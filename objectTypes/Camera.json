@@ -1,0 +1,56 @@
+{
+	"name": "Camera",
+	"plugin-id": "Sprite",
+	"sid": 173040847138025,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "zoom",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 509600852305770
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 138668090363884
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 909926221827215
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 245,
+						"height": 86,
+						"originX": 0.5061224489795918,
+						"originY": 0.5116279069767442,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9615976,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 344522777285650,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

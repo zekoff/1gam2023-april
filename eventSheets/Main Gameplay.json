@@ -1,0 +1,559 @@
+{
+	"name": "Main Gameplay",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 572746605038108
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "MechSprite",
+					"sid": 633700376436442,
+					"parameters": {
+						"object": "MechBody",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "PilotSprite",
+					"sid": 577117761186717,
+					"parameters": {
+						"object": "PilotBody",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 179604045597597,
+					"parameters": {
+						"scale": "Camera.zoom"
+					}
+				}
+			],
+			"sid": 342752582310445
+		},
+		{
+			"eventType": "variable",
+			"name": "ACTIVE_ENTITY_PILOT",
+			"type": "string",
+			"initialValue": "PILOT",
+			"comment": "Constant to track when the pilot is the active player entity.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 562504756414324
+		},
+		{
+			"eventType": "variable",
+			"name": "ACTIVE_ENTITY_MECH",
+			"type": "string",
+			"initialValue": "MECH",
+			"comment": "Constant to track when the mech is the active player entity.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 523601190610026
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Controls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 987170093668648
+						}
+					],
+					"actions": [],
+					"sid": 845939933369494,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PlayerController",
+									"sid": 613651582697487,
+									"parameters": {
+										"instance-variable": "activeEntity",
+										"comparison": 0,
+										"value": "ACTIVE_ENTITY_PILOT"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 739205674187909,
+									"parameters": {
+										"group-name": "\"Pilot Control\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 761799384866616,
+									"parameters": {
+										"group-name": "\"Mech Control\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "Camera",
+									"sid": 291180148586968,
+									"parameters": {
+										"object": "PilotBody",
+										"image-point-optional": "0"
+									}
+								}
+							],
+							"sid": 149144082961452
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PlayerController",
+									"sid": 205722533528430,
+									"parameters": {
+										"instance-variable": "activeEntity",
+										"comparison": 0,
+										"value": "ACTIVE_ENTITY_MECH"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 771139431593212,
+									"parameters": {
+										"group-name": "\"Mech Control\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 688891796998977,
+									"parameters": {
+										"group-name": "\"Pilot Control\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "Camera",
+									"sid": 151884073987035,
+									"parameters": {
+										"object": "MechBody",
+										"image-point-optional": "0"
+									}
+								}
+							],
+							"sid": 340825198646136
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 878018987966971,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-y"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 566212856708314,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PlayerController",
+									"sid": 431639473583819,
+									"parameters": {
+										"instance-variable": "activeEntity",
+										"comparison": 0,
+										"value": "ACTIVE_ENTITY_MECH"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PlayerController",
+									"sid": 473956090974137,
+									"parameters": {
+										"instance-variable": "activeEntity",
+										"value": "ACTIVE_ENTITY_PILOT"
+									}
+								},
+								{
+									"id": "unpin",
+									"objectClass": "PilotBody",
+									"sid": 917576496328918,
+									"behaviorType": "Pin"
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Camera",
+									"sid": 347780240661798,
+									"parameters": {
+										"instance-variable": "zoom",
+										"value": "2"
+									}
+								}
+							],
+							"sid": 123946075069142
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 390818570574308
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PlayerController",
+									"sid": 565640715917397,
+									"parameters": {
+										"instance-variable": "activeEntity",
+										"comparison": 0,
+										"value": "ACTIVE_ENTITY_PILOT"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "PilotBody",
+									"sid": 913932154538998,
+									"parameters": {
+										"object": "MechBody"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PlayerController",
+									"sid": 567610901260583,
+									"parameters": {
+										"instance-variable": "activeEntity",
+										"value": "ACTIVE_ENTITY_MECH"
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "PilotBody",
+									"sid": 774950438724167,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "MechBody",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "no",
+										"height-type": "no",
+										"z": false
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Camera",
+									"sid": 971857049697296,
+									"parameters": {
+										"instance-variable": "zoom",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 136545515296880
+						}
+					]
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Pilot Control",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 860605916891509,
+									"parameters": {
+										"gamepad": "0",
+										"button": "button-a"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "PilotBody",
+									"sid": 168994289179076,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "jump"
+									}
+								}
+							],
+							"sid": 546275138912364
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 473436502877134,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-right"
+									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 541970143851191,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-x-axis",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "PilotBody",
+									"sid": 231978343894695,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "PilotSprite",
+									"sid": 624841398467006,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 469250898996274,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 585925922997840,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-left"
+									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 970451739874314,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-x-axis",
+										"comparison": 2,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "PilotBody",
+									"sid": 403889345741173,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "PilotSprite",
+									"sid": 681993348799084,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 848182079992872,
+							"isOrBlock": true
+						}
+					],
+					"sid": 872123182067605
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Mech Control",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 906828625725797,
+									"parameters": {
+										"gamepad": "0",
+										"button": "button-a"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "MechBody",
+									"sid": 545177212551410,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "jump"
+									}
+								}
+							],
+							"sid": 709847357338711
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 899892560224042,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-right"
+									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 848626875130167,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-x-axis",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "MechBody",
+									"sid": 111411222081548,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "MechSprite",
+									"sid": 660484110007725,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 904698108223007,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 934060011745165,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-left"
+									}
+								},
+								{
+									"id": "compare-axis",
+									"objectClass": "Gamepad",
+									"sid": 117413245719810,
+									"parameters": {
+										"gamepad": "0",
+										"axis": "left-analog-x-axis",
+										"comparison": 2,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "MechBody",
+									"sid": 949893472702145,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "MechSprite",
+									"sid": 204574120723446,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 785111504344407,
+							"isOrBlock": true
+						}
+					],
+					"sid": 897378048646074
+				}
+			],
+			"sid": 941801672490726
+		}
+	],
+	"sid": 833620024739152
+}

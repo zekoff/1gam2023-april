@@ -1,0 +1,27 @@
+{
+	"name": "OryxScifiTilemap",
+	"plugin-id": "Tilemap",
+	"sid": 123661312220323,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 436212609661373
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 840,
+		"height": 984,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 568964,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {}
+}

@@ -1,0 +1,55 @@
+{
+	"name": "PilotBody",
+	"plugin-id": "Sprite",
+	"sid": 125332285697727,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 830621217512092
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 915889548807940
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5493706,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Foot",
+								"x": 0.53125,
+								"y": 1
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 818309974868025,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

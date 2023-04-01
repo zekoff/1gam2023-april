@@ -1,0 +1,45 @@
+{
+	"name": "PlayerController",
+	"plugin-id": "Sprite",
+	"sid": 197207337594396,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "activeEntity",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 567227413742350
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4795007,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 225486366883998,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
