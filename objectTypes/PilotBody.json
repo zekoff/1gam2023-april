@@ -9,11 +9,6 @@
 			"behaviorId": "Platform",
 			"name": "Platform",
 			"sid": 830621217512092
-		},
-		{
-			"behaviorId": "Pin",
-			"name": "Pin",
-			"sid": 915889548807940
 		}
 	],
 	"effectTypes": [],

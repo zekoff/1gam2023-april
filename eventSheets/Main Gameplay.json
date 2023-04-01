@@ -165,6 +165,15 @@
 										"object": "MechBody",
 										"image-point-optional": "0"
 									}
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "PilotBody",
+									"sid": 764383108607499,
+									"parameters": {
+										"object": "MechBody",
+										"image-point-optional": "0"
+									}
 								}
 							],
 							"sid": 340825198646136
@@ -199,6 +208,12 @@
 										"comparison": 0,
 										"value": "ACTIVE_ENTITY_MECH"
 									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "MechBody",
+									"sid": 257733772354333,
+									"behaviorType": "Platform"
 								}
 							],
 							"actions": [
@@ -212,12 +227,6 @@
 									}
 								},
 								{
-									"id": "unpin",
-									"objectClass": "PilotBody",
-									"sid": 917576496328918,
-									"behaviorType": "Pin"
-								},
-								{
 									"id": "set-instvar-value",
 									"objectClass": "Camera",
 									"sid": 347780240661798,
@@ -225,6 +234,10 @@
 										"instance-variable": "zoom",
 										"value": "2"
 									}
+								},
+								{
+									"callFunction": "EnablePilot",
+									"sid": 288655513839938
 								}
 							],
 							"sid": 123946075069142
@@ -267,21 +280,6 @@
 									}
 								},
 								{
-									"id": "pin-to-object-properties",
-									"objectClass": "PilotBody",
-									"sid": 774950438724167,
-									"behaviorType": "Pin",
-									"parameters": {
-										"pin-to": "MechBody",
-										"x": true,
-										"y": true,
-										"angle": true,
-										"width-type": "no",
-										"height-type": "no",
-										"z": false
-									}
-								},
-								{
 									"id": "set-instvar-value",
 									"objectClass": "Camera",
 									"sid": 971857049697296,
@@ -289,6 +287,10 @@
 										"instance-variable": "zoom",
 										"value": "1"
 									}
+								},
+								{
+									"callFunction": "DisablePilot",
+									"sid": 658375691397113
 								}
 							],
 							"sid": 136545515296880
@@ -306,9 +308,9 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-button-pressed",
+									"id": "is-button-down",
 									"objectClass": "Gamepad",
-									"sid": 860605916891509,
+									"sid": 857455473088290,
 									"parameters": {
 										"gamepad": "0",
 										"button": "button-a"
@@ -434,9 +436,9 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "on-button-pressed",
+									"id": "is-button-down",
 									"objectClass": "Gamepad",
-									"sid": 906828625725797,
+									"sid": 615511519892304,
 									"parameters": {
 										"gamepad": "0",
 										"button": "button-a"
@@ -553,6 +555,84 @@
 				}
 			],
 			"sid": 941801672490726
+		},
+		{
+			"functionName": "DisablePilot",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "PilotBody",
+					"sid": 887500731928850,
+					"parameters": {
+						"collisions": "disabled"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "PilotSprite",
+					"sid": 641357761309468,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "PilotBody",
+					"sid": 177291116914692,
+					"behaviorType": "Platform",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 556727484889647
+		},
+		{
+			"functionName": "EnablePilot",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "PilotBody",
+					"sid": 376678790479215,
+					"parameters": {
+						"collisions": "enabled"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "PilotSprite",
+					"sid": 620632265146081,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "PilotBody",
+					"sid": 803121135354688,
+					"behaviorType": "Platform",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 849844807077180
 		}
 	],
 	"sid": 833620024739152

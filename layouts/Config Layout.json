@@ -227,7 +227,7 @@
 				{
 					"type": "MechBody",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -238,14 +238,14 @@
 					"behaviors": {
 						"Platform": {
 							"properties": {
-								"max-speed": 330,
-								"acceleration": 1500,
-								"deceleration": 1500,
-								"jump-strength": 650,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
+								"max-speed": 200,
+								"acceleration": 500,
+								"deceleration": 2000,
+								"jump-strength": 300,
+								"gravity": 2000,
+								"max-fall-speed": 2000,
 								"double-jump": false,
-								"jump-sustain": 0,
+								"jump-sustain": 200,
 								"default-controls": true,
 								"enabled": true
 							}
@@ -300,7 +300,7 @@
 				{
 					"type": "PilotBody",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -314,18 +314,13 @@
 								"max-speed": 330,
 								"acceleration": 1500,
 								"deceleration": 1500,
-								"jump-strength": 650,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
+								"jump-strength": 300,
+								"gravity": 2000,
+								"max-fall-speed": 2000,
 								"double-jump": true,
-								"jump-sustain": 0,
+								"jump-sustain": 200,
 								"default-controls": true,
 								"enabled": true
-							}
-						},
-						"Pin": {
-							"properties": {
-								"destroy": false
 							}
 						}
 					},
@@ -449,10 +444,10 @@
 				{
 					"type": "PlayerController",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
-						"enable-collisions": true,
+						"enable-collisions": false,
 						"live-preview": false
 					},
 					"uid": 8,
@@ -483,12 +478,12 @@
 						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
-						"enable-collisions": true,
+						"enable-collisions": false,
 						"live-preview": false
 					},
 					"uid": 9,
 					"instanceVariables": {
-						"zoom": 1
+						"zoom": 2
 					},
 					"behaviors": {
 						"ScrollTo": {
