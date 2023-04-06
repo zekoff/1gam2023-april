@@ -7,14 +7,14 @@
 				{
 					"id": "every-tick",
 					"objectClass": "System",
-					"sid": 572746605038108
+					"sid": 181761845177696
 				}
 			],
 			"actions": [
 				{
 					"id": "set-position-to-another-object",
 					"objectClass": "MechSprite",
-					"sid": 633700376436442,
+					"sid": 806611486845857,
 					"parameters": {
 						"object": "MechBody",
 						"image-point-optional": "1"
@@ -23,7 +23,7 @@
 				{
 					"id": "set-position-to-another-object",
 					"objectClass": "PilotSprite",
-					"sid": 577117761186717,
+					"sid": 546193829154757,
 					"parameters": {
 						"object": "PilotBody",
 						"image-point-optional": "1"
@@ -32,33 +32,13 @@
 				{
 					"id": "set-layout-scale",
 					"objectClass": "System",
-					"sid": 179604045597597,
+					"sid": 991988186693461,
 					"parameters": {
 						"scale": "Camera.zoom"
 					}
 				}
 			],
-			"sid": 342752582310445
-		},
-		{
-			"eventType": "variable",
-			"name": "ACTIVE_ENTITY_PILOT",
-			"type": "string",
-			"initialValue": "PILOT",
-			"comment": "Constant to track when the pilot is the active player entity.",
-			"isStatic": false,
-			"isConstant": true,
-			"sid": 562504756414324
-		},
-		{
-			"eventType": "variable",
-			"name": "ACTIVE_ENTITY_MECH",
-			"type": "string",
-			"initialValue": "MECH",
-			"comment": "Constant to track when the mech is the active player entity.",
-			"isStatic": false,
-			"isConstant": true,
-			"sid": 523601190610026
+			"sid": 101929101902993
 		},
 		{
 			"eventType": "group",
@@ -85,7 +65,7 @@
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "PlayerController",
-									"sid": 613651582697487,
+									"sid": 111392924598579,
 									"parameters": {
 										"instance-variable": "activeEntity",
 										"comparison": 0,
@@ -130,7 +110,7 @@
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "PlayerController",
-									"sid": 205722533528430,
+									"sid": 835944368655605,
 									"parameters": {
 										"instance-variable": "activeEntity",
 										"comparison": 0,
@@ -202,7 +182,7 @@
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "PlayerController",
-									"sid": 431639473583819,
+									"sid": 587063182420632,
 									"parameters": {
 										"instance-variable": "activeEntity",
 										"comparison": 0,
@@ -220,7 +200,7 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "PlayerController",
-									"sid": 473956090974137,
+									"sid": 100007532004977,
 									"parameters": {
 										"instance-variable": "activeEntity",
 										"value": "ACTIVE_ENTITY_PILOT"
@@ -253,7 +233,7 @@
 								{
 									"id": "compare-instance-variable",
 									"objectClass": "PlayerController",
-									"sid": 565640715917397,
+									"sid": 750573512638544,
 									"parameters": {
 										"instance-variable": "activeEntity",
 										"comparison": 0,
@@ -273,7 +253,7 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "PlayerController",
-									"sid": 567610901260583,
+									"sid": 432681567124139,
 									"parameters": {
 										"instance-variable": "activeEntity",
 										"value": "ACTIVE_ENTITY_MECH"
@@ -421,6 +401,134 @@
 							],
 							"sid": 848182079992872,
 							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 954635299232645,
+									"parameters": {
+										"gamepad": "0",
+										"button": "button-a"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "PilotBody",
+									"sid": 636294896064067,
+									"behaviorType": "Platform",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "PilotBody",
+									"sid": 437693165271668,
+									"parameters": {
+										"object": "Crosshair",
+										"layer": "\"Entities\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 959391097955787,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-last-created",
+											"objectClass": "System",
+											"sid": 963500640138496,
+											"parameters": {
+												"object": "Crosshair"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 655773397358090,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-mirrored",
+													"objectClass": "PilotSprite",
+													"sid": 443051518301205
+												}
+											],
+											"actions": [
+												{
+													"id": "set-angle-of-motion",
+													"objectClass": "Crosshair",
+													"sid": 293934238826821,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"angle": "-135"
+													}
+												}
+											],
+											"sid": 595948696888747
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 186814552351844
+												}
+											],
+											"actions": [
+												{
+													"id": "set-angle-of-motion",
+													"objectClass": "Crosshair",
+													"sid": 223366525174463,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"angle": "-45"
+													}
+												}
+											],
+											"sid": 873111958598776
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Crosshair",
+									"sid": 760877864117247,
+									"parameters": {
+										"object": "OryxScifiTilemap"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-vector-y",
+									"objectClass": "PilotBody",
+									"sid": 792279513665042,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-y": "-600"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Crosshair",
+									"sid": 776528351761553
+								}
+							],
+							"sid": 332299307360722
 						}
 					],
 					"sid": 872123182067605
@@ -558,10 +666,10 @@
 		},
 		{
 			"functionName": "DisablePilot",
+			"functionCopyPicked": false,
 			"functionDescription": "",
 			"functionCategory": "",
 			"functionReturnType": "none",
-			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [],
 			"eventType": "function-block",
@@ -597,10 +705,10 @@
 		},
 		{
 			"functionName": "EnablePilot",
+			"functionCopyPicked": false,
 			"functionDescription": "",
 			"functionCategory": "",
 			"functionReturnType": "none",
-			"functionCopyPicked": false,
 			"functionIsAsync": false,
 			"functionParameters": [],
 			"eventType": "function-block",

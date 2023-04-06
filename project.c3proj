@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 32703,
+	"savedWithRelease": 33600,
 	"name": "1gam2023-april",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -29,6 +29,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
@@ -38,6 +45,13 @@
 			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -66,7 +80,8 @@
 			"PilotSprite",
 			"PilotBody",
 			"PlayerController",
-			"Camera"
+			"Camera",
+			"Crosshair"
 		],
 		"subfolders": []
 	},
@@ -76,15 +91,13 @@
 			"members": [
 				"MechBody",
 				"MechSprite"
-			],
-			"selectMode": "normal"
+			]
 		},
 		{
 			"members": [
 				"PilotBody",
 				"PilotSprite"
-			],
-			"selectMode": "normal"
+			]
 		}
 	],
 	"families": {
@@ -99,7 +112,8 @@
 	},
 	"eventSheets": {
 		"items": [
-			"Main Gameplay"
+			"Main Gameplay",
+			"Constants"
 		],
 		"subfolders": []
 	},

@@ -1,0 +1,68 @@
+{
+	"name": "Crosshair",
+	"plugin-id": "Sprite",
+	"sid": 826329861654515,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 666226443228247
+		},
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 499233637723571
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 36,
+						"height": 36,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3632771,
+						"collisionPoly": {
+							"points": [
+								0.2222222222222222,
+								0.2222222222222222,
+								0.5,
+								0,
+								0.7777777777777778,
+								0.2222222222222222,
+								1,
+								0.5,
+								0.7777777777777778,
+								0.7777777777777778,
+								0.5,
+								1,
+								0.2222222222222222,
+								0.7777777777777778,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 800261832892080,
+				"name": "Animation 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
