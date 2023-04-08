@@ -1,5 +1,5 @@
 {
-	"name": "Crosshair",
+	"name": "GrappleHook",
 	"plugin-id": "Sprite",
 	"sid": 826329861654515,
 	"isGlobal": false,
@@ -11,9 +11,14 @@
 			"sid": 666226443228247
 		},
 		{
-			"behaviorId": "bound",
-			"name": "BoundToLayout",
-			"sid": 499233637723571
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 298391000769893
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 280200756254072
 		}
 	],
 	"effectTypes": [],

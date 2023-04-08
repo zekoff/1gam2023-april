@@ -469,6 +469,14 @@
 											"sid": 710873468654477,
 											"behaviorType": "Platform",
 											"isInverted": true
+										},
+										{
+											"id": "evaluate-expression",
+											"objectClass": "System",
+											"sid": 634743660858406,
+											"parameters": {
+												"value": "GrappleHook.Count = 0"
+											}
 										}
 									],
 									"actions": [
@@ -488,7 +496,7 @@
 							"conditions": [
 								{
 									"id": "on-collision-with-another-object",
-									"objectClass": "Crosshair",
+									"objectClass": "GrappleHook",
 									"sid": 760877864117247,
 									"parameters": {
 										"object": "OryxScifiTilemap"
@@ -507,7 +515,7 @@
 								},
 								{
 									"id": "destroy",
-									"objectClass": "Crosshair",
+									"objectClass": "GrappleHook",
 									"sid": 776528351761553
 								}
 							],
@@ -530,7 +538,7 @@
 									"objectClass": "PilotBody",
 									"sid": 303287789616843,
 									"parameters": {
-										"object": "Crosshair",
+										"object": "GrappleHook",
 										"layer": "\"Entities\"",
 										"image-point": "0",
 										"create-hierarchy": false
@@ -547,11 +555,23 @@
 											"objectClass": "System",
 											"sid": 512536963348244,
 											"parameters": {
-												"object": "Crosshair"
+												"object": "GrappleHook"
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "start-timer",
+											"objectClass": "GrappleHook",
+											"sid": 749378317459795,
+											"behaviorType": "Timer",
+											"parameters": {
+												"duration": ".5",
+												"type": "once",
+												"tag": "\"lifetime\""
+											}
+										}
+									],
 									"sid": 887021733348843,
 									"children": [
 										{
@@ -566,7 +586,7 @@
 											"actions": [
 												{
 													"id": "set-angle-of-motion",
-													"objectClass": "Crosshair",
+													"objectClass": "GrappleHook",
 													"sid": 654808333622098,
 													"behaviorType": "Bullet",
 													"parameters": {
@@ -588,7 +608,7 @@
 											"actions": [
 												{
 													"id": "set-angle-of-motion",
-													"objectClass": "Crosshair",
+													"objectClass": "GrappleHook",
 													"sid": 789101715951352,
 													"behaviorType": "Bullet",
 													"parameters": {
@@ -601,6 +621,74 @@
 									]
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 480917796359400
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "GrappleRope",
+									"sid": 326960292856420,
+									"parameters": {
+										"x": "PilotBody.X",
+										"y": "PilotBody.Y"
+									}
+								},
+								{
+									"id": "set-width",
+									"objectClass": "GrappleRope",
+									"sid": 874433373314010,
+									"parameters": {
+										"width": "distance(PilotBody.X, PilotBody.Y, GrappleHook.X, GrappleHook.Y)"
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "GrappleRope",
+									"sid": 224284261833636,
+									"parameters": {
+										"angle": "angle(PilotBody.X, PilotBody.Y, GrappleHook.X, GrappleHook.Y )"
+									}
+								},
+								{
+									"id": "set-height",
+									"objectClass": "GrappleRope",
+									"sid": 444737020636442,
+									"parameters": {
+										"height": "5"
+									}
+								}
+							],
+							"sid": 231191374169081
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "GrappleHook",
+									"sid": 918207959663357,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"lifetime\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "GrappleHook",
+									"sid": 762256972982193
+								}
+							],
+							"sid": 574112822977159
 						}
 					],
 					"sid": 872123182067605

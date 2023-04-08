@@ -57,8 +57,15 @@
 		},
 		{
 			"type": "behavior",
-			"id": "bound",
-			"name": "Bound to layout",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "destroy",
+			"name": "Destroy outside layout",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -88,8 +95,9 @@
 			"PilotBody",
 			"PlayerController",
 			"Camera",
-			"Crosshair",
-			"Keyboard"
+			"GrappleHook",
+			"Keyboard",
+			"GrappleRope"
 		],
 		"subfolders": []
 	},
@@ -105,6 +113,12 @@
 			"members": [
 				"PilotBody",
 				"PilotSprite"
+			]
+		},
+		{
+			"members": [
+				"GrappleHook",
+				"GrappleRope"
 			]
 		}
 	],
