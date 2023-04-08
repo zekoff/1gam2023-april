@@ -3,12 +3,25 @@
 	"plugin-id": "Sprite",
 	"sid": 125332285697727,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "canFire",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 577290982959180
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Platform",
 			"name": "Platform",
 			"sid": 830621217512092
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 362118348367577
 		}
 	],
 	"effectTypes": [],

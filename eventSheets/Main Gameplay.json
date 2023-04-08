@@ -332,6 +332,54 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 944074100106959,
+									"parameters": {
+										"gamepad": "0",
+										"button": "button-x"
+									}
+								},
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 235760137518870,
+									"parameters": {
+										"key": 32
+									}
+								}
+							],
+							"actions": [],
+							"sid": 859030802501128,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "PilotBody",
+											"sid": 918752831465183,
+											"parameters": {
+												"instance-variable": "canFire"
+											}
+										}
+									],
+									"actions": [
+										{
+											"customAction": "FireBullet",
+											"objectClass": "PilotBody",
+											"sid": 878302698825928
+										}
+									],
+									"sid": 415843655879987
+								}
+							],
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
 									"id": "is-button-down",
 									"objectClass": "Gamepad",
 									"sid": 473436502877134,
@@ -689,6 +737,161 @@
 								}
 							],
 							"sid": 574112822977159
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "PilotBody",
+									"sid": 193671661274789,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"canFire\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "PilotBody",
+									"sid": 305186869642702,
+									"parameters": {
+										"instance-variable": "canFire",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 475222261239737
+						},
+						{
+							"aceType": "action",
+							"aceName": "FireBullet",
+							"objectClass": "PilotBody",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "custom-ace-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 190611236179100,
+									"parameters": {
+										"object-to-create": "Bullet",
+										"layer": "\"Entities\"",
+										"x": "PilotBody.X",
+										"y": "PilotBody.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "PilotBody",
+									"sid": 386040146057504,
+									"parameters": {
+										"instance-variable": "canFire",
+										"value": "false"
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "PilotBody",
+									"sid": 909828051322324,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": ".2",
+										"type": "once",
+										"tag": "\"canFire\""
+									}
+								}
+							],
+							"sid": 413594252284095,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-last-created",
+											"objectClass": "System",
+											"sid": 483823338701896,
+											"parameters": {
+												"object": "Bullet"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-speed",
+											"objectClass": "Bullet",
+											"sid": 427703852273029,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"speed": "800"
+											}
+										}
+									],
+									"sid": 560500852979522,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-mirrored",
+													"objectClass": "PilotSprite",
+													"sid": 435148908915919
+												}
+											],
+											"actions": [
+												{
+													"id": "set-angle-of-motion",
+													"objectClass": "Bullet",
+													"sid": 137286895655794,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"angle": "180"
+													}
+												},
+												{
+													"id": "set-mirrored",
+													"objectClass": "Bullet",
+													"sid": 920555252711484,
+													"parameters": {
+														"state": "mirrored"
+													}
+												}
+											],
+											"sid": 423215777751782
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 539353607842356
+												}
+											],
+											"actions": [
+												{
+													"id": "set-angle-of-motion",
+													"objectClass": "Bullet",
+													"sid": 365150681943319,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"angle": "0"
+													}
+												}
+											],
+											"sid": 554389820646266
+										}
+									]
+								}
+							]
 						}
 					],
 					"sid": 872123182067605
@@ -733,6 +936,54 @@
 								}
 							],
 							"sid": 709847357338711,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 971449386823475,
+									"parameters": {
+										"gamepad": "0",
+										"button": "button-x"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 507515343637117,
+									"parameters": {
+										"key": 32
+									}
+								}
+							],
+							"actions": [],
+							"sid": 485775202900890,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "MechBody",
+											"sid": 738103289617202,
+											"parameters": {
+												"instance-variable": "canFire"
+											}
+										}
+									],
+									"actions": [
+										{
+											"customAction": "FireBullet",
+											"objectClass": "MechBody",
+											"sid": 455226023444735
+										}
+									],
+									"sid": 422536335666451
+								}
+							],
 							"isOrBlock": true
 						},
 						{
@@ -842,6 +1093,161 @@
 							],
 							"sid": 785111504344407,
 							"isOrBlock": true
+						},
+						{
+							"aceType": "action",
+							"aceName": "FireBullet",
+							"objectClass": "MechBody",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "custom-ace-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 240870119678586,
+									"parameters": {
+										"object-to-create": "Bullet",
+										"layer": "\"Entities\"",
+										"x": "MechBody.X",
+										"y": "MechBody.Y + random(-5, 5)",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "MechBody",
+									"sid": 186522566736796,
+									"parameters": {
+										"instance-variable": "canFire",
+										"value": "false"
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "MechBody",
+									"sid": 971021438273566,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": ".05",
+										"type": "once",
+										"tag": "\"canFire\""
+									}
+								}
+							],
+							"sid": 101022485900528,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-last-created",
+											"objectClass": "System",
+											"sid": 639742859468625,
+											"parameters": {
+												"object": "Bullet"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-speed",
+											"objectClass": "Bullet",
+											"sid": 379390598629620,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"speed": "800"
+											}
+										}
+									],
+									"sid": 294804356607935,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-mirrored",
+													"objectClass": "MechSprite",
+													"sid": 308033281984125
+												}
+											],
+											"actions": [
+												{
+													"id": "set-angle-of-motion",
+													"objectClass": "Bullet",
+													"sid": 254894555190830,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"angle": "180"
+													}
+												},
+												{
+													"id": "set-mirrored",
+													"objectClass": "Bullet",
+													"sid": 365231167330890,
+													"parameters": {
+														"state": "mirrored"
+													}
+												}
+											],
+											"sid": 813106833825286
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 315594804305646
+												}
+											],
+											"actions": [
+												{
+													"id": "set-angle-of-motion",
+													"objectClass": "Bullet",
+													"sid": 757483457599660,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"angle": "0"
+													}
+												}
+											],
+											"sid": 274796671930048
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "MechBody",
+									"sid": 720465702495095,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"canFire\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "MechBody",
+									"sid": 658167265722998,
+									"parameters": {
+										"instance-variable": "canFire",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 848505547071830
 						}
 					],
 					"sid": 897378048646074

@@ -97,7 +97,8 @@
 			"Camera",
 			"GrappleHook",
 			"Keyboard",
-			"GrappleRope"
+			"GrappleRope",
+			"Bullet"
 		],
 		"subfolders": []
 	},
