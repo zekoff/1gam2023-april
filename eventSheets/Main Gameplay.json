@@ -171,6 +171,14 @@
 								"gamepad": "0",
 								"button": "button-y"
 							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 835185851057300,
+							"parameters": {
+								"key": 88
+							}
 						}
 					],
 					"actions": [],
@@ -275,7 +283,8 @@
 							],
 							"sid": 136545515296880
 						}
-					]
+					],
+					"isOrBlock": true
 				},
 				{
 					"eventType": "group",
@@ -295,6 +304,14 @@
 										"gamepad": "0",
 										"button": "button-a"
 									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 323129443652874,
+									"parameters": {
+										"key": 38
+									}
 								}
 							],
 							"actions": [
@@ -308,7 +325,8 @@
 									}
 								}
 							],
-							"sid": 546275138912364
+							"sid": 546275138912364,
+							"isOrBlock": true
 						},
 						{
 							"eventType": "block",
@@ -331,6 +349,14 @@
 										"axis": "left-analog-x-axis",
 										"comparison": 4,
 										"value": "0"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 676128209364905,
+									"parameters": {
+										"key": 39
 									}
 								}
 							],
@@ -378,6 +404,14 @@
 										"comparison": 2,
 										"value": "0"
 									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 932931261385242,
+									"parameters": {
+										"key": 37
+									}
 								}
 							],
 							"actions": [
@@ -408,97 +442,46 @@
 								{
 									"id": "on-button-pressed",
 									"objectClass": "Gamepad",
-									"sid": 954635299232645,
+									"sid": 966371803644437,
 									"parameters": {
 										"gamepad": "0",
 										"button": "button-a"
 									}
 								},
 								{
-									"id": "is-on-floor",
-									"objectClass": "PilotBody",
-									"sid": 636294896064067,
-									"behaviorType": "Platform",
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "spawn-another-object",
-									"objectClass": "PilotBody",
-									"sid": 437693165271668,
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 681456400079327,
 									"parameters": {
-										"object": "Crosshair",
-										"layer": "\"Entities\"",
-										"image-point": "0",
-										"create-hierarchy": false
+										"key": 38
 									}
 								}
 							],
-							"sid": 959391097955787,
+							"actions": [],
+							"sid": 584387183943233,
 							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "pick-last-created",
-											"objectClass": "System",
-											"sid": 963500640138496,
-											"parameters": {
-												"object": "Crosshair"
-											}
+											"id": "is-on-floor",
+											"objectClass": "PilotBody",
+											"sid": 710873468654477,
+											"behaviorType": "Platform",
+											"isInverted": true
 										}
 									],
-									"actions": [],
-									"sid": 655773397358090,
-									"children": [
+									"actions": [
 										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-mirrored",
-													"objectClass": "PilotSprite",
-													"sid": 443051518301205
-												}
-											],
-											"actions": [
-												{
-													"id": "set-angle-of-motion",
-													"objectClass": "Crosshair",
-													"sid": 293934238826821,
-													"behaviorType": "Bullet",
-													"parameters": {
-														"angle": "-135"
-													}
-												}
-											],
-											"sid": 595948696888747
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "else",
-													"objectClass": "System",
-													"sid": 186814552351844
-												}
-											],
-											"actions": [
-												{
-													"id": "set-angle-of-motion",
-													"objectClass": "Crosshair",
-													"sid": 223366525174463,
-													"behaviorType": "Bullet",
-													"parameters": {
-														"angle": "-45"
-													}
-												}
-											],
-											"sid": 873111958598776
+											"customAction": "LaunchGrapplingHook",
+											"objectClass": "PilotBody",
+											"sid": 169331607805938
 										}
-									]
+									],
+									"sid": 709036623456042
 								}
-							]
+							],
+							"isOrBlock": true
 						},
 						{
 							"eventType": "block",
@@ -529,6 +512,95 @@
 								}
 							],
 							"sid": 332299307360722
+						},
+						{
+							"aceType": "action",
+							"aceName": "LaunchGrapplingHook",
+							"objectClass": "PilotBody",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "custom-ace-block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "PilotBody",
+									"sid": 303287789616843,
+									"parameters": {
+										"object": "Crosshair",
+										"layer": "\"Entities\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 800550882386613,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-last-created",
+											"objectClass": "System",
+											"sid": 512536963348244,
+											"parameters": {
+												"object": "Crosshair"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 887021733348843,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-mirrored",
+													"objectClass": "PilotSprite",
+													"sid": 961585979858818
+												}
+											],
+											"actions": [
+												{
+													"id": "set-angle-of-motion",
+													"objectClass": "Crosshair",
+													"sid": 654808333622098,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"angle": "-135"
+													}
+												}
+											],
+											"sid": 442896881660452
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 527970075852443
+												}
+											],
+											"actions": [
+												{
+													"id": "set-angle-of-motion",
+													"objectClass": "Crosshair",
+													"sid": 789101715951352,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"angle": "-45"
+													}
+												}
+											],
+											"sid": 593324691013905
+										}
+									]
+								}
+							]
 						}
 					],
 					"sid": 872123182067605
@@ -551,6 +623,14 @@
 										"gamepad": "0",
 										"button": "button-a"
 									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 211148540392507,
+									"parameters": {
+										"key": 38
+									}
 								}
 							],
 							"actions": [
@@ -564,7 +644,8 @@
 									}
 								}
 							],
-							"sid": 709847357338711
+							"sid": 709847357338711,
+							"isOrBlock": true
 						},
 						{
 							"eventType": "block",
@@ -587,6 +668,14 @@
 										"axis": "left-analog-x-axis",
 										"comparison": 4,
 										"value": "0"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 569257371316573,
+									"parameters": {
+										"key": 39
 									}
 								}
 							],
@@ -633,6 +722,14 @@
 										"axis": "left-analog-x-axis",
 										"comparison": 2,
 										"value": "0"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 200493049817134,
+									"parameters": {
+										"key": 37
 									}
 								}
 							],

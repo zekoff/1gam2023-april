@@ -292,7 +292,7 @@
 								"max-fall-speed": 2000,
 								"double-jump": false,
 								"jump-sustain": 200,
-								"default-controls": true,
+								"default-controls": false,
 								"enabled": true
 							}
 						}
@@ -365,7 +365,7 @@
 								"max-fall-speed": 2000,
 								"double-jump": false,
 								"jump-sustain": 200,
-								"default-controls": true,
+								"default-controls": false,
 								"enabled": true
 							}
 						}
