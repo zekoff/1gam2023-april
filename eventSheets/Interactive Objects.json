@@ -1,0 +1,142 @@
+{
+	"name": "Interactive Objects",
+	"events": [
+		{
+			"aceType": "action",
+			"aceName": "ToggleConnectedDoors",
+			"objectClass": "Computer",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 141931360014924,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 451490407749108,
+							"parameters": {
+								"object": "PilotLockDoor"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "PilotLockDoor",
+							"sid": 674771763828745,
+							"parameters": {
+								"instance-variable": "lockColor",
+								"comparison": 0,
+								"value": "Computer.lockColor"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "toggle-boolean-instvar",
+							"objectClass": "PilotLockDoor",
+							"sid": 262830712410264,
+							"parameters": {
+								"instance-variable": "lockStatus"
+							}
+						}
+					],
+					"sid": 367194660505275
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 128237774315877,
+					"parameters": {
+						"object": "PilotLockDoor"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 125722065555432,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "PilotLockDoor",
+							"sid": 313374123620749,
+							"parameters": {
+								"instance-variable": "lockStatus"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "PilotLockDoor",
+							"sid": 953117049170324,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PilotLockDoor",
+							"sid": 390608286740256,
+							"parameters": {
+								"animation": "\"Closed\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 517814596764137
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "PilotLockDoor",
+							"sid": 632601385936979,
+							"parameters": {
+								"instance-variable": "lockStatus"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "PilotLockDoor",
+							"sid": 508902638614962,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "PilotLockDoor",
+							"sid": 573258435829760,
+							"parameters": {
+								"animation": "\"Open\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 814408229789617
+				}
+			]
+		}
+	],
+	"sid": 398150217251672
+}

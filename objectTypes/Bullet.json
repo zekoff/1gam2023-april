@@ -14,6 +14,11 @@
 			"behaviorId": "destroy",
 			"name": "DestroyOutsideLayout",
 			"sid": 466267485398685
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 331358144482091
 		}
 	],
 	"effectTypes": [],

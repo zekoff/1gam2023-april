@@ -98,7 +98,9 @@
 			"GrappleHook",
 			"Keyboard",
 			"GrappleRope",
-			"Bullet"
+			"Bullet",
+			"PilotLockDoor",
+			"Computer"
 		],
 		"subfolders": []
 	},
@@ -136,7 +138,8 @@
 	"eventSheets": {
 		"items": [
 			"Main Gameplay",
-			"Constants"
+			"Constants",
+			"Interactive Objects"
 		],
 		"subfolders": []
 	},

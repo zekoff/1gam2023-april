@@ -8,7 +8,7 @@
 			"initialValue": "PILOT",
 			"comment": "",
 			"isStatic": false,
-			"isConstant": false,
+			"isConstant": true,
 			"sid": 858593113256058
 		},
 		{
@@ -18,8 +18,78 @@
 			"initialValue": "MECH",
 			"comment": "",
 			"isStatic": false,
-			"isConstant": false,
+			"isConstant": true,
 			"sid": 203266439821934
+		},
+		{
+			"eventType": "variable",
+			"name": "LOCK_GREEN",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 833960801307595
+		},
+		{
+			"eventType": "variable",
+			"name": "LOCK_BLUE",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 229961812783939
+		},
+		{
+			"eventType": "variable",
+			"name": "LOCK_RED",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 966741401315538
+		},
+		{
+			"eventType": "variable",
+			"name": "STATE_LOCKED",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 890931941034977
+		},
+		{
+			"eventType": "variable",
+			"name": "STATE_UNLOCKED",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 114636561502480
+		},
+		{
+			"eventType": "variable",
+			"name": "ZOOM_MECH",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "Zoom level when mech mode is active.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 432447549454397
+		},
+		{
+			"eventType": "variable",
+			"name": "ZOOM_PILOT",
+			"type": "number",
+			"initialValue": "1.75",
+			"comment": "Zoom level when pilot mode is active.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 506218660919472
 		}
 	],
 	"sid": 702646782823973
