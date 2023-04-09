@@ -856,14 +856,14 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 311400562831429,
+							"sid": 478319385660143,
 							"parameters": {
 								"object-to-create": "Bullet",
 								"layer": "\"Entities\"",
 								"x": "PilotBody.X",
 								"y": "PilotBody.Y",
 								"create-hierarchy": false,
-								"template-name": "\"\""
+								"template-name": "\"Standard\""
 							}
 						},
 						{
@@ -942,14 +942,6 @@
 											"behaviorType": "Bullet",
 											"parameters": {
 												"angle": "180"
-											}
-										},
-										{
-											"id": "set-mirrored",
-											"objectClass": "Bullet",
-											"sid": 808936717453423,
-											"parameters": {
-												"state": "mirrored"
 											}
 										}
 									],
@@ -1288,14 +1280,14 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 912143314615306,
+							"sid": 423610068881106,
 							"parameters": {
 								"object-to-create": "Bullet",
 								"layer": "\"Entities\"",
 								"x": "MechBody.X",
 								"y": "MechBody.Y + random(-5, 5)",
 								"create-hierarchy": false,
-								"template-name": "\"\""
+								"template-name": "\"Standard\""
 							}
 						},
 						{
@@ -1374,14 +1366,6 @@
 											"behaviorType": "Bullet",
 											"parameters": {
 												"angle": "180"
-											}
-										},
-										{
-											"id": "set-mirrored",
-											"objectClass": "Bullet",
-											"sid": 298001141733673,
-											"parameters": {
-												"state": "mirrored"
 											}
 										}
 									],
@@ -1614,6 +1598,33 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Bullet",
+							"sid": 774410871989548,
+							"parameters": {
+								"object": "SmallLockDoor"
+							}
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "SmallLockDoor",
+							"sid": 396578397736197,
+							"behaviorType": "Solid"
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Bullet",
+							"sid": 110102866469300
+						}
+					],
+					"sid": 205880335134494
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-timer",
 							"objectClass": "Bullet",
 							"sid": 757467833141655,
@@ -1631,6 +1642,72 @@
 						}
 					],
 					"sid": 591208355729937
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Bullet",
+							"sid": 311030162914653,
+							"parameters": {
+								"object": "Enemies"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Enemies",
+							"sid": 500878620337530,
+							"parameters": {
+								"instance-variable": "healthCurrent",
+								"value": "Bullet.power"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Bullet",
+							"sid": 186279175240245
+						},
+						{
+							"id": "flash",
+							"objectClass": "Enemies",
+							"sid": 810121077357750,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.05",
+								"off-time": "0.05",
+								"duration": "0.2"
+							}
+						}
+					],
+					"sid": 490635791443511,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemies",
+									"sid": 784224492025607,
+									"parameters": {
+										"instance-variable": "healthCurrent",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Enemies",
+									"sid": 111927686476199
+								}
+							],
+							"sid": 531767143807941
+						}
+					]
 				}
 			],
 			"sid": 698599934526377

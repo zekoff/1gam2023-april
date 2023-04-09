@@ -43,6 +43,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
@@ -52,6 +59,13 @@
 			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -99,8 +113,9 @@
 			"Keyboard",
 			"GrappleRope",
 			"Bullet",
-			"PilotLockDoor",
-			"Computer"
+			"SmallLockDoor",
+			"Computer",
+			"Drone"
 		],
 		"subfolders": []
 	},
@@ -126,7 +141,9 @@
 		}
 	],
 	"families": {
-		"items": [],
+		"items": [
+			"Enemies"
+		],
 		"subfolders": []
 	},
 	"layouts": {

@@ -23,12 +23,12 @@
 							"objectClass": "System",
 							"sid": 451490407749108,
 							"parameters": {
-								"object": "PilotLockDoor"
+								"object": "SmallLockDoor"
 							}
 						},
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "PilotLockDoor",
+							"objectClass": "SmallLockDoor",
 							"sid": 674771763828745,
 							"parameters": {
 								"instance-variable": "lockColor",
@@ -40,7 +40,7 @@
 					"actions": [
 						{
 							"id": "toggle-boolean-instvar",
-							"objectClass": "PilotLockDoor",
+							"objectClass": "SmallLockDoor",
 							"sid": 262830712410264,
 							"parameters": {
 								"instance-variable": "lockStatus"
@@ -59,7 +59,7 @@
 					"objectClass": "System",
 					"sid": 128237774315877,
 					"parameters": {
-						"object": "PilotLockDoor"
+						"object": "SmallLockDoor"
 					}
 				}
 			],
@@ -71,7 +71,7 @@
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "PilotLockDoor",
+							"objectClass": "SmallLockDoor",
 							"sid": 313374123620749,
 							"parameters": {
 								"instance-variable": "lockStatus"
@@ -81,7 +81,7 @@
 					"actions": [
 						{
 							"id": "set-enabled",
-							"objectClass": "PilotLockDoor",
+							"objectClass": "SmallLockDoor",
 							"sid": 953117049170324,
 							"behaviorType": "Solid",
 							"parameters": {
@@ -90,7 +90,7 @@
 						},
 						{
 							"id": "set-animation",
-							"objectClass": "PilotLockDoor",
+							"objectClass": "SmallLockDoor",
 							"sid": 390608286740256,
 							"parameters": {
 								"animation": "\"Closed\"",
@@ -105,7 +105,7 @@
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "PilotLockDoor",
+							"objectClass": "SmallLockDoor",
 							"sid": 632601385936979,
 							"parameters": {
 								"instance-variable": "lockStatus"
@@ -116,7 +116,7 @@
 					"actions": [
 						{
 							"id": "set-enabled",
-							"objectClass": "PilotLockDoor",
+							"objectClass": "SmallLockDoor",
 							"sid": 508902638614962,
 							"behaviorType": "Solid",
 							"parameters": {
@@ -125,7 +125,7 @@
 						},
 						{
 							"id": "set-animation",
-							"objectClass": "PilotLockDoor",
+							"objectClass": "SmallLockDoor",
 							"sid": 573258435829760,
 							"parameters": {
 								"animation": "\"Open\"",
@@ -134,6 +134,104 @@
 						}
 					],
 					"sid": 814408229789617
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 171171130006236,
+					"parameters": {
+						"object": "Computer"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 193399326283091,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Computer",
+							"sid": 809823552168696,
+							"parameters": {
+								"instance-variable": "lockColor",
+								"comparison": 0,
+								"value": "LOCK_GREEN"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Computer",
+							"sid": 487919428743385,
+							"parameters": {
+								"animation": "\"Green\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 373446428899755
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Computer",
+							"sid": 860016085266188,
+							"parameters": {
+								"instance-variable": "lockColor",
+								"comparison": 0,
+								"value": "LOCK_RED"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Computer",
+							"sid": 568023709850393,
+							"parameters": {
+								"animation": "\"Red\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 947815021593595
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Computer",
+							"sid": 824600210278179,
+							"parameters": {
+								"instance-variable": "lockColor",
+								"comparison": 0,
+								"value": "LOCK_BLUE"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Computer",
+							"sid": 932120670608686,
+							"parameters": {
+								"animation": "\"Blue\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 161519114770199
 				}
 			]
 		}

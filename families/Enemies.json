@@ -1,0 +1,32 @@
+{
+	"name": "Enemies",
+	"plugin-id": "Sprite",
+	"sid": 614724835602610,
+	"instanceVariables": [
+		{
+			"name": "healthCurrent",
+			"type": "number",
+			"desc": "Current health points of enemy.",
+			"show": true,
+			"sid": 429432497825122
+		},
+		{
+			"name": "healthMaximum",
+			"type": "number",
+			"desc": "Maximum health points of enemy.",
+			"show": true,
+			"sid": 521103810933266
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 672550499196797
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Drone"
+	]
+}
