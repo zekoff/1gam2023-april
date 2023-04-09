@@ -77,6 +77,50 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "is-in-touch",
+							"objectClass": "Touch",
+							"sid": 289066567173263
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 142298705432792,
+							"parameters": {
+								"layer": "\"Touch Controls\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 345797741239395
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 583153527431997
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 287631278285264,
+							"parameters": {
+								"layer": "\"Touch Controls\"",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 635380209154026
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "every-tick",
 							"objectClass": "System",
 							"sid": 987170093668648
@@ -212,6 +256,14 @@
 									"parameters": {
 										"key": 38
 									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 261789084589634,
+									"parameters": {
+										"object": "JumpButton"
+									}
 								}
 							],
 							"actions": [
@@ -246,6 +298,14 @@
 									"sid": 235760137518870,
 									"parameters": {
 										"key": 32
+									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 440872379450857,
+									"parameters": {
+										"object": "FireButton"
 									}
 								}
 							],
@@ -306,6 +366,14 @@
 									"parameters": {
 										"key": 39
 									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 779531519911611,
+									"parameters": {
+										"object": "RightButton"
+									}
 								}
 							],
 							"actions": [
@@ -348,6 +416,14 @@
 									"parameters": {
 										"key": 37
 									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 442501283477889,
+									"parameters": {
+										"object": "LeftButton"
+									}
 								}
 							],
 							"actions": [
@@ -378,6 +454,14 @@
 									"sid": 681456400079327,
 									"parameters": {
 										"key": 38
+									}
+								},
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 413039151705082,
+									"parameters": {
+										"object": "JumpButton"
 									}
 								}
 							],
@@ -433,6 +517,14 @@
 									"sid": 858037231228081,
 									"parameters": {
 										"key": 88
+									}
+								},
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 842443511400275,
+									"parameters": {
+										"object": "InteractButton"
 									}
 								}
 							],
@@ -510,6 +602,14 @@
 									"parameters": {
 										"key": 38
 									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 453125749517078,
+									"parameters": {
+										"object": "JumpButton"
+									}
 								}
 							],
 							"actions": [
@@ -544,6 +644,14 @@
 									"sid": 507515343637117,
 									"parameters": {
 										"key": 32
+									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 954990844873015,
+									"parameters": {
+										"object": "FireButton"
 									}
 								}
 							],
@@ -604,6 +712,14 @@
 									"parameters": {
 										"key": 39
 									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 155471437296399,
+									"parameters": {
+										"object": "RightButton"
+									}
 								}
 							],
 							"actions": [
@@ -646,6 +762,14 @@
 									"parameters": {
 										"key": 37
 									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 102301970138984,
+									"parameters": {
+										"object": "LeftButton"
+									}
 								}
 							],
 							"actions": [
@@ -676,6 +800,14 @@
 									"sid": 863415503152024,
 									"parameters": {
 										"key": 88
+									}
+								},
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 111994674000657,
+									"parameters": {
+										"object": "InteractButton"
 									}
 								}
 							],
