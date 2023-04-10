@@ -9,6 +9,11 @@
 			"behaviorId": "Turret",
 			"name": "Turret",
 			"sid": 861259889484924
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 760739929542442
 		}
 	],
 	"effectTypes": [],

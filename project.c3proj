@@ -57,6 +57,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
@@ -177,7 +184,8 @@
 	],
 	"families": {
 		"items": [
-			"Enemies"
+			"Enemies",
+			"PlayerBodies"
 		],
 		"subfolders": []
 	},

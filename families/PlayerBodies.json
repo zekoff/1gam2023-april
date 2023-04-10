@@ -1,0 +1,12 @@
+{
+	"name": "PlayerBodies",
+	"plugin-id": "Sprite",
+	"sid": 370916773275269,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"MechBody",
+		"PilotBody"
+	]
+}

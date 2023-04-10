@@ -27,19 +27,10 @@
 				{
 					"id": "add-object-to-target",
 					"objectClass": "DroneTurret",
-					"sid": 893163191063187,
+					"sid": 586441848082053,
 					"behaviorType": "Turret",
 					"parameters": {
-						"target": "PilotBody"
-					}
-				},
-				{
-					"id": "add-object-to-target",
-					"objectClass": "DroneTurret",
-					"sid": 503899795171185,
-					"behaviorType": "Turret",
-					"parameters": {
-						"target": "MechBody"
+						"target": "PlayerBodies"
 					}
 				}
 			],
@@ -1879,46 +1870,73 @@
 							"behaviorType": "Turret"
 						}
 					],
-					"actions": [
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 902725438467135,
-							"parameters": {
-								"object-to-create": "EnemyBullet",
-								"layer": "\"Entities\"",
-								"x": "Drone.X",
-								"y": "Drone.Y",
-								"create-hierarchy": false,
-								"template-name": "\"Standard\""
-							}
-						}
-					],
+					"actions": [],
 					"sid": 431981207737669,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "pick-last-created",
-									"objectClass": "System",
-									"sid": 281489318572209,
+									"id": "pick-by-unique-id",
+									"objectClass": "PlayerBodies",
+									"sid": 425024726169400,
 									"parameters": {
-										"object": "EnemyBullet"
+										"unique-id": "DroneTurret.Turret.TargetUID"
+									}
+								},
+								{
+									"id": "has-los-to-object",
+									"objectClass": "DroneTurret",
+									"sid": 678469346808115,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "PlayerBodies",
+										"image-point": "0"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-angle",
-									"objectClass": "EnemyBullet",
-									"sid": 337140218820427,
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 815982256181485,
 									"parameters": {
-										"angle": "DroneTurret.Angle"
+										"object-to-create": "EnemyBullet",
+										"layer": "\"Entities\"",
+										"x": "Drone.X",
+										"y": "Drone.Y",
+										"create-hierarchy": false,
+										"template-name": "\"Standard\""
 									}
 								}
 							],
-							"sid": 870322092158283
+							"sid": 687638486441947,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-last-created",
+											"objectClass": "System",
+											"sid": 578510099579359,
+											"parameters": {
+												"object": "EnemyBullet"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle",
+											"objectClass": "EnemyBullet",
+											"sid": 330265188843044,
+											"parameters": {
+												"angle": "DroneTurret.Angle"
+											}
+										}
+									],
+									"sid": 533871493429931
+								}
+							]
 						}
 					]
 				},
