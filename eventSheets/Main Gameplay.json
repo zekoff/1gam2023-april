@@ -23,6 +23,24 @@
 						"instance-variable": "zoom",
 						"value": "ZOOM_PILOT"
 					}
+				},
+				{
+					"id": "add-object-to-target",
+					"objectClass": "DroneTurret",
+					"sid": 893163191063187,
+					"behaviorType": "Turret",
+					"parameters": {
+						"target": "PilotBody"
+					}
+				},
+				{
+					"id": "add-object-to-target",
+					"objectClass": "DroneTurret",
+					"sid": 503899795171185,
+					"behaviorType": "Turret",
+					"parameters": {
+						"target": "MechBody"
+					}
 				}
 			],
 			"sid": 277103336315007
@@ -990,7 +1008,7 @@
 							"objectClass": "System",
 							"sid": 478319385660143,
 							"parameters": {
-								"object-to-create": "Bullet",
+								"object-to-create": "PlayerBullet",
 								"layer": "\"Entities\"",
 								"x": "PilotBody.X",
 								"y": "PilotBody.Y",
@@ -1029,14 +1047,14 @@
 									"objectClass": "System",
 									"sid": 733253189539158,
 									"parameters": {
-										"object": "Bullet"
+										"object": "PlayerBullet"
 									}
 								}
 							],
 							"actions": [
 								{
 									"id": "set-speed",
-									"objectClass": "Bullet",
+									"objectClass": "PlayerBullet",
 									"sid": 738659350409059,
 									"behaviorType": "Bullet",
 									"parameters": {
@@ -1045,7 +1063,7 @@
 								},
 								{
 									"id": "start-timer",
-									"objectClass": "Bullet",
+									"objectClass": "PlayerBullet",
 									"sid": 659096382153567,
 									"behaviorType": "Timer",
 									"parameters": {
@@ -1069,7 +1087,7 @@
 									"actions": [
 										{
 											"id": "set-angle-of-motion",
-											"objectClass": "Bullet",
+											"objectClass": "PlayerBullet",
 											"sid": 186153022872676,
 											"behaviorType": "Bullet",
 											"parameters": {
@@ -1091,7 +1109,7 @@
 									"actions": [
 										{
 											"id": "set-angle-of-motion",
-											"objectClass": "Bullet",
+											"objectClass": "PlayerBullet",
 											"sid": 459954068888285,
 											"behaviorType": "Bullet",
 											"parameters": {
@@ -1414,7 +1432,7 @@
 							"objectClass": "System",
 							"sid": 423610068881106,
 							"parameters": {
-								"object-to-create": "Bullet",
+								"object-to-create": "PlayerBullet",
 								"layer": "\"Entities\"",
 								"x": "MechBody.X",
 								"y": "MechBody.Y + random(-5, 5)",
@@ -1453,14 +1471,14 @@
 									"objectClass": "System",
 									"sid": 246147853837538,
 									"parameters": {
-										"object": "Bullet"
+										"object": "PlayerBullet"
 									}
 								}
 							],
 							"actions": [
 								{
 									"id": "set-speed",
-									"objectClass": "Bullet",
+									"objectClass": "PlayerBullet",
 									"sid": 796853065138687,
 									"behaviorType": "Bullet",
 									"parameters": {
@@ -1469,7 +1487,7 @@
 								},
 								{
 									"id": "start-timer",
-									"objectClass": "Bullet",
+									"objectClass": "PlayerBullet",
 									"sid": 384231239662700,
 									"behaviorType": "Timer",
 									"parameters": {
@@ -1493,7 +1511,7 @@
 									"actions": [
 										{
 											"id": "set-angle-of-motion",
-											"objectClass": "Bullet",
+											"objectClass": "PlayerBullet",
 											"sid": 604913829024178,
 											"behaviorType": "Bullet",
 											"parameters": {
@@ -1515,7 +1533,7 @@
 									"actions": [
 										{
 											"id": "set-angle-of-motion",
-											"objectClass": "Bullet",
+											"objectClass": "PlayerBullet",
 											"sid": 430812505161097,
 											"behaviorType": "Bullet",
 											"parameters": {
@@ -1710,7 +1728,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "Bullet",
+							"objectClass": "PlayerBullet",
 							"sid": 616011169450110,
 							"parameters": {
 								"object": "OryxScifiTilemap"
@@ -1720,7 +1738,7 @@
 					"actions": [
 						{
 							"id": "destroy",
-							"objectClass": "Bullet",
+							"objectClass": "PlayerBullet",
 							"sid": 872427536794476
 						}
 					],
@@ -1731,7 +1749,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "Bullet",
+							"objectClass": "PlayerBullet",
 							"sid": 774410871989548,
 							"parameters": {
 								"object": "SmallLockDoor"
@@ -1747,7 +1765,7 @@
 					"actions": [
 						{
 							"id": "destroy",
-							"objectClass": "Bullet",
+							"objectClass": "PlayerBullet",
 							"sid": 110102866469300
 						}
 					],
@@ -1758,7 +1776,7 @@
 					"conditions": [
 						{
 							"id": "on-timer",
-							"objectClass": "Bullet",
+							"objectClass": "PlayerBullet",
 							"sid": 757467833141655,
 							"behaviorType": "Timer",
 							"parameters": {
@@ -1769,7 +1787,7 @@
 					"actions": [
 						{
 							"id": "destroy",
-							"objectClass": "Bullet",
+							"objectClass": "PlayerBullet",
 							"sid": 521776701922475
 						}
 					],
@@ -1780,7 +1798,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "Bullet",
+							"objectClass": "PlayerBullet",
 							"sid": 311030162914653,
 							"parameters": {
 								"object": "Enemies"
@@ -1794,12 +1812,12 @@
 							"sid": 500878620337530,
 							"parameters": {
 								"instance-variable": "healthCurrent",
-								"value": "Bullet.power"
+								"value": "PlayerBullet.power"
 							}
 						},
 						{
 							"id": "destroy",
-							"objectClass": "Bullet",
+							"objectClass": "PlayerBullet",
 							"sid": 186279175240245
 						},
 						{
@@ -1843,6 +1861,94 @@
 				}
 			],
 			"sid": 698599934526377
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy Events",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-shoot",
+							"objectClass": "DroneTurret",
+							"sid": 967813952600621,
+							"behaviorType": "Turret"
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 902725438467135,
+							"parameters": {
+								"object-to-create": "EnemyBullet",
+								"layer": "\"Entities\"",
+								"x": "Drone.X",
+								"y": "Drone.Y",
+								"create-hierarchy": false,
+								"template-name": "\"Standard\""
+							}
+						}
+					],
+					"sid": 431981207737669,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-last-created",
+									"objectClass": "System",
+									"sid": 281489318572209,
+									"parameters": {
+										"object": "EnemyBullet"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle",
+									"objectClass": "EnemyBullet",
+									"sid": 337140218820427,
+									"parameters": {
+										"angle": "DroneTurret.Angle"
+									}
+								}
+							],
+							"sid": 870322092158283
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 753145604818867,
+							"parameters": {
+								"object": "Drone"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "DroneTurret",
+							"sid": 788297541797018,
+							"parameters": {
+								"object": "Drone",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 353884960243492
+				}
+			],
+			"sid": 236999979525116
 		}
 	],
 	"sid": 833620024739152

@@ -85,6 +85,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Turret",
+			"name": "Turret",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "destroy",
 			"name": "Destroy outside layout",
 			"author": "Scirra",
@@ -119,10 +126,12 @@
 			"GrappleHook",
 			"Keyboard",
 			"GrappleRope",
-			"Bullet",
+			"PlayerBullet",
 			"SmallLockDoor",
 			"Computer",
-			"Drone"
+			"Drone",
+			"EnemyBullet",
+			"DroneTurret"
 		],
 		"subfolders": [
 			{
@@ -157,6 +166,12 @@
 			"members": [
 				"GrappleHook",
 				"GrappleRope"
+			]
+		},
+		{
+			"members": [
+				"Drone",
+				"DroneTurret"
 			]
 		}
 	],
