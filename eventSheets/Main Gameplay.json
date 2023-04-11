@@ -2066,6 +2066,92 @@
 				}
 			],
 			"sid": 236999979525116
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "UI",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Text UI",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 187216782771759
+								}
+							],
+							"actions": [],
+							"sid": 933077802122933,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "UiText",
+											"sid": 534293315931656,
+											"parameters": {
+												"instance-variable": "handle",
+												"comparison": 0,
+												"value": "\"Pilot Health\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "UiText",
+											"sid": 627333031599779,
+											"parameters": {
+												"text": "\"Pilot Health: \" & PilotBody.healthCurrent & \" / \" &PilotBody.healthMax"
+											}
+										}
+									],
+									"sid": 360438080350653
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "UiText",
+											"sid": 204020637739511,
+											"parameters": {
+												"instance-variable": "handle",
+												"comparison": 0,
+												"value": "\"Mech Health\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "UiText",
+											"sid": 954977494473831,
+											"parameters": {
+												"text": "\"Mech Health: \" & MechBody.healthCurrent & \" / \" & MechBody.healthMax"
+											}
+										}
+									],
+									"sid": 336891493600650
+								}
+							]
+						}
+					],
+					"sid": 548977703256079
+				}
+			],
+			"sid": 565080358830722
 		}
 	],
 	"sid": 833620024739152

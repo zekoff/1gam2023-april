@@ -22,6 +22,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Tilemap",
 			"name": "Tilemap",
 			"author": "Scirra",
@@ -138,7 +145,8 @@
 			"Computer",
 			"Drone",
 			"EnemyBullet",
-			"DroneTurret"
+			"DroneTurret",
+			"UiText"
 		],
 		"subfolders": [
 			{
