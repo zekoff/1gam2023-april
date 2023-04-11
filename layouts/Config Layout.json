@@ -821,6 +821,8 @@
 					},
 					"uid": 5,
 					"instanceVariables": {
+						"healthCurrent": 100,
+						"healthMax": 100,
 						"canFire": true
 					},
 					"behaviors": {
@@ -899,6 +901,8 @@
 					},
 					"uid": 7,
 					"instanceVariables": {
+						"healthCurrent": 5,
+						"healthMax": 5,
 						"canFire": true
 					},
 					"behaviors": {

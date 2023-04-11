@@ -2,8 +2,29 @@
 	"name": "PlayerBodies",
 	"plugin-id": "Sprite",
 	"sid": 370916773275269,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "healthCurrent",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 761282074362091
+		},
+		{
+			"name": "healthMax",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 734073665096757
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 411532112730836
+		}
+	],
 	"effectTypes": [],
 	"members": [
 		"MechBody",

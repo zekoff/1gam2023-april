@@ -14,11 +14,6 @@
 	],
 	"behaviorTypes": [
 		{
-			"behaviorId": "Platform",
-			"name": "Platform",
-			"sid": 836541319583907
-		},
-		{
 			"behaviorId": "Timer",
 			"name": "Timer",
 			"sid": 497673845200672

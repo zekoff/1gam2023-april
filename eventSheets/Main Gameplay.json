@@ -279,7 +279,7 @@
 								{
 									"id": "simulate-control",
 									"objectClass": "PilotBody",
-									"sid": 168994289179076,
+									"sid": 785249498211700,
 									"behaviorType": "Platform",
 									"parameters": {
 										"control": "jump"
@@ -483,7 +483,7 @@
 										{
 											"id": "is-on-floor",
 											"objectClass": "PilotBody",
-											"sid": 710873468654477,
+											"sid": 994304493809337,
 											"behaviorType": "Platform",
 											"isInverted": true
 										},
@@ -625,7 +625,7 @@
 								{
 									"id": "simulate-control",
 									"objectClass": "MechBody",
-									"sid": 545177212551410,
+									"sid": 990529678622757,
 									"behaviorType": "Platform",
 									"parameters": {
 										"control": "jump"
@@ -829,7 +829,7 @@
 										{
 											"id": "is-on-floor",
 											"objectClass": "MechBody",
-											"sid": 547482125201105,
+											"sid": 560932061887851,
 											"behaviorType": "Platform"
 										}
 									],
@@ -874,7 +874,7 @@
 						{
 							"id": "set-vector-y",
 							"objectClass": "PilotBody",
-							"sid": 710932773238094,
+							"sid": 808181168850736,
 							"behaviorType": "Platform",
 							"parameters": {
 								"vector-y": "-300"
@@ -1230,7 +1230,7 @@
 						{
 							"id": "simulate-control",
 							"objectClass": "PilotBody",
-							"sid": 188051285901616,
+							"sid": 303814671837044,
 							"behaviorType": "Platform",
 							"parameters": {
 								"control": "right"
@@ -1262,7 +1262,7 @@
 						{
 							"id": "simulate-control",
 							"objectClass": "PilotBody",
-							"sid": 403889345741173,
+							"sid": 134247730106744,
 							"behaviorType": "Platform",
 							"parameters": {
 								"control": "left"
@@ -1347,7 +1347,7 @@
 						{
 							"id": "set-enabled",
 							"objectClass": "PilotBody",
-							"sid": 480137920829440,
+							"sid": 434162531444512,
 							"behaviorType": "Platform",
 							"parameters": {
 								"state": "enabled"
@@ -1387,7 +1387,7 @@
 						{
 							"id": "set-enabled",
 							"objectClass": "PilotBody",
-							"sid": 404620224685101,
+							"sid": 746353102757439,
 							"behaviorType": "Platform",
 							"parameters": {
 								"state": "disabled"
@@ -1579,7 +1579,7 @@
 						{
 							"id": "simulate-control",
 							"objectClass": "MechBody",
-							"sid": 111411222081548,
+							"sid": 535334125617928,
 							"behaviorType": "Platform",
 							"parameters": {
 								"control": "right"
@@ -1611,7 +1611,7 @@
 						{
 							"id": "simulate-control",
 							"objectClass": "MechBody",
-							"sid": 949893472702145,
+							"sid": 840608014292795,
 							"behaviorType": "Platform",
 							"parameters": {
 								"control": "left"
@@ -1847,6 +1847,94 @@
 								}
 							],
 							"sid": 531767143807941
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "EnemyBullet",
+							"sid": 466969399852948,
+							"parameters": {
+								"object": "PlayerBodies"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "EnemyBullet",
+							"sid": 224006325396218
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "PlayerBodies",
+							"sid": 984644836075674,
+							"parameters": {
+								"instance-variable": "healthCurrent",
+								"value": "EnemyBullet.power"
+							}
+						},
+						{
+							"id": "set-vector-y",
+							"objectClass": "PlayerBodies",
+							"sid": 873039762338233,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-y": "PlayerBodies.Platform.VectorY - 50"
+							}
+						}
+					],
+					"sid": 581867715995059,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "evaluate-expression",
+									"objectClass": "System",
+									"sid": 177198124775459,
+									"parameters": {
+										"value": "PlayerBodies.X > EnemyBullet.X"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-vector-x",
+									"objectClass": "PlayerBodies",
+									"sid": 325167969669760,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-x": "PlayerBodies.Platform.VectorX + (PLAYER_KNOCKBACK_FACTOR / PlayerBodies.healthMax)"
+									}
+								}
+							],
+							"sid": 206342290873241
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 575683798958994
+								}
+							],
+							"actions": [
+								{
+									"id": "set-vector-x",
+									"objectClass": "PlayerBodies",
+									"sid": 987590898622734,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-x": "PlayerBodies.Platform.VectorX - (PLAYER_KNOCKBACK_FACTOR / PlayerBodies.healthMax)"
+									}
+								}
+							],
+							"sid": 507565444303458
 						}
 					]
 				}

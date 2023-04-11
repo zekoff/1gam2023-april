@@ -95,11 +95,21 @@
 			"eventType": "variable",
 			"name": "MECH_SHOT_DEVIATION",
 			"type": "number",
-			"initialValue": "10",
+			"initialValue": "5",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": true,
 			"sid": 654175230335868
+		},
+		{
+			"eventType": "variable",
+			"name": "PLAYER_KNOCKBACK_FACTOR",
+			"type": "number",
+			"initialValue": "10000",
+			"comment": "Amount of knockback to impart to player when struck by bullet (which will be divided by max health).",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 185329283461960
 		}
 	],
 	"sid": 702646782823973
