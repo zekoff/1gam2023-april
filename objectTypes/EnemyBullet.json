@@ -3,39 +3,8 @@
 	"plugin-id": "Sprite",
 	"sid": 736720775500213,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "lifetime",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 987236372778081
-		},
-		{
-			"name": "power",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 487020775372893
-		}
-	],
-	"behaviorTypes": [
-		{
-			"behaviorId": "destroy",
-			"name": "DestroyOutsideLayout",
-			"sid": 347056117029533
-		},
-		{
-			"behaviorId": "Timer",
-			"name": "Timer",
-			"sid": 129147546367819
-		},
-		{
-			"behaviorId": "Bullet",
-			"name": "Bullet",
-			"sid": 742528882999696
-		}
-	],
+	"instanceVariables": [],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [

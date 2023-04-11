@@ -439,14 +439,11 @@
 							},
 							"uid": 38,
 							"instanceVariables": {
-								"lifetime": 1,
+								"lifetime": 3,
 								"power": 1
 							},
 							"behaviors": {
 								"DestroyOutsideLayout": {
-									"properties": {}
-								},
-								"Timer": {
 									"properties": {}
 								},
 								"Bullet": {
@@ -459,6 +456,9 @@
 										"step": false,
 										"enabled": true
 									}
+								},
+								"Timer": {
+									"properties": {}
 								}
 							},
 							"template": {
@@ -518,10 +518,6 @@
 												"state": []
 											},
 											{
-												"key": "Timer",
-												"state": []
-											},
-											{
 												"key": "Bullet",
 												"state": [
 													[
@@ -553,6 +549,10 @@
 														true
 													]
 												]
+											},
+											{
+												"key": "Timer",
+												"state": []
 											}
 										]
 									},
@@ -684,7 +684,7 @@
 										"rate-of-fire": 1,
 										"rotate": true,
 										"rotate-speed": 720,
-										"target-mode": "first-in-range",
+										"target-mode": "nearest",
 										"predictive-aim": true,
 										"projectile-speed": 100,
 										"use-collision-cells": true,
@@ -1266,9 +1266,13 @@
 					},
 					"uid": 22,
 					"instanceVariables": {
+						"lifetime": 1,
 						"power": 10
 					},
 					"behaviors": {
+						"DestroyOutsideLayout": {
+							"properties": {}
+						},
 						"Bullet": {
 							"properties": {
 								"speed": 400,
@@ -1279,9 +1283,6 @@
 								"step": false,
 								"enabled": true
 							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
 						},
 						"Timer": {
 							"properties": {}
@@ -1325,6 +1326,10 @@
 										"key": "instance-variable",
 										"state": [
 											{
+												"iv": "lifetime",
+												"state": true
+											},
+											{
 												"iv": "power",
 												"state": true
 											}
@@ -1335,6 +1340,10 @@
 							{
 								"id": "behavior",
 								"component": [
+									{
+										"key": "DestroyOutsideLayout",
+										"state": []
+									},
 									{
 										"key": "Bullet",
 										"state": [
@@ -1367,10 +1376,6 @@
 												true
 											]
 										]
-									},
-									{
-										"key": "DestroyOutsideLayout",
-										"state": []
 									},
 									{
 										"key": "Timer",

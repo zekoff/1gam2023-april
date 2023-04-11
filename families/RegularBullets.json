@@ -1,0 +1,43 @@
+{
+	"name": "RegularBullets",
+	"plugin-id": "Sprite",
+	"sid": 414779509253480,
+	"instanceVariables": [
+		{
+			"name": "lifetime",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 485188403945952
+		},
+		{
+			"name": "power",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 322813923464236
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 667941387075689
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 655039874595763
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 278378925880109
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"PlayerBullet",
+		"EnemyBullet"
+	]
+}

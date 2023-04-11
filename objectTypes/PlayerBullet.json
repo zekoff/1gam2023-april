@@ -3,32 +3,8 @@
 	"plugin-id": "Sprite",
 	"sid": 521078844623451,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "power",
-			"type": "number",
-			"desc": "Damage the bullet causes when it strikes something.",
-			"show": true,
-			"sid": 672111151863811
-		}
-	],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Bullet",
-			"name": "Bullet",
-			"sid": 214959315172885
-		},
-		{
-			"behaviorId": "destroy",
-			"name": "DestroyOutsideLayout",
-			"sid": 466267485398685
-		},
-		{
-			"behaviorId": "Timer",
-			"name": "Timer",
-			"sid": 331358144482091
-		}
-	],
+	"instanceVariables": [],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [

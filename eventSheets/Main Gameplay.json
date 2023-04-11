@@ -1046,7 +1046,7 @@
 								{
 									"id": "set-speed",
 									"objectClass": "PlayerBullet",
-									"sid": 738659350409059,
+									"sid": 457975283585508,
 									"behaviorType": "Bullet",
 									"parameters": {
 										"speed": "800"
@@ -1055,7 +1055,7 @@
 								{
 									"id": "start-timer",
 									"objectClass": "PlayerBullet",
-									"sid": 659096382153567,
+									"sid": 923938850381452,
 									"behaviorType": "Timer",
 									"parameters": {
 										"duration": ".3",
@@ -1079,7 +1079,7 @@
 										{
 											"id": "set-angle-of-motion",
 											"objectClass": "PlayerBullet",
-											"sid": 186153022872676,
+											"sid": 221899827696334,
 											"behaviorType": "Bullet",
 											"parameters": {
 												"angle": "180"
@@ -1101,7 +1101,7 @@
 										{
 											"id": "set-angle-of-motion",
 											"objectClass": "PlayerBullet",
-											"sid": 459954068888285,
+											"sid": 770572651067536,
 											"behaviorType": "Bullet",
 											"parameters": {
 												"angle": "0"
@@ -1470,7 +1470,7 @@
 								{
 									"id": "set-speed",
 									"objectClass": "PlayerBullet",
-									"sid": 796853065138687,
+									"sid": 423000863466022,
 									"behaviorType": "Bullet",
 									"parameters": {
 										"speed": "800"
@@ -1479,7 +1479,7 @@
 								{
 									"id": "start-timer",
 									"objectClass": "PlayerBullet",
-									"sid": 384231239662700,
+									"sid": 904870660288365,
 									"behaviorType": "Timer",
 									"parameters": {
 										"duration": ".7",
@@ -1503,10 +1503,10 @@
 										{
 											"id": "set-angle-of-motion",
 											"objectClass": "PlayerBullet",
-											"sid": 604913829024178,
+											"sid": 999040385370458,
 											"behaviorType": "Bullet",
 											"parameters": {
-												"angle": "180"
+												"angle": "180 + random(-MECH_SHOT_DEVIATION, MECH_SHOT_DEVIATION)"
 											}
 										}
 									],
@@ -1525,10 +1525,10 @@
 										{
 											"id": "set-angle-of-motion",
 											"objectClass": "PlayerBullet",
-											"sid": 430812505161097,
+											"sid": 222429856619044,
 											"behaviorType": "Bullet",
 											"parameters": {
-												"angle": "0"
+												"angle": "random(-MECH_SHOT_DEVIATION, MECH_SHOT_DEVIATION)"
 											}
 										}
 									],
@@ -1719,7 +1719,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "PlayerBullet",
+							"objectClass": "RegularBullets",
 							"sid": 616011169450110,
 							"parameters": {
 								"object": "OryxScifiTilemap"
@@ -1729,7 +1729,7 @@
 					"actions": [
 						{
 							"id": "destroy",
-							"objectClass": "PlayerBullet",
+							"objectClass": "RegularBullets",
 							"sid": 872427536794476
 						}
 					],
@@ -1740,7 +1740,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "PlayerBullet",
+							"objectClass": "RegularBullets",
 							"sid": 774410871989548,
 							"parameters": {
 								"object": "SmallLockDoor"
@@ -1756,8 +1756,8 @@
 					"actions": [
 						{
 							"id": "destroy",
-							"objectClass": "PlayerBullet",
-							"sid": 110102866469300
+							"objectClass": "RegularBullets",
+							"sid": 518600239465308
 						}
 					],
 					"sid": 205880335134494
@@ -1767,8 +1767,8 @@
 					"conditions": [
 						{
 							"id": "on-timer",
-							"objectClass": "PlayerBullet",
-							"sid": 757467833141655,
+							"objectClass": "RegularBullets",
+							"sid": 721182126907243,
 							"behaviorType": "Timer",
 							"parameters": {
 								"tag": "\"lifetime\""
@@ -1778,8 +1778,8 @@
 					"actions": [
 						{
 							"id": "destroy",
-							"objectClass": "PlayerBullet",
-							"sid": 521776701922475
+							"objectClass": "RegularBullets",
+							"sid": 572189316607190
 						}
 					],
 					"sid": 591208355729937
@@ -1800,7 +1800,7 @@
 						{
 							"id": "subtract-from-instvar",
 							"objectClass": "Enemies",
-							"sid": 500878620337530,
+							"sid": 335986053758052,
 							"parameters": {
 								"instance-variable": "healthCurrent",
 								"value": "PlayerBullet.power"
@@ -1931,6 +1931,17 @@
 											"sid": 330265188843044,
 											"parameters": {
 												"angle": "DroneTurret.Angle"
+											}
+										},
+										{
+											"id": "start-timer",
+											"objectClass": "EnemyBullet",
+											"sid": 767644567169892,
+											"behaviorType": "Timer",
+											"parameters": {
+												"duration": "EnemyBullet.lifetime",
+												"type": "once",
+												"tag": "\"lifetime\""
 											}
 										}
 									],

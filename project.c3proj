@@ -185,7 +185,8 @@
 	"families": {
 		"items": [
 			"Enemies",
-			"PlayerBodies"
+			"PlayerBodies",
+			"RegularBullets"
 		],
 		"subfolders": []
 	},

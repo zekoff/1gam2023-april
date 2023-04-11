@@ -90,6 +90,16 @@
 			"isStatic": false,
 			"isConstant": true,
 			"sid": 506218660919472
+		},
+		{
+			"eventType": "variable",
+			"name": "MECH_SHOT_DEVIATION",
+			"type": "number",
+			"initialValue": "10",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 654175230335868
 		}
 	],
 	"sid": 702646782823973
