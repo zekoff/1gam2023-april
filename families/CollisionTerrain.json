@@ -1,0 +1,11 @@
+{
+	"name": "CollisionTerrain",
+	"plugin-id": "Sprite",
+	"sid": 305033053179114,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"SmallLockDoor"
+	]
+}

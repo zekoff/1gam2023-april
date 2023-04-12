@@ -2063,6 +2063,310 @@
 						}
 					],
 					"sid": 353884960243492
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Patroller",
+							"sid": 772579185832330,
+							"parameters": {
+								"object": "OryxScifiTilemap"
+							}
+						},
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Patroller",
+							"sid": 582968617715696,
+							"parameters": {
+								"object": "SmallLockDoor"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "toggle-boolean-instvar",
+							"objectClass": "Patroller",
+							"sid": 909485437270767,
+							"parameters": {
+								"instance-variable": "movingRight"
+							}
+						}
+					],
+					"sid": 538249212863426,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "PlayerBodies",
+							"sid": 418260530626621,
+							"parameters": {
+								"which": "nearest",
+								"x": "Patroller.X",
+								"y": "Patroller.Y"
+							}
+						},
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 533313630535634,
+							"parameters": {
+								"value": "distance(Patroller.X, Patroller.Y, PlayerBodies.X, PlayerBodies.Y) < Patroller.targetingRange"
+							}
+						}
+					],
+					"actions": [
+						{
+							"customAction": "ShootAtPlayer",
+							"objectClass": "Patroller",
+							"sid": 662372658599108
+						}
+					],
+					"sid": 296524277222457
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 511838541470164
+						}
+					],
+					"actions": [],
+					"sid": 115266766824783,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Patroller",
+									"sid": 686136103578001,
+									"parameters": {
+										"instance-variable": "movingRight"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Patroller",
+									"sid": 795268540431955,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Patroller",
+									"sid": 422333918558317,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 283880531221288
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 924979260111246
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Patroller",
+									"sid": 691431172706867,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Patroller",
+									"sid": 726208782032473,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 529452106492326
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "Patroller",
+							"sid": 706041722963098,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"cooldown\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Patroller",
+							"sid": 260471319592794,
+							"parameters": {
+								"instance-variable": "canFire",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 859114276777317
+				},
+				{
+					"aceType": "action",
+					"aceName": "ShootAtPlayer",
+					"objectClass": "Patroller",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "custom-ace-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 472498814562765,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "evaluate-expression",
+									"objectClass": "System",
+									"sid": 597026332855892,
+									"parameters": {
+										"value": "PlayerBodies.X < Patroller.X"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Patroller",
+									"sid": 748550884305415,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 156802942192833
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 765134405782901
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Patroller",
+									"sid": 256373422359388,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 238248650020692
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Patroller",
+									"sid": 294217645262303,
+									"parameters": {
+										"instance-variable": "canFire"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 732944396018559,
+									"parameters": {
+										"object-to-create": "EnemyBullet",
+										"layer": "\"Entities\"",
+										"x": "Patroller.X",
+										"y": "Patroller.Y",
+										"create-hierarchy": false,
+										"template-name": "\"Standard\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Patroller",
+									"sid": 748730570021812,
+									"parameters": {
+										"instance-variable": "canFire",
+										"value": "false"
+									}
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "Patroller",
+									"sid": 731814606780075,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "Patroller.shotCooldown",
+										"type": "once",
+										"tag": "\"cooldown\""
+									}
+								}
+							],
+							"sid": 202240390268020,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-last-created",
+											"objectClass": "System",
+											"sid": 128583518078244,
+											"parameters": {
+												"object": "EnemyBullet"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle-of-motion",
+											"objectClass": "EnemyBullet",
+											"sid": 909557220695076,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"angle": "angle(Patroller.X, Patroller.Y, PlayerBodies.X, PlayerBodies.Y)"
+											}
+										}
+									],
+									"sid": 932260536027400
+								}
+							]
+						}
+					]
 				}
 			],
 			"sid": 236999979525116

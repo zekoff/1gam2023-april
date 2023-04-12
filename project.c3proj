@@ -146,7 +146,8 @@
 			"Drone",
 			"EnemyBullet",
 			"DroneTurret",
-			"UiText"
+			"UiText",
+			"Patroller"
 		],
 		"subfolders": [
 			{
@@ -194,7 +195,8 @@
 		"items": [
 			"Enemies",
 			"PlayerBodies",
-			"RegularBullets"
+			"RegularBullets",
+			"CollisionTerrain"
 		],
 		"subfolders": []
 	},

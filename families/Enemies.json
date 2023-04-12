@@ -27,6 +27,7 @@
 	],
 	"effectTypes": [],
 	"members": [
-		"Drone"
+		"Drone",
+		"Patroller"
 	]
 }

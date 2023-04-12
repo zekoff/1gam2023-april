@@ -1,0 +1,134 @@
+{
+	"name": "Patroller",
+	"plugin-id": "Sprite",
+	"sid": 701823212036927,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "canFire",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 738875072359003
+		},
+		{
+			"name": "shotCooldown",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 916753930209958
+		},
+		{
+			"name": "movingRight",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 953288804817915
+		},
+		{
+			"name": "targetingRange",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 261939711685718
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 759352936865388
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 504572323967263
+		},
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 486303819611380
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3169340,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.5820185991429078,
+								0.8190982828899961,
+								1,
+								0.4500563296187371,
+								1,
+								0.13534507580615707,
+								1,
+								0.08333333333333337,
+								0.5,
+								0.25,
+								0.25,
+								0.5,
+								0.041666666666666664,
+								0.75,
+								0.25
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8881172,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.5820185991429078,
+								0.8190982828899961,
+								1,
+								0.4500563296187371,
+								1,
+								0.13534507580615707,
+								1,
+								0.08333333333333337,
+								0.5,
+								0.25,
+								0.25,
+								0.5,
+								0.041666666666666664,
+								0.75,
+								0.25
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 213121217671583,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 2
+			}
+		],
+		"subfolders": []
+	}
+}
