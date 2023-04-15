@@ -10,6 +10,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 845427461903336
+		},
+		{
+			"name": "fuel",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 649628999142371
 		}
 	],
 	"behaviorTypes": [

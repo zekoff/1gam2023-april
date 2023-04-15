@@ -96,6 +96,14 @@
 								"animation": "\"Closed\"",
 								"from": "beginning"
 							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "SmallLockDoor",
+							"sid": 575102193888228,
+							"parameters": {
+								"collisions": "enabled"
+							}
 						}
 					],
 					"sid": 517814596764137
@@ -130,6 +138,14 @@
 							"parameters": {
 								"animation": "\"Open\"",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "SmallLockDoor",
+							"sid": 793688865709573,
+							"parameters": {
+								"collisions": "disabled"
 							}
 						}
 					],

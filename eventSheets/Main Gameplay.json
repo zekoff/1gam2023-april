@@ -19,6 +19,7 @@
 					"id": "set-instvar-value",
 					"objectClass": "Camera",
 					"sid": 241626513382998,
+					"disabled": true,
 					"parameters": {
 						"instance-variable": "zoom",
 						"value": "ZOOM_PILOT"
@@ -32,6 +33,11 @@
 					"parameters": {
 						"target": "PlayerBodies"
 					}
+				},
+				{
+					"customAction": "ExitMech",
+					"objectClass": "MechBody",
+					"sid": 674053625355176
 				}
 			],
 			"sid": 277103336315007
@@ -549,6 +555,16 @@
 											"sid": 244952282960457,
 											"parameters": {
 												"object": "MechBody"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MechBody",
+											"sid": 991370413225923,
+											"parameters": {
+												"instance-variable": "fuel",
+												"comparison": 4,
+												"value": "0"
 											}
 										}
 									],
@@ -1443,10 +1459,10 @@
 						{
 							"id": "start-timer",
 							"objectClass": "MechBody",
-							"sid": 959751575108952,
+							"sid": 952605076564968,
 							"behaviorType": "Timer",
 							"parameters": {
-								"duration": ".05",
+								"duration": ".02",
 								"type": "once",
 								"tag": "\"canFire\""
 							}
@@ -1641,6 +1657,15 @@
 					"conditions": [],
 					"actions": [
 						{
+							"id": "set-animation",
+							"objectClass": "MechSprite",
+							"sid": 439068994448474,
+							"parameters": {
+								"animation": "\"Inactive\"",
+								"from": "beginning"
+							}
+						},
+						{
 							"id": "set-instvar-value",
 							"objectClass": "PlayerController",
 							"sid": 296483687526772,
@@ -1700,9 +1725,70 @@
 							"customAction": "DisablePilot",
 							"objectClass": "PilotBody",
 							"sid": 426544299180739
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "MechSprite",
+							"sid": 619548860582005,
+							"parameters": {
+								"animation": "\"Active\"",
+								"from": "beginning"
+							}
 						}
 					],
 					"sid": 561012418383507
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "PlayerController",
+							"sid": 471132227705771,
+							"parameters": {
+								"instance-variable": "activeEntity",
+								"comparison": 0,
+								"value": "ACTIVE_ENTITY_MECH"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "MechBody",
+							"sid": 696887204619009,
+							"parameters": {
+								"instance-variable": "fuel",
+								"value": "2 * dt"
+							}
+						}
+					],
+					"sid": 212289420508419,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MechBody",
+									"sid": 798902215030065,
+									"parameters": {
+										"instance-variable": "fuel",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"customAction": "ExitMech",
+									"objectClass": "MechBody",
+									"sid": 414395844009853
+								}
+							],
+							"sid": 368023851365683
+						}
+					]
 				}
 			],
 			"sid": 463669855263307
@@ -2101,77 +2187,47 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "pick-nearestfurthest",
-							"objectClass": "PlayerBodies",
-							"sid": 418260530626621,
-							"parameters": {
-								"which": "nearest",
-								"x": "Patroller.X",
-								"y": "Patroller.Y"
-							}
-						},
-						{
-							"id": "evaluate-expression",
+							"id": "for-each",
 							"objectClass": "System",
-							"sid": 533313630535634,
+							"sid": 800801511611250,
 							"parameters": {
-								"value": "distance(Patroller.X, Patroller.Y, PlayerBodies.X, PlayerBodies.Y) < Patroller.targetingRange"
+								"object": "Patroller"
 							}
-						}
-					],
-					"actions": [
-						{
-							"customAction": "ShootAtPlayer",
-							"objectClass": "Patroller",
-							"sid": 662372658599108
-						}
-					],
-					"sid": 296524277222457
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 511838541470164
 						}
 					],
 					"actions": [],
-					"sid": 115266766824783,
+					"sid": 296524277222457,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Patroller",
-									"sid": 686136103578001,
+									"id": "pick-nearestfurthest",
+									"objectClass": "PlayerBodies",
+									"sid": 798174347477679,
 									"parameters": {
-										"instance-variable": "movingRight"
+										"which": "nearest",
+										"x": "Patroller.X",
+										"y": "Patroller.Y"
+									}
+								},
+								{
+									"id": "evaluate-expression",
+									"objectClass": "System",
+									"sid": 534841733818420,
+									"parameters": {
+										"value": "distance(Patroller.X, Patroller.Y, PlayerBodies.X, PlayerBodies.Y) < Patroller.targetingRange"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "simulate-control",
+									"customAction": "ShootAtPlayer",
 									"objectClass": "Patroller",
-									"sid": 795268540431955,
-									"behaviorType": "Platform",
-									"parameters": {
-										"control": "right"
-									}
-								},
-								{
-									"id": "set-mirrored",
-									"objectClass": "Patroller",
-									"sid": 422333918558317,
-									"parameters": {
-										"state": "not-mirrored"
-									}
+									"sid": 420688347946957
 								}
 							],
-							"sid": 283880531221288
+							"sid": 569798013863322
 						},
 						{
 							"eventType": "block",
@@ -2179,29 +2235,76 @@
 								{
 									"id": "else",
 									"objectClass": "System",
-									"sid": 924979260111246
+									"sid": 562228502010538
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 994696797235007,
+							"children": [
 								{
-									"id": "simulate-control",
-									"objectClass": "Patroller",
-									"sid": 691431172706867,
-									"behaviorType": "Platform",
-									"parameters": {
-										"control": "left"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Patroller",
+											"sid": 315735955816334,
+											"parameters": {
+												"instance-variable": "movingRight"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "Patroller",
+											"sid": 209863697264634,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "right"
+											}
+										},
+										{
+											"id": "set-mirrored",
+											"objectClass": "Patroller",
+											"sid": 631615913612869,
+											"parameters": {
+												"state": "not-mirrored"
+											}
+										}
+									],
+									"sid": 895979002756797
 								},
 								{
-									"id": "set-mirrored",
-									"objectClass": "Patroller",
-									"sid": 726208782032473,
-									"parameters": {
-										"state": "mirrored"
-									}
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 724335895976218
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "Patroller",
+											"sid": 829936854819143,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "left"
+											}
+										},
+										{
+											"id": "set-mirrored",
+											"objectClass": "Patroller",
+											"sid": 259157659421200,
+											"parameters": {
+												"state": "mirrored"
+											}
+										}
+									],
+									"sid": 703293343805548
 								}
-							],
-							"sid": 529452106492326
+							]
 						}
 					]
 				},
@@ -2448,6 +2551,32 @@
 										}
 									],
 									"sid": 336891493600650
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "UiText",
+											"sid": 692666450358523,
+											"parameters": {
+												"instance-variable": "handle",
+												"comparison": 0,
+												"value": "\"Mech Fuel\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "UiText",
+											"sid": 464269458979101,
+											"parameters": {
+												"text": "\"Mech Fuel: \" & ceil(MechBody.fuel) & \" / \" & 100"
+											}
+										}
+									],
+									"sid": 476576331932356
 								}
 							]
 						}
@@ -2456,6 +2585,119 @@
 				}
 			],
 			"sid": 565080358830722
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pickups",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Pickup",
+							"sid": 232264125217947,
+							"parameters": {
+								"object": "PlayerBodies"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 595192476131173,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Pickup",
+									"sid": 462624695191815,
+									"parameters": {
+										"animation": "\"Health Pack\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PilotBody",
+									"sid": 894605701871549,
+									"parameters": {
+										"instance-variable": "healthCurrent",
+										"value": "PilotBody.healthMax"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "MechBody",
+									"sid": 784275629613574,
+									"parameters": {
+										"instance-variable": "healthCurrent",
+										"value": "MechBody.healthMax"
+									}
+								}
+							],
+							"sid": 139512505258124
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Pickup",
+									"sid": 622999320609578,
+									"parameters": {
+										"animation": "\"Fuel\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "MechBody",
+									"sid": 139560627285613,
+									"parameters": {
+										"instance-variable": "fuel",
+										"value": "100"
+									}
+								}
+							],
+							"sid": 240999203843888
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Pickup",
+									"sid": 257067390357939,
+									"parameters": {
+										"animation": "\"Treasure\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 799054663162136
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Pickup",
+									"sid": 469090550817914
+								}
+							],
+							"sid": 394621466669817
+						}
+					]
+				}
+			],
+			"sid": 488993146001131
 		}
 	],
 	"sid": 833620024739152

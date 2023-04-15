@@ -147,7 +147,8 @@
 			"EnemyBullet",
 			"DroneTurret",
 			"UiText",
-			"Patroller"
+			"Patroller",
+			"Pickup"
 		],
 		"subfolders": [
 			{

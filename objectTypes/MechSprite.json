@@ -260,8 +260,50 @@
 					}
 				],
 				"sid": 528915341059508,
-				"name": "Animation 2",
+				"name": "Active",
 				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.46875,
+						"originY": 0.84375,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1076475,
+						"collisionPoly": {
+							"points": [
+								0.20580310821533201,
+								0.19650249481201176,
+								0.6932577133178712,
+								0.278512191772461,
+								0.6627765655517576,
+								0.8319744110107422,
+								0.21087512969970698,
+								0.8302902221679687
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Foot",
+								"x": 0.453125,
+								"y": 0.84375
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 671360872651603,
+				"name": "Inactive",
+				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
