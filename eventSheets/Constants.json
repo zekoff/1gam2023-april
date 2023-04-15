@@ -105,11 +105,41 @@
 			"eventType": "variable",
 			"name": "PLAYER_KNOCKBACK_FACTOR",
 			"type": "number",
-			"initialValue": "10000",
+			"initialValue": "20000",
 			"comment": "Amount of knockback to impart to player when struck by bullet (which will be divided by max health).",
 			"isStatic": false,
 			"isConstant": true,
 			"sid": 185329283461960
+		},
+		{
+			"eventType": "variable",
+			"name": "MECH_ENTER_EXIT_TIME",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "Amount of time for camera movement, etc. when entering/exiting mech.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 411195555549009
+		},
+		{
+			"eventType": "variable",
+			"name": "COLLISION_IFRAME_SECONDS",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "Number of seconds the player collision body should be invulnerable after a collision.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 551990793857591
+		},
+		{
+			"eventType": "variable",
+			"name": "MECH_FUEL_BURN_RATE",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "Fuel units to burn per second.",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 951087474313437
 		}
 	],
 	"sid": 702646782823973

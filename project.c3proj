@@ -71,13 +71,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Pin",
-			"name": "Pin",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
 			"author": "Scirra",
@@ -101,6 +94,20 @@
 			"type": "behavior",
 			"id": "Turret",
 			"name": "Turret",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -148,7 +155,8 @@
 			"DroneTurret",
 			"UiText",
 			"Patroller",
-			"Pickup"
+			"Pickup",
+			"SmallExplosion"
 		],
 		"subfolders": [
 			{
@@ -197,7 +205,8 @@
 			"Enemies",
 			"PlayerBodies",
 			"RegularBullets",
-			"CollisionTerrain"
+			"CollisionTerrain",
+			"EnemyCollisionSources"
 		],
 		"subfolders": []
 	},
@@ -303,9 +312,7 @@
 		}
 	},
 	"timelines": {
-		"items": [
-			"Timeline 1"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [],

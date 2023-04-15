@@ -16,16 +16,6 @@
 			],
 			"actions": [
 				{
-					"id": "set-instvar-value",
-					"objectClass": "Camera",
-					"sid": 241626513382998,
-					"disabled": true,
-					"parameters": {
-						"instance-variable": "zoom",
-						"value": "ZOOM_PILOT"
-					}
-				},
-				{
 					"id": "add-object-to-target",
 					"objectClass": "DroneTurret",
 					"sid": 586441848082053,
@@ -79,7 +69,410 @@
 					}
 				}
 			],
-			"sid": 101929101902993
+			"sid": 101929101902993,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "PlayerController",
+							"sid": 458167905955246,
+							"parameters": {
+								"instance-variable": "activeEntity",
+								"comparison": 0,
+								"value": "ACTIVE_ENTITY_MECH"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "PilotBody",
+							"sid": 218991569938365,
+							"parameters": {
+								"object": "MechBody",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Camera",
+							"sid": 886125447701227,
+							"parameters": {
+								"x": "MechBody.X",
+								"y": "MechBody.Y + Camera.yOffsetFromFocal"
+							}
+						}
+					],
+					"sid": 370603036529824
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "PlayerController",
+							"sid": 985782600620284,
+							"parameters": {
+								"instance-variable": "activeEntity",
+								"comparison": 0,
+								"value": "ACTIVE_ENTITY_PILOT"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Camera",
+							"sid": 246558319164923,
+							"parameters": {
+								"x": "PilotBody.X",
+								"y": "PilotBody.Y + Camera.yOffsetFromFocal"
+							}
+						}
+					],
+					"sid": 277406561403766
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "EnemyCollisionSources",
+					"sid": 411752119470510,
+					"parameters": {
+						"object": "PlayerBodies"
+					}
+				}
+			],
+			"actions": [
+				{
+					"customAction": "RespondToCollision",
+					"objectClass": "PlayerBodies",
+					"sid": 182401088212728
+				}
+			],
+			"sid": 342099932472507
+		},
+		{
+			"aceType": "action",
+			"aceName": "SetToMechZoom",
+			"objectClass": "Camera",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "tween-value",
+					"objectClass": "Camera",
+					"sid": 271975569264773,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"zoom\"",
+						"start-value": "Camera.zoom",
+						"end-value": "ZOOM_MECH",
+						"time": "MECH_ENTER_EXIT_TIME",
+						"ease": "easeoutcubic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 963526849229508
+		},
+		{
+			"aceType": "action",
+			"aceName": "SetToPilotZoom",
+			"objectClass": "Camera",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "tween-value",
+					"objectClass": "Camera",
+					"sid": 269780283411719,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"zoom\"",
+						"start-value": "Camera.zoom",
+						"end-value": "ZOOM_PILOT",
+						"time": "MECH_ENTER_EXIT_TIME",
+						"ease": "easeoutcubic",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 681393208166155
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-playing",
+					"objectClass": "Camera",
+					"sid": 423249678955276,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"zoom\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Camera",
+					"sid": 217083259392263,
+					"parameters": {
+						"instance-variable": "zoom",
+						"value": "Camera.Tween.Value(\"zoom\")"
+					}
+				}
+			],
+			"sid": 600349769124780
+		},
+		{
+			"aceType": "action",
+			"aceName": "RespondToCollision",
+			"objectClass": "PlayerBodies",
+			"functionDescription": "Rebound from collision source and flash to show collision damage.",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-vector-y",
+					"objectClass": "PlayerBodies",
+					"sid": 378422412573103,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-y": "PlayerBodies.Platform.VectorY - 50"
+					}
+				}
+			],
+			"sid": 301823082699045,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "PlayerController",
+							"sid": 948644568211151,
+							"parameters": {
+								"instance-variable": "activeEntity",
+								"comparison": 0,
+								"value": "ACTIVE_ENTITY_MECH"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "flash",
+							"objectClass": "MechSprite",
+							"sid": 412747156344520,
+							"disabled": true,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "COLLISION_IFRAME_SECONDS"
+							}
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "MechBody",
+							"sid": 540050257676658,
+							"parameters": {
+								"instance-variable": "healthCurrent",
+								"value": "EnemyCollisionSources.damageCaused"
+							}
+						}
+					],
+					"sid": 213397943088053
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 920963083930425
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "PlayerController",
+							"sid": 934003432050768,
+							"parameters": {
+								"instance-variable": "activeEntity",
+								"comparison": 0,
+								"value": "ACTIVE_ENTITY_PILOT"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 338966414690259,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-flashing",
+									"objectClass": "PilotSprite",
+									"sid": 864962803540144,
+									"behaviorType": "Flash",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "flash",
+									"objectClass": "PilotSprite",
+									"sid": 661569449397706,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "COLLISION_IFRAME_SECONDS"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "PilotBody",
+									"sid": 337696963469217,
+									"parameters": {
+										"instance-variable": "healthCurrent",
+										"value": "EnemyCollisionSources.damageCaused"
+									}
+								}
+							],
+							"sid": 249171722534255
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 422807115593098,
+							"parameters": {
+								"value": "PlayerBodies.X > EnemyCollisionSources.X"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-vector-x",
+							"objectClass": "PlayerBodies",
+							"sid": 875705241036745,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-x": "PlayerBodies.Platform.VectorX + (PLAYER_KNOCKBACK_FACTOR / PlayerBodies.healthMax)"
+							}
+						}
+					],
+					"sid": 921170906062678
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 165313057771622
+						}
+					],
+					"actions": [
+						{
+							"id": "set-vector-x",
+							"objectClass": "PlayerBodies",
+							"sid": 825008810081576,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-x": "PlayerBodies.Platform.VectorX - (PLAYER_KNOCKBACK_FACTOR / PlayerBodies.healthMax)"
+							}
+						}
+					],
+					"sid": 422617917421950
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "EnemyBullet",
+							"sid": 819756528899831
+						}
+					],
+					"sid": 106581272970324
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "PilotBody",
+					"sid": 223950349138061,
+					"parameters": {
+						"instance-variable": "healthCurrent",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 919372443355606
+				}
+			],
+			"sid": 289757538366344
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "SmallExplosion",
+					"sid": 987686796371643,
+					"parameters": {
+						"animation": "\"Animation 1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "SmallExplosion",
+					"sid": 145224479987073
+				}
+			],
+			"sid": 946344436061319
 		},
 		{
 			"eventType": "group",
@@ -176,15 +569,6 @@
 										"group-name": "\"Mech Control\"",
 										"state": "deactivated"
 									}
-								},
-								{
-									"id": "set-position-to-another-object",
-									"objectClass": "Camera",
-									"sid": 291180148586968,
-									"parameters": {
-										"object": "PilotBody",
-										"image-point-optional": "0"
-									}
 								}
 							],
 							"sid": 149144082961452
@@ -220,24 +604,6 @@
 									"parameters": {
 										"group-name": "\"Pilot Control\"",
 										"state": "deactivated"
-									}
-								},
-								{
-									"id": "set-position-to-another-object",
-									"objectClass": "Camera",
-									"sid": 151884073987035,
-									"parameters": {
-										"object": "MechBody",
-										"image-point-optional": "0"
-									}
-								},
-								{
-									"id": "set-position-to-another-object",
-									"objectClass": "PilotBody",
-									"sid": 764383108607499,
-									"parameters": {
-										"object": "MechBody",
-										"image-point-optional": "0"
 									}
 								}
 							],
@@ -566,6 +932,26 @@
 												"comparison": 4,
 												"value": "0"
 											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MechBody",
+											"sid": 737090977494888,
+											"parameters": {
+												"instance-variable": "healthCurrent",
+												"comparison": 4,
+												"value": "0"
+											}
+										},
+										{
+											"id": "is-playing",
+											"objectClass": "Camera",
+											"sid": 812449544767397,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"zoom\""
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [
@@ -847,6 +1233,16 @@
 											"objectClass": "MechBody",
 											"sid": 560932061887851,
 											"behaviorType": "Platform"
+										},
+										{
+											"id": "is-playing",
+											"objectClass": "Camera",
+											"sid": 719306558006357,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"zoom\""
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [
@@ -1678,6 +2074,7 @@
 							"id": "set-instvar-value",
 							"objectClass": "Camera",
 							"sid": 160380294722175,
+							"disabled": true,
 							"parameters": {
 								"instance-variable": "zoom",
 								"value": "ZOOM_PILOT"
@@ -1687,6 +2084,11 @@
 							"customAction": "EnablePilot",
 							"objectClass": "PilotBody",
 							"sid": 872664086134637
+						},
+						{
+							"customAction": "SetToPilotZoom",
+							"objectClass": "Camera",
+							"sid": 121126030619365
 						}
 					],
 					"sid": 951776900126213
@@ -1716,6 +2118,7 @@
 							"id": "set-instvar-value",
 							"objectClass": "Camera",
 							"sid": 196561779334980,
+							"disabled": true,
 							"parameters": {
 								"instance-variable": "zoom",
 								"value": "ZOOM_MECH"
@@ -1734,6 +2137,11 @@
 								"animation": "\"Active\"",
 								"from": "beginning"
 							}
+						},
+						{
+							"customAction": "SetToMechZoom",
+							"objectClass": "Camera",
+							"sid": 859899229834842
 						}
 					],
 					"sid": 561012418383507
@@ -1756,10 +2164,10 @@
 						{
 							"id": "subtract-from-instvar",
 							"objectClass": "MechBody",
-							"sid": 696887204619009,
+							"sid": 866338780361096,
 							"parameters": {
 								"instance-variable": "fuel",
-								"value": "2 * dt"
+								"value": "MECH_FUEL_BURN_RATE * dt"
 							}
 						}
 					],
@@ -1777,6 +2185,16 @@
 										"comparison": 3,
 										"value": "0"
 									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MechBody",
+									"sid": 472468857044079,
+									"parameters": {
+										"instance-variable": "healthCurrent",
+										"comparison": 3,
+										"value": "0"
+									}
 								}
 							],
 							"actions": [
@@ -1786,7 +2204,8 @@
 									"sid": 414395844009853
 								}
 							],
-							"sid": 368023851365683
+							"sid": 368023851365683,
+							"isOrBlock": true
 						}
 					]
 				}
@@ -1930,97 +2349,22 @@
 									"id": "destroy",
 									"objectClass": "Enemies",
 									"sid": 111927686476199
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 486969049698331,
+									"parameters": {
+										"object-to-create": "SmallExplosion",
+										"layer": "\"Entities\"",
+										"x": "Enemies.X",
+										"y": "Enemies.Y",
+										"create-hierarchy": false,
+										"template-name": "\"Standard\""
+									}
 								}
 							],
 							"sid": 531767143807941
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "EnemyBullet",
-							"sid": 466969399852948,
-							"parameters": {
-								"object": "PlayerBodies"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "EnemyBullet",
-							"sid": 224006325396218
-						},
-						{
-							"id": "subtract-from-instvar",
-							"objectClass": "PlayerBodies",
-							"sid": 984644836075674,
-							"parameters": {
-								"instance-variable": "healthCurrent",
-								"value": "EnemyBullet.power"
-							}
-						},
-						{
-							"id": "set-vector-y",
-							"objectClass": "PlayerBodies",
-							"sid": 873039762338233,
-							"behaviorType": "Platform",
-							"parameters": {
-								"vector-y": "PlayerBodies.Platform.VectorY - 50"
-							}
-						}
-					],
-					"sid": 581867715995059,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "evaluate-expression",
-									"objectClass": "System",
-									"sid": 177198124775459,
-									"parameters": {
-										"value": "PlayerBodies.X > EnemyBullet.X"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-vector-x",
-									"objectClass": "PlayerBodies",
-									"sid": 325167969669760,
-									"behaviorType": "Platform",
-									"parameters": {
-										"vector-x": "PlayerBodies.Platform.VectorX + (PLAYER_KNOCKBACK_FACTOR / PlayerBodies.healthMax)"
-									}
-								}
-							],
-							"sid": 206342290873241
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 575683798958994
-								}
-							],
-							"actions": [
-								{
-									"id": "set-vector-x",
-									"objectClass": "PlayerBodies",
-									"sid": 987590898622734,
-									"behaviorType": "Platform",
-									"parameters": {
-										"vector-x": "PlayerBodies.Platform.VectorX - (PLAYER_KNOCKBACK_FACTOR / PlayerBodies.healthMax)"
-									}
-								}
-							],
-							"sid": 507565444303458
 						}
 					]
 				}
@@ -2463,6 +2807,17 @@
 											"parameters": {
 												"angle": "angle(Patroller.X, Patroller.Y, PlayerBodies.X, PlayerBodies.Y)"
 											}
+										},
+										{
+											"id": "start-timer",
+											"objectClass": "EnemyBullet",
+											"sid": 110831649785851,
+											"behaviorType": "Timer",
+											"parameters": {
+												"duration": "EnemyBullet.lifetime",
+												"type": "once",
+												"tag": "\"lifetime\""
+											}
 										}
 									],
 									"sid": 932260536027400
@@ -2577,6 +2932,32 @@
 										}
 									],
 									"sid": 476576331932356
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "UiText",
+											"sid": 868861840700136,
+											"parameters": {
+												"instance-variable": "handle",
+												"comparison": 0,
+												"value": "\"Treasure\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "UiText",
+											"sid": 255834813921567,
+											"parameters": {
+												"text": "\"Treasure Collected: \" & PlayerController.treasureCollected"
+											}
+										}
+									],
+									"sid": 405470405850282
 								}
 							]
 						}
@@ -2658,10 +3039,10 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "MechBody",
-									"sid": 139560627285613,
+									"sid": 597913900991629,
 									"parameters": {
 										"instance-variable": "fuel",
-										"value": "100"
+										"value": "MechBody.fuel + 20"
 									}
 								}
 							],
@@ -2679,7 +3060,17 @@
 									}
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "PlayerController",
+									"sid": 460953455391912,
+									"parameters": {
+										"instance-variable": "treasureCollected",
+										"value": "1"
+									}
+								}
+							],
 							"sid": 799054663162136
 						},
 						{

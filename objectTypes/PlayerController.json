@@ -10,6 +10,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 567227413742350
+		},
+		{
+			"name": "treasureCollected",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 420483441935508
 		}
 	],
 	"behaviorTypes": [],

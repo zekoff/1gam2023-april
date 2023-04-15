@@ -1,0 +1,21 @@
+{
+	"name": "EnemyCollisionSources",
+	"plugin-id": "Sprite",
+	"sid": 487420232925034,
+	"instanceVariables": [
+		{
+			"name": "damageCaused",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 490863251565328
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"EnemyBullet",
+		"Drone",
+		"Patroller"
+	]
+}
