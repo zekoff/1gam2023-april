@@ -8,7 +8,7 @@
 			"name": "canFire",
 			"type": "boolean",
 			"desc": "",
-			"show": true,
+			"show": false,
 			"sid": 738875072359003
 		},
 		{

@@ -418,7 +418,16 @@
 				},
 				{
 					"eventType": "block",
-					"conditions": [],
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "EnemyBullet",
+							"sid": 808928426502396,
+							"parameters": {
+								"object": "PlayerBodies"
+							}
+						}
+					],
 					"actions": [
 						{
 							"id": "destroy",
