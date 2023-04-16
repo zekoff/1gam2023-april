@@ -1,0 +1,146 @@
+{
+	"name": "Level 5 Events",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Main Gameplay"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 975828215927495,
+					"parameters": {
+						"tag": "\"level_exit\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-value",
+					"objectClass": "PlayerController",
+					"sid": 218366907925957,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"overlay\"",
+						"start-value": "0",
+						"end-value": "100",
+						"time": "2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 441040409887166,
+					"parameters": {
+						"group-name": "\"Controls\"",
+						"state": "deactivated"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 208235964650125
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 236301144093843,
+					"parameters": {
+						"group-name": "\"Controls\"",
+						"state": "activated"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 777420688116364,
+					"parameters": {
+						"layout": "Level 1"
+					}
+				}
+			],
+			"sid": 486615198811056
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 884566137565818
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "FireHazard",
+					"sid": 704806042842613,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "FireHazard",
+					"sid": 849039869000466,
+					"parameters": {
+						"collisions": "disabled"
+					}
+				}
+			],
+			"sid": 168858484012868
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 955754464414754,
+					"parameters": {
+						"tag": "\"special_computer\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "FireHazard",
+					"sid": 690906882601461,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-collisions-enabled",
+					"objectClass": "FireHazard",
+					"sid": 440143738033649,
+					"parameters": {
+						"collisions": "enabled"
+					}
+				},
+				{
+					"id": "shake",
+					"objectClass": "Camera",
+					"sid": 570136410413738,
+					"behaviorType": "ScrollTo",
+					"parameters": {
+						"magnitude": "50",
+						"duration": "2",
+						"mode": "reducing-magnitude"
+					}
+				}
+			],
+			"sid": 288968172480714
+		}
+	],
+	"sid": 663148948003260
+}

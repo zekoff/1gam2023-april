@@ -121,7 +121,82 @@
 					}
 				],
 				"sid": 213121217671583,
-				"name": "Animation 1",
+				"name": "Standard",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 2
+			},
+			{
+				"frames": [
+					{
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6600683,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.5820185991429078,
+								0.8190982828899961,
+								1,
+								0.4500563296187371,
+								1,
+								0.13534507580615707,
+								1,
+								0.08333333333333337,
+								0.5,
+								0.25,
+								0.25,
+								0.5,
+								0.041666666666666664,
+								0.75,
+								0.25
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2060715,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.5820185991429078,
+								0.8190982828899961,
+								1,
+								0.4500563296187371,
+								1,
+								0.13534507580615707,
+								1,
+								0.08333333333333337,
+								0.5,
+								0.25,
+								0.25,
+								0.5,
+								0.041666666666666664,
+								0.75,
+								0.25
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 640982818679980,
+				"name": "Boss",
 				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
