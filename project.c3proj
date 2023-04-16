@@ -260,7 +260,8 @@
 		"subfolders": [
 			{
 				"items": [
-					"Level 2 Events"
+					"Level 2 Events",
+					"Level 1 Events"
 				],
 				"subfolders": [],
 				"name": "Level-specific"

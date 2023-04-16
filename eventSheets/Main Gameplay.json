@@ -704,9 +704,12 @@
 			],
 			"actions": [
 				{
-					"customAction": "FatalDamageTaken",
-					"objectClass": "PilotBody",
-					"sid": 289998035413649
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 339015190113471,
+					"parameters": {
+						"tag": "\"level_exit\""
+					}
 				}
 			],
 			"sid": 357008527325118
@@ -2948,15 +2951,7 @@
 							"objectClass": "Patroller",
 							"sid": 582968617715696,
 							"parameters": {
-								"object": "SmallLockDoor"
-							}
-						},
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Patroller",
-							"sid": 333652709346737,
-							"parameters": {
-								"object": "Elevator"
+								"object": "CollisionTerrain"
 							}
 						}
 					],

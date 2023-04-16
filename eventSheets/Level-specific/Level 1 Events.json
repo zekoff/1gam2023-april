@@ -1,0 +1,126 @@
+{
+	"name": "Level 1 Events",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Main Gameplay"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "UiText",
+					"sid": 563753944548515,
+					"parameters": {
+						"instance-variable": "handle",
+						"comparison": 0,
+						"value": "\"Mech Health\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "UiText",
+					"sid": 629039648313131,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 263744508568304
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "UiText",
+					"sid": 886996839282280,
+					"parameters": {
+						"instance-variable": "handle",
+						"comparison": 0,
+						"value": "\"Mech Fuel\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "UiText",
+					"sid": 138879349738960,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 695157491863510
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 711524018422654,
+					"parameters": {
+						"tag": "\"level_exit\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-value",
+					"objectClass": "PlayerController",
+					"sid": 689133474345519,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"overlay\"",
+						"start-value": "0",
+						"end-value": "100",
+						"time": "2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 935044530043060,
+					"parameters": {
+						"group-name": "\"Controls\"",
+						"state": "deactivated"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 797800682994669
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 354104447471299,
+					"parameters": {
+						"group-name": "\"Controls\"",
+						"state": "activated"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 401875540310718,
+					"parameters": {
+						"layout": "Level 2"
+					}
+				}
+			],
+			"sid": 483826306858819
+		}
+	],
+	"sid": 273305275768074
+}
