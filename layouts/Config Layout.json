@@ -6154,7 +6154,8 @@
 					"uid": 8,
 					"instanceVariables": {
 						"activeEntity": "PILOT",
-						"treasureCollected": 0
+						"treasureCollected": 0,
+						"touchControlsVisible": false
 					},
 					"behaviors": {
 						"Tween": {

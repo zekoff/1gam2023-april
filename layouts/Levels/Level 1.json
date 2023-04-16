@@ -1,0 +1,6989 @@
+{
+	"name": "Level 1",
+	"layers": [
+		{
+			"name": "Background",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 974619979729455,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.8,
+				0.8,
+				0.8,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Terrain",
+			"overriden": 0,
+			"subLayers": [
+				{
+					"name": "Solid",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "OryxScifiTilemap",
+							"properties": {
+								"initially-visible": true,
+								"tile-width": 24,
+								"tile-height": 24,
+								"tile-x-offset": 0,
+								"tile-y-offset": 0,
+								"tile-x-spacing": 0,
+								"tile-y-spacing": 0,
+								"tile-x-drawing-offset": 0,
+								"tile-y-drawing-offset": 0,
+								"drawing-mode": "top-to-right"
+							},
+							"uid": 103,
+							"instanceVariables": {},
+							"behaviors": {
+								"Solid": {
+									"properties": {
+										"enabled": true,
+										"tags": ""
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"tile-width",
+														true
+													],
+													[
+														"tile-height",
+														true
+													],
+													[
+														"tile-x-offset",
+														true
+													],
+													[
+														"tile-y-offset",
+														true
+													],
+													[
+														"tile-x-spacing",
+														true
+													],
+													[
+														"tile-y-spacing",
+														true
+													],
+													[
+														"tile-x-drawing-offset",
+														true
+													],
+													[
+														"tile-y-drawing-offset",
+														true
+													],
+													[
+														"drawing-mode",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": []
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Solid",
+												"state": [
+													[
+														"enabled",
+														true
+													],
+													[
+														"tags",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														false
+													],
+													[
+														"h",
+														false
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														false
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														false
+													],
+													[
+														"sy",
+														false
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"ownData": {
+								"tilemapData": {
+									"width": 111,
+									"height": 64,
+									"max-width": 388,
+									"max-height": 206,
+									"data": "14,49,6x12,2x49,12x12,49,7x12,46,49,16,173x2,9,31x0,52,173x2,48,31x0,50,173x2,9,31x0,48,173x2,48,31x0,9,173x2,48,31x0,9,173x2,9,30x0,11,22,2x2,3,170x2,9,31x0,48,173x2,9,31x0,9,5x2,43,167x2,50,31x0,9,173x2,9,31x0,48,2,43,171x2,48,31x0,50,173x2,52,31x0,48,173x2,9,31x0,9,2,3,5x2,43,6x2,43,158x2,9,30x0,14,17,173x2,9,29x0,14,17,174x2,9,29x0,9,175x2,9,29x0,15,49,16,9x2,3,163x2,48,31x0,9,173x2,9,31x0,9,173x2,50,31x0,9,3x2,43,2x2,14,3x12,16,3x2,43,158x2,9,31x0,9,6x2,9,3x0,9,162x2,52,31x0,9,2,43,4x2,9,3x0,52,162x2,9,31x0,9,6x2,50,3x0,9,162x2,50,31x0,48,6x2,52,3x0,51,162x2,9,31x0,53,6x2,9,3x0,9,162x2,15,3x12,46,8x12,49,3x12,46,12,49,7x12,49,16,3x0,9,6x2,9,3x0,9,190x2,9,3x0,9,6x2,48,3x0,9,186x2,43,2,43,2,9,3x0,9,3x2,3,2x2,48,3x0,9,190x2,9,3x0,9,2x2,43,3x2,9,3x0,9,190x2,48,3x0,9,6x2,9,3x0,53,175x2,3,5x2,3,8x2,9,3x0,50,6x2,15,12,16,0,9,190x2,9,3x0,9,3x2,43,4x2,9,0,50,185x2,3,4x2,9,3x0,9,8x2,39,0,39,3x2,43,185x2,43,48,3x0,15,46,3x12,46,12,46,12,17,0,9,190x2,48,14x0,52,190x2,48,14x0,9,190x2,15,2x12,49,7x12,16,3x0,9,201x2,50,3x0,51,189x2,43,11x2,9,3x0,9,191x2,3,9x2,9,3x0,9,195x2,43,3x2,3,2,9,3x0,9,201x2,9,3x0,50,3x2,3,191x2,14,49,46,21,12,49,17,3x0,52,4x2,43,178x2,43,11x2,9,2x0,9,6x0,50,195x2,9,2x0,10,6x0,9,195x2,9,9x0,9,195x2,48,9x0,9,186x2,3,8x2,53,9x0,9,195x2,9,4x0,11,16,3x0,9,195x2,9,5x0,9,3x0,9,195x2,50,5x0,39,3x0,50,192x2,3,2x2,9,5x0,9,3x0,9,195x2,9,5x0,38,3x0,9,3x2,3,186x2,43,4x2,53,5x0,50,3x0,9,195x2,9,4x0,11,17,3x0,9,195x2,9,9x0,9,195x2,9,9x0,48,2,43,193x2,9,9x0,9,192x2,3,2x2,9,9x0,9,195x2,9,2x0,14,12,49,2x12,46,12,17,195x2,19,38,0,38,202x2,9,2x0,9,202x2,53,2x0,9,202x2,9,2x0,9,4x2,43,197x2,48,2x0,9,202x2,9,2x0,9,202x2,48,2x0,50,202x2,9,2x0,9,202x2,9,2x0,50,3x2,3,195x2,3,2x2,9,2x0,52,202x2,52,2x0,51,202x2,9,2x0,9,202x2,9,2x0,9,202x2,52,2x0,9,202x2,9,2x0,50,4x2,3,197x2,50,2x0,48,202x2,51,2x0,50,202x2,9,2x0,51,202x2,9,2x0,9,202x2,9,2x0,9,202x2,53,2x0,9,202x2,9,2x0,9,202x2,9,2x0,9,202x2,9,2x0,48,202x2,51,2x0,9,202x2,51,2x0,9,202x2,9,2x0,48,202x2,9,2x0,9,202x2,9,2x0,9,202x2,9,2x0,9,202x2,50,2x0,9,202x2,9,2x0,9,202x2,9,2x0,19,16,201x2,9,2x0,19,22,201x2,9,2x0,19,22,201x2,50,2x0,19,22,201x2,9,2x0,19,17,201x2,9,2x0,9,202x2,9,2x0,53,202x2,52,2x0,9,202x2,19,13,0,9,202x2,9,2x0,50,202x2,19,16,0,50,202x2,19,17,0,9,202x2,9,2x0,9,202x2,50,2x0,50,202x2,9,2x0,9,202x2,52,2x0,9,202x2,19,2x21,22,202x2,15,3x20,13,57230x2"
+								},
+								"tile-width": 24,
+								"tile-height": 24,
+								"tile-x-offset": 0,
+								"tile-y-offset": 0,
+								"tile-x-spacing": 0,
+								"tile-y-spacing": 0
+							},
+							"world": {
+								"x": -48,
+								"y": -48,
+								"width": 2664,
+								"height": 1536,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Computer",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Green",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 109,
+							"instanceVariables": {
+								"lockColor": 0
+							},
+							"behaviors": {},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														true
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "lockColor",
+														"state": false
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": []
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 1176,
+								"y": 864,
+								"width": 24,
+								"height": 24,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "SmallLockDoor",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Closed",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 110,
+							"instanceVariables": {
+								"lockColor": 0,
+								"lockStatus": true
+							},
+							"behaviors": {
+								"Solid": {
+									"properties": {
+										"enabled": true,
+										"tags": "green"
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														true
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "lockColor",
+														"state": false
+													},
+													{
+														"iv": "lockStatus",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Solid",
+												"state": [
+													[
+														"enabled",
+														true
+													],
+													[
+														"tags",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 744,
+								"y": 960,
+								"width": 24,
+								"height": 24,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Computer",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Blue",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 112,
+							"instanceVariables": {
+								"lockColor": 1
+							},
+							"behaviors": {},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "lockColor",
+														"state": false
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": []
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 1224,
+								"y": 864,
+								"width": 24,
+								"height": 24,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "SmallLockDoor",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Closed",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 113,
+							"instanceVariables": {
+								"lockColor": 1,
+								"lockStatus": true
+							},
+							"behaviors": {
+								"Solid": {
+									"properties": {
+										"enabled": true,
+										"tags": "green"
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														true
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "lockColor",
+														"state": false
+													},
+													{
+														"iv": "lockStatus",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Solid",
+												"state": [
+													[
+														"enabled",
+														true
+													],
+													[
+														"tags",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 1416,
+								"y": 792,
+								"width": 24,
+								"height": 24,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Drone",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 119,
+							"instanceVariables": {
+								"healthCurrent": 2,
+								"healthMaximum": 2,
+								"damageCaused": 1
+							},
+							"behaviors": {
+								"Flash": {
+									"properties": {}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "vertical",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 2,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														true
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthCurrent",
+														"state": true
+													},
+													{
+														"iv": "healthMaximum",
+														"state": true
+													},
+													{
+														"iv": "damageCaused",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Flash",
+												"state": []
+											},
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 1176,
+								"y": 960,
+								"width": 24,
+								"height": 24,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Drone",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 120,
+							"instanceVariables": {
+								"healthCurrent": 2,
+								"healthMaximum": 2,
+								"damageCaused": 1
+							},
+							"behaviors": {
+								"Flash": {
+									"properties": {}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "vertical",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 2,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														true
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthCurrent",
+														"state": true
+													},
+													{
+														"iv": "healthMaximum",
+														"state": true
+													},
+													{
+														"iv": "damageCaused",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Flash",
+												"state": []
+											},
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 1248,
+								"y": 960,
+								"width": 24,
+								"height": 24,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Drone",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 121,
+							"instanceVariables": {
+								"healthCurrent": 2,
+								"healthMaximum": 2,
+								"damageCaused": 1
+							},
+							"behaviors": {
+								"Flash": {
+									"properties": {}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "vertical",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 2,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														true
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthCurrent",
+														"state": true
+													},
+													{
+														"iv": "healthMaximum",
+														"state": true
+													},
+													{
+														"iv": "damageCaused",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Flash",
+												"state": []
+											},
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 624,
+								"y": 960,
+								"width": 24,
+								"height": 24,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Drone",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 122,
+							"instanceVariables": {
+								"healthCurrent": 2,
+								"healthMaximum": 2,
+								"damageCaused": 1
+							},
+							"behaviors": {
+								"Flash": {
+									"properties": {}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "vertical",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 2,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														true
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthCurrent",
+														"state": true
+													},
+													{
+														"iv": "healthMaximum",
+														"state": true
+													},
+													{
+														"iv": "damageCaused",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Flash",
+												"state": []
+											},
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 576,
+								"y": 960,
+								"width": 24,
+								"height": 24,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Drone",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 123,
+							"instanceVariables": {
+								"healthCurrent": 2,
+								"healthMaximum": 2,
+								"damageCaused": 1
+							},
+							"behaviors": {
+								"Flash": {
+									"properties": {}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "vertical",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 2,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														true
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthCurrent",
+														"state": true
+													},
+													{
+														"iv": "healthMaximum",
+														"state": true
+													},
+													{
+														"iv": "damageCaused",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Flash",
+												"state": []
+											},
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 528,
+								"y": 960,
+								"width": 24,
+								"height": 24,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Drone",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 124,
+							"instanceVariables": {
+								"healthCurrent": 2,
+								"healthMaximum": 2,
+								"damageCaused": 1
+							},
+							"behaviors": {
+								"Flash": {
+									"properties": {}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "vertical",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 2,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														true
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthCurrent",
+														"state": true
+													},
+													{
+														"iv": "healthMaximum",
+														"state": true
+													},
+													{
+														"iv": "damageCaused",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Flash",
+												"state": []
+											},
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 720,
+								"y": 696,
+								"width": 24,
+								"height": 24,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Drone",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 125,
+							"instanceVariables": {
+								"healthCurrent": 2,
+								"healthMaximum": 2,
+								"damageCaused": 1
+							},
+							"behaviors": {
+								"Flash": {
+									"properties": {}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "vertical",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 2,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														true
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthCurrent",
+														"state": true
+													},
+													{
+														"iv": "healthMaximum",
+														"state": true
+													},
+													{
+														"iv": "damageCaused",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Flash",
+												"state": []
+											},
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 504,
+								"y": 696,
+								"width": 24,
+								"height": 24,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Pickup",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Health Pack",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 126,
+							"instanceVariables": {},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "triangle",
+										"period": 3,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 10,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": []
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 360,
+								"y": 648,
+								"width": 16,
+								"height": 16,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Drone",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 127,
+							"instanceVariables": {
+								"healthCurrent": 2,
+								"healthMaximum": 2,
+								"damageCaused": 1
+							},
+							"behaviors": {
+								"Flash": {
+									"properties": {}
+								},
+								"Sine": {
+									"properties": {
+										"movement": "vertical",
+										"wave": "sine",
+										"period": 2,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 2,
+										"magnitude": 5,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														true
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthCurrent",
+														"state": true
+													},
+													{
+														"iv": "healthMaximum",
+														"state": true
+													},
+													{
+														"iv": "damageCaused",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Flash",
+												"state": []
+											},
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 264,
+								"y": 696,
+								"width": 24,
+								"height": 24,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Pickup",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Health Pack",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 128,
+							"instanceVariables": {},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "triangle",
+										"period": 3,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 10,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": []
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 816,
+								"y": 888,
+								"width": 16,
+								"height": 16,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Pickup",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Treasure",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 129,
+							"instanceVariables": {},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "triangle",
+										"period": 3,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 10,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": []
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 480,
+								"y": 936,
+								"width": 16,
+								"height": 16,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Pickup",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Treasure",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 130,
+							"instanceVariables": {},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "triangle",
+										"period": 3,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 10,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": []
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 480,
+								"y": 960,
+								"width": 16,
+								"height": 16,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Pickup",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Treasure",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 131,
+							"instanceVariables": {},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "triangle",
+										"period": 3,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 10,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": []
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 1032,
+								"y": 792,
+								"width": 16,
+								"height": 16,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Pickup",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Treasure",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 132,
+							"instanceVariables": {},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "triangle",
+										"period": 3,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 10,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": []
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 1368,
+								"y": 960,
+								"width": 16,
+								"height": 16,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Pickup",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Treasure",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 134,
+							"instanceVariables": {},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "triangle",
+										"period": 3,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 10,
+										"magnitude-random": 0,
+										"enabled": true,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": []
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 408,
+								"y": 696,
+								"width": 16,
+								"height": 16,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						}
+					],
+					"sid": 496773078821620,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						1,
+						1,
+						1,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				},
+				{
+					"name": "Interactive",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [],
+					"sid": 758391909914372,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						1,
+						1,
+						1,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				}
+			],
+			"instances": [
+				{
+					"type": "LevelExitMarker",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 133,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1800,
+						"y": 792,
+						"width": 96,
+						"height": 144,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 142928223570131,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Entities",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "MechBody",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 85,
+					"instanceVariables": {
+						"healthCurrent": 100,
+						"healthMax": 100,
+						"canFire": true,
+						"fuel": 100
+					},
+					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 500,
+								"deceleration": 2000,
+								"jump-strength": 400,
+								"gravity": 2000,
+								"max-fall-speed": 2000,
+								"double-jump": true,
+								"jump-sustain": 200,
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
+						},
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"template": {
+						"mode": "replica",
+						"templateName": "",
+						"sourceTemplateName": "Standard",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"initially-visible",
+												true
+											],
+											[
+												"initial-animation",
+												true
+											],
+											[
+												"initial-frame",
+												true
+											],
+											[
+												"enable-collisions",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": [
+											{
+												"iv": "healthCurrent",
+												"state": true
+											},
+											{
+												"iv": "healthMax",
+												"state": true
+											},
+											{
+												"iv": "canFire",
+												"state": true
+											},
+											{
+												"iv": "fuel",
+												"state": false
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": [
+									{
+										"key": "Platform",
+										"state": [
+											[
+												"max-speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"deceleration",
+												true
+											],
+											[
+												"jump-strength",
+												true
+											],
+											[
+												"gravity",
+												true
+											],
+											[
+												"max-fall-speed",
+												true
+											],
+											[
+												"double-jump",
+												true
+											],
+											[
+												"jump-sustain",
+												true
+											],
+											[
+												"default-controls",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "BoundToLayout",
+										"state": [
+											[
+												"bound-by",
+												true
+											]
+										]
+									},
+									{
+										"key": "Timer",
+										"state": []
+									}
+								]
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												true
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						],
+						"replicasUIDs": null
+					},
+					"world": {
+						"x": 744,
+						"y": 1392,
+						"width": 65.054656416564,
+						"height": 87.71390696955433,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PilotBody",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 86,
+					"instanceVariables": {
+						"healthCurrent": 5,
+						"healthMax": 5,
+						"canFire": true
+					},
+					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 1500,
+								"deceleration": 1500,
+								"jump-strength": 100,
+								"gravity": 500,
+								"max-fall-speed": 300,
+								"double-jump": false,
+								"jump-sustain": 200,
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
+						},
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"template": {
+						"mode": "replica",
+						"templateName": "",
+						"sourceTemplateName": "Standard",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"initially-visible",
+												true
+											],
+											[
+												"initial-animation",
+												true
+											],
+											[
+												"initial-frame",
+												true
+											],
+											[
+												"enable-collisions",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": [
+											{
+												"iv": "healthCurrent",
+												"state": true
+											},
+											{
+												"iv": "healthMax",
+												"state": true
+											},
+											{
+												"iv": "canFire",
+												"state": true
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": [
+									{
+										"key": "Platform",
+										"state": [
+											[
+												"max-speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"deceleration",
+												true
+											],
+											[
+												"jump-strength",
+												true
+											],
+											[
+												"gravity",
+												true
+											],
+											[
+												"max-fall-speed",
+												true
+											],
+											[
+												"double-jump",
+												true
+											],
+											[
+												"jump-sustain",
+												true
+											],
+											[
+												"default-controls",
+												true
+											],
+											[
+												"enabled",
+												true
+											]
+										]
+									},
+									{
+										"key": "BoundToLayout",
+										"state": [
+											[
+												"bound-by",
+												true
+											]
+										]
+									},
+									{
+										"key": "Timer",
+										"state": []
+									}
+								]
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												true
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						],
+						"replicasUIDs": null
+					},
+					"world": {
+						"x": 46.8483251690876,
+						"y": 707.0384552695399,
+						"width": 12.885851658508898,
+						"height": 19.91223944782911,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 248367028193801,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "UI",
+			"overriden": 1,
+			"subLayers": [
+				{
+					"name": "Text",
+					"overriden": 1,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "UiText",
+							"properties": {
+								"text": "STANDARD UI TEXT TEMPLATE",
+								"enable-bbcode": true,
+								"font": "Arial",
+								"size": 15,
+								"line-height": 0,
+								"bold": true,
+								"italic": false,
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"horizontal-alignment": "left",
+								"vertical-alignment": "top",
+								"wrapping": "word",
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 104,
+							"instanceVariables": {
+								"handle": ""
+							},
+							"behaviors": {},
+							"template": {
+								"mode": "template",
+								"templateName": "Standard",
+								"sourceTemplateName": "",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"text",
+														true
+													],
+													[
+														"enable-bbcode",
+														true
+													],
+													[
+														"font",
+														true
+													],
+													[
+														"size",
+														true
+													],
+													[
+														"line-height",
+														true
+													],
+													[
+														"bold",
+														true
+													],
+													[
+														"italic",
+														true
+													],
+													[
+														"color",
+														true
+													],
+													[
+														"horizontal-alignment",
+														true
+													],
+													[
+														"vertical-alignment",
+														true
+													],
+													[
+														"wrapping",
+														true
+													],
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"origin",
+														true
+													],
+													[
+														"read-aloud",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "handle",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": []
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 24,
+								"y": -120,
+								"width": 720,
+								"height": 48,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "UiText",
+							"properties": {
+								"text": "STANDARD UI TEXT TEMPLATE",
+								"enable-bbcode": true,
+								"font": "Arial",
+								"size": 24,
+								"line-height": 0,
+								"bold": true,
+								"italic": false,
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"horizontal-alignment": "left",
+								"vertical-alignment": "top",
+								"wrapping": "word",
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 105,
+							"instanceVariables": {
+								"handle": "Mech Health"
+							},
+							"behaviors": {},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"text",
+														true
+													],
+													[
+														"enable-bbcode",
+														true
+													],
+													[
+														"font",
+														true
+													],
+													[
+														"size",
+														true
+													],
+													[
+														"line-height",
+														true
+													],
+													[
+														"bold",
+														true
+													],
+													[
+														"italic",
+														true
+													],
+													[
+														"color",
+														true
+													],
+													[
+														"horizontal-alignment",
+														true
+													],
+													[
+														"vertical-alignment",
+														true
+													],
+													[
+														"wrapping",
+														true
+													],
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"origin",
+														true
+													],
+													[
+														"read-aloud",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "handle",
+														"state": false
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": []
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 24,
+								"y": 24,
+								"width": 720,
+								"height": 48,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "UiText",
+							"properties": {
+								"text": "STANDARD UI TEXT TEMPLATE",
+								"enable-bbcode": true,
+								"font": "Arial",
+								"size": 24,
+								"line-height": 0,
+								"bold": true,
+								"italic": false,
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"horizontal-alignment": "left",
+								"vertical-alignment": "top",
+								"wrapping": "word",
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 106,
+							"instanceVariables": {
+								"handle": "Pilot Health"
+							},
+							"behaviors": {},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"text",
+														true
+													],
+													[
+														"enable-bbcode",
+														true
+													],
+													[
+														"font",
+														true
+													],
+													[
+														"size",
+														true
+													],
+													[
+														"line-height",
+														true
+													],
+													[
+														"bold",
+														true
+													],
+													[
+														"italic",
+														true
+													],
+													[
+														"color",
+														true
+													],
+													[
+														"horizontal-alignment",
+														true
+													],
+													[
+														"vertical-alignment",
+														true
+													],
+													[
+														"wrapping",
+														true
+													],
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"origin",
+														true
+													],
+													[
+														"read-aloud",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "handle",
+														"state": false
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": []
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 24,
+								"y": 48,
+								"width": 720,
+								"height": 48,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "UiText",
+							"properties": {
+								"text": "STANDARD UI TEXT TEMPLATE",
+								"enable-bbcode": true,
+								"font": "Arial",
+								"size": 24,
+								"line-height": 0,
+								"bold": true,
+								"italic": false,
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"horizontal-alignment": "left",
+								"vertical-alignment": "top",
+								"wrapping": "word",
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 107,
+							"instanceVariables": {
+								"handle": "Mech Fuel"
+							},
+							"behaviors": {},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"text",
+														true
+													],
+													[
+														"enable-bbcode",
+														true
+													],
+													[
+														"font",
+														true
+													],
+													[
+														"size",
+														true
+													],
+													[
+														"line-height",
+														true
+													],
+													[
+														"bold",
+														true
+													],
+													[
+														"italic",
+														true
+													],
+													[
+														"color",
+														true
+													],
+													[
+														"horizontal-alignment",
+														true
+													],
+													[
+														"vertical-alignment",
+														true
+													],
+													[
+														"wrapping",
+														true
+													],
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"origin",
+														true
+													],
+													[
+														"read-aloud",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "handle",
+														"state": false
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": []
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 24,
+								"y": 72,
+								"width": 720,
+								"height": 48,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "UiText",
+							"properties": {
+								"text": "STANDARD UI TEXT TEMPLATE",
+								"enable-bbcode": true,
+								"font": "Arial",
+								"size": 15,
+								"line-height": 0,
+								"bold": true,
+								"italic": false,
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"horizontal-alignment": "left",
+								"vertical-alignment": "top",
+								"wrapping": "word",
+								"initially-visible": true,
+								"origin": "top-left",
+								"read-aloud": false
+							},
+							"uid": 108,
+							"instanceVariables": {
+								"handle": "Treasure"
+							},
+							"behaviors": {},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"text",
+														true
+													],
+													[
+														"enable-bbcode",
+														true
+													],
+													[
+														"font",
+														true
+													],
+													[
+														"size",
+														true
+													],
+													[
+														"line-height",
+														true
+													],
+													[
+														"bold",
+														true
+													],
+													[
+														"italic",
+														true
+													],
+													[
+														"color",
+														true
+													],
+													[
+														"horizontal-alignment",
+														true
+													],
+													[
+														"vertical-alignment",
+														true
+													],
+													[
+														"wrapping",
+														true
+													],
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"origin",
+														true
+													],
+													[
+														"read-aloud",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "handle",
+														"state": false
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": []
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 24,
+								"y": 96,
+								"width": 720,
+								"height": 48,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						}
+					],
+					"sid": 983427072721687,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						1,
+						1,
+						1,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 0,
+					"parallaxY": 0,
+					"scaleRate": 0,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				},
+				{
+					"name": "Graphical",
+					"overriden": 1,
+					"subLayers": [],
+					"instances": [],
+					"sid": 543368958396957,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						1,
+						1,
+						1,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 0,
+					"parallaxY": 0,
+					"scaleRate": 0,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				}
+			],
+			"instances": [],
+			"sid": 640203675254648,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 0,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Overlay",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 465405115020400,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				0
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Touch Controls",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "LeftButton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 87,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 120,
+						"y": 504,
+						"width": 192,
+						"height": 192,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "RightButton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 88,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 312,
+						"y": 600,
+						"width": 192,
+						"height": 192,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "FireButton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 89,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 960,
+						"y": 600,
+						"width": 192,
+						"height": 192,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "JumpButton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 90,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1152,
+						"y": 504,
+						"width": 192,
+						"height": 192,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "InteractButton",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 91,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 984,
+						"y": 408,
+						"width": 120,
+						"height": 120,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 208691969853985,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				0.3736108398437503
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 0,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Controllers",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "PlayerController",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 92,
+					"instanceVariables": {
+						"activeEntity": "PILOT",
+						"treasureCollected": 0,
+						"touchControlsVisible": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": -72,
+						"y": 0,
+						"width": 85.89202202095842,
+						"height": 85.89202202095842,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Camera",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 93,
+					"instanceVariables": {
+						"zoom": 1.75,
+						"yOffsetFromFocal": -40
+					},
+					"behaviors": {
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 143.22372126490708,
+						"y": 129.73425907263066,
+						"width": 82.37644852460124,
+						"height": 35.476044148413244,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SmallExplosion",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 94,
+					"instanceVariables": {},
+					"behaviors": {},
+					"template": {
+						"mode": "template",
+						"templateName": "Standard",
+						"sourceTemplateName": "",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"initially-visible",
+												true
+											],
+											[
+												"initial-animation",
+												true
+											],
+											[
+												"initial-frame",
+												true
+											],
+											[
+												"enable-collisions",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": []
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": []
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												true
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						],
+						"replicasUIDs": null
+					},
+					"world": {
+						"x": 1416,
+						"y": -72,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 805586364639774,
+			"effectTypes": [],
+			"isInitiallyVisible": false,
+			"isInitiallyInteractive": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 630871748861807,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 2560,
+	"height": 1440,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "Main Gameplay"
+}

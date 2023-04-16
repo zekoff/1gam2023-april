@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -157,7 +164,9 @@
 			"Patroller",
 			"Pickup",
 			"SmallExplosion",
-			"FireHazard"
+			"FireHazard",
+			"Browser",
+			"LevelExitMarker"
 		],
 		"subfolders": [
 			{
@@ -218,7 +227,9 @@
 		],
 		"subfolders": [
 			{
-				"items": [],
+				"items": [
+					"Level 1"
+				],
 				"subfolders": [],
 				"name": "Levels"
 			}
@@ -340,7 +351,7 @@
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
 		"fullscreenMode": "letterbox-scale",
-		"fullscreenQuality": "low",
+		"fullscreenQuality": "high",
 		"viewportFit": "auto",
 		"backgroundColor": [
 			0,

@@ -166,6 +166,30 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "is-fullscreen",
+					"objectClass": "Browser",
+					"sid": 391896144038406,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "request-fullscreen",
+					"objectClass": "Browser",
+					"sid": 798102755923370,
+					"parameters": {
+						"mode": "stretch-letterbox-scale",
+						"navigation-ui": "hide"
+					}
+				}
+			],
+			"sid": 614696984365980,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "EnemyCollisionSources",
 					"sid": 411752119470510,
@@ -667,6 +691,27 @@
 			"sid": 190124933865624
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerBodies",
+					"sid": 926250656209646,
+					"parameters": {
+						"object": "LevelExitMarker"
+					}
+				}
+			],
+			"actions": [
+				{
+					"customAction": "FatalDamageTaken",
+					"objectClass": "PilotBody",
+					"sid": 289998035413649
+				}
+			],
+			"sid": 357008527325118
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Controls",
@@ -677,9 +722,12 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-in-touch",
-							"objectClass": "Touch",
-							"sid": 289066567173263
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "PlayerController",
+							"sid": 561018254257670,
+							"parameters": {
+								"instance-variable": "touchControlsVisible"
+							}
 						}
 					],
 					"actions": [
@@ -708,7 +756,7 @@
 						{
 							"id": "set-layer-visible",
 							"objectClass": "System",
-							"sid": 287631278285264,
+							"sid": 417519875522643,
 							"parameters": {
 								"layer": "\"Touch Controls\"",
 								"visibility": "invisible"
@@ -716,6 +764,59 @@
 						}
 					],
 					"sid": 635380209154026
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 186270740141140,
+							"parameters": {
+								"gamepad": "-1"
+							}
+						},
+						{
+							"id": "on-any-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 282201798266062
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "PlayerController",
+							"sid": 372083923060062,
+							"parameters": {
+								"instance-variable": "touchControlsVisible",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 135785206967955,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Touch",
+							"sid": 636192317987558
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "PlayerController",
+							"sid": 114149764616697,
+							"parameters": {
+								"instance-variable": "touchControlsVisible",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 215316313876783
 				},
 				{
 					"eventType": "block",
@@ -1760,10 +1861,10 @@
 								{
 									"id": "start-timer",
 									"objectClass": "GrappleHook",
-									"sid": 660773714700413,
+									"sid": 571136516779135,
 									"behaviorType": "Timer",
 									"parameters": {
-										"duration": ".5",
+										"duration": ".4",
 										"type": "once",
 										"tag": "\"lifetime\""
 									}

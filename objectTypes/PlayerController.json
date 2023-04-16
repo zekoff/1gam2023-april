@@ -17,6 +17,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 420483441935508
+		},
+		{
+			"name": "touchControlsVisible",
+			"type": "boolean",
+			"desc": "Should the touch control overlay be visible onscreen?",
+			"show": true,
+			"sid": 880279097268840
 		}
 	],
 	"behaviorTypes": [
