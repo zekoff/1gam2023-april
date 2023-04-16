@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Browser",
 			"name": "Browser",
 			"author": "Scirra",
@@ -174,7 +181,8 @@
 			"FireHazard",
 			"Browser",
 			"LevelExitMarker",
-			"SpecialComputer"
+			"SpecialComputer",
+			"Audio"
 		],
 		"subfolders": [
 			{
@@ -283,7 +291,136 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "doorClose_002.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 153766772915343,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "doorOpen_002.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 829850388325617,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "engineCircular_000.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 294019829363989,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "explosionCrunch_000.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 393302129637080,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "explosionCrunch_002.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 335193323650614,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "forceField_000.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 636978894948024,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "laserSmall_000.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 167048094199313,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "laserSmall_001.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 811414172871700,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "spaceEngine_000.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 779150782404922,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "explosionCrunch_004.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 385923191255869,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "threeTone2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 122873623197344,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "powerUp2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 647020186886891,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "laser1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 734963882601608,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "mission_completed.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 430931529503058,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "mission_failed.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 808542888791154,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "congratulations.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 556484402651689,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
@@ -428,5 +565,5 @@
 	},
 	"viewportWidth": 1280,
 	"viewportHeight": 720,
-	"firstLayout": null
+	"firstLayout": "Level 1"
 }

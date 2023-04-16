@@ -59,6 +59,14 @@
 					}
 				},
 				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 788774123704322,
+					"parameters": {
+						"tag": "\"alarm\""
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 768020164557412,
@@ -78,7 +86,20 @@
 					"sid": 174676333378282
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 114793668202072,
+					"parameters": {
+						"audio-file": "spaceEngine_000",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"alarm\""
+					}
+				}
+			],
 			"sid": 729961505407731,
 			"children": [
 				{
@@ -157,6 +178,18 @@
 						"magnitude": "20",
 						"duration": "0.4",
 						"mode": "reducing-magnitude"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 513123533022869,
+					"parameters": {
+						"audio-file": "explosionCrunch_002",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],

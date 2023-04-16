@@ -59,6 +59,14 @@
 					}
 				},
 				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 156971547313283,
+					"parameters": {
+						"tag": "\"alarm\""
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 207508901775706,
@@ -111,6 +119,30 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 955660336866995,
+					"parameters": {
+						"audio-file": "explosionCrunch_002",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 840266338384141,
+					"parameters": {
+						"audio-file": "spaceEngine_000",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"alarm\""
+					}
+				},
 				{
 					"id": "set-visible",
 					"objectClass": "FireHazard",

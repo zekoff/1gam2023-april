@@ -524,6 +524,11 @@
 						"comparison": 3,
 						"value": "0"
 					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 441008901829013
 				}
 			],
 			"actions": [
@@ -700,9 +705,39 @@
 					"parameters": {
 						"object": "LevelExitMarker"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "PlayerController",
+					"sid": 649271708788597,
+					"parameters": {
+						"instance-variable": "triggeredLevelEnd"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "PlayerController",
+					"sid": 351749676103755,
+					"parameters": {
+						"instance-variable": "triggeredLevelEnd",
+						"value": "true"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 789746658755763,
+					"parameters": {
+						"audio-file": "mission_completed",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
 				{
 					"id": "signal",
 					"objectClass": "System",
@@ -1770,6 +1805,18 @@
 								"type": "once",
 								"tag": "\"canFire\""
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 548109661965271,
+							"parameters": {
+								"audio-file": "laserSmall_001",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 297008774173570,
@@ -1879,6 +1926,18 @@
 								"layer": "\"Entities\"",
 								"image-point": "0",
 								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 201950170314327,
+							"parameters": {
+								"audio-file": "laserSmall_000",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -2054,6 +2113,18 @@
 									"customAction": "ToggleConnectedDoors",
 									"objectClass": "DoorComputer",
 									"sid": 466764959528887
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 351586777959002,
+									"parameters": {
+										"audio-file": "threeTone2",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 181002753000449
@@ -2077,6 +2148,18 @@
 									"sid": 784378233867746,
 									"parameters": {
 										"tag": "\"special_computer\""
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 351586777959002,
+									"parameters": {
+										"audio-file": "threeTone2",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
 									}
 								}
 							],
@@ -2186,6 +2269,18 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 611245054492450,
+							"parameters": {
+								"audio-file": "mission_failed",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "tween-value",
 							"objectClass": "PlayerController",
 							"sid": 908814428939694,
@@ -2286,6 +2381,18 @@
 								"duration": ".02",
 								"type": "once",
 								"tag": "\"canFire\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 919318917959245,
+							"parameters": {
+								"audio-file": "laserSmall_001",
+								"loop": "not-looping",
+								"volume": "-15",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -2504,6 +2611,14 @@
 							"customAction": "SetToPilotZoom",
 							"objectClass": "Camera",
 							"sid": 121126030619365
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 260162331326336,
+							"parameters": {
+								"tag": "\"mech_engine\""
+							}
 						}
 					],
 					"sid": 951776900126213
@@ -2547,6 +2662,18 @@
 							"customAction": "SetToMechZoom",
 							"objectClass": "Camera",
 							"sid": 859899229834842
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 579018022020659,
+							"parameters": {
+								"audio-file": "engineCircular_000",
+								"loop": "looping",
+								"volume": "-30",
+								"stereo-pan": "0",
+								"tag-optional": "\"mech_engine\""
+							}
 						}
 					],
 					"sid": 561012418383507
@@ -2607,6 +2734,18 @@
 									"customAction": "ExitMech",
 									"objectClass": "MechBody",
 									"sid": 414395844009853
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 364187416914835,
+									"parameters": {
+										"audio-file": "doorClose_002",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
 								}
 							],
 							"sid": 368023851365683,
@@ -2802,6 +2941,18 @@
 								"y": "Enemies.Y",
 								"create-hierarchy": false,
 								"template-name": "\"Standard\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 890623716843743,
+							"parameters": {
+								"audio-file": "explosionCrunch_000",
+								"loop": "not-looping",
+								"volume": "-5",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -3469,7 +3620,20 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 932155938156928,
+							"parameters": {
+								"audio-file": "powerUp2",
+								"loop": "not-looping",
+								"volume": "5",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
 					"sid": 595192476131173,
 					"children": [
 						{

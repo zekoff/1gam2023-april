@@ -24,6 +24,13 @@
 			"desc": "Should the touch control overlay be visible onscreen?",
 			"show": true,
 			"sid": 880279097268840
+		},
+		{
+			"name": "triggeredLevelEnd",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 782483139422634
 		}
 	],
 	"behaviorTypes": [
