@@ -1,0 +1,207 @@
+{
+	"name": "Level 6 Events",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Main Gameplay"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 931870154599889,
+					"parameters": {
+						"tag": "\"level_exit\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-value",
+					"objectClass": "PlayerController",
+					"sid": 906449168012691,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"overlay\"",
+						"start-value": "0",
+						"end-value": "100",
+						"time": "2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 735875673505695,
+					"parameters": {
+						"group-name": "\"Controls\"",
+						"state": "deactivated"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 327083761826144
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 374121752484940,
+					"parameters": {
+						"group-name": "\"Controls\"",
+						"state": "activated"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 768020164557412,
+					"parameters": {
+						"layout": "Level 1"
+					}
+				}
+			],
+			"sid": 983493060332175
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 174676333378282
+				}
+			],
+			"actions": [],
+			"sid": 729961505407731,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FireHazard",
+							"sid": 281268353477123,
+							"parameters": {
+								"instance-variable": "handle",
+								"comparison": 5,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "FireHazard",
+							"sid": 229315369994166,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "FireHazard",
+							"sid": 507168037905089,
+							"parameters": {
+								"collisions": "disabled"
+							}
+						}
+					],
+					"sid": 993733499121647
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ExplosionTriggerVolume",
+					"sid": 757933680518984,
+					"parameters": {
+						"object": "PlayerBodies"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "ExplosionTriggerVolume",
+					"sid": 613673171656089,
+					"parameters": {
+						"instance-variable": "triggered"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "ExplosionTriggerVolume",
+					"sid": 378249172650535,
+					"parameters": {
+						"instance-variable": "triggered",
+						"value": "true"
+					}
+				},
+				{
+					"id": "shake",
+					"objectClass": "Camera",
+					"sid": 809843086404592,
+					"behaviorType": "ScrollTo",
+					"parameters": {
+						"magnitude": "20",
+						"duration": "0.4",
+						"mode": "reducing-magnitude"
+					}
+				}
+			],
+			"sid": 647994783958193,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FireHazard",
+							"sid": 466910524565677,
+							"parameters": {
+								"instance-variable": "handle",
+								"comparison": 0,
+								"value": "ExplosionTriggerVolume.handle"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "FireHazard",
+							"sid": 855147549057890,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "FireHazard",
+							"sid": 633593775263242,
+							"parameters": {
+								"collisions": "enabled"
+							}
+						}
+					],
+					"sid": 315610831349298
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "TODO: disable mech HUD"
+		}
+	],
+	"sid": 893592782922576
+}

@@ -908,7 +908,8 @@
 					},
 					"uid": 308,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -943,7 +944,8 @@
 					},
 					"uid": 309,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -978,7 +980,8 @@
 					},
 					"uid": 310,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1013,7 +1016,8 @@
 					},
 					"uid": 311,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1048,7 +1052,8 @@
 					},
 					"uid": 312,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1083,7 +1088,8 @@
 					},
 					"uid": 313,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1118,7 +1124,8 @@
 					},
 					"uid": 314,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1153,7 +1160,8 @@
 					},
 					"uid": 315,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1188,7 +1196,8 @@
 					},
 					"uid": 316,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1223,7 +1232,8 @@
 					},
 					"uid": 317,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1258,7 +1268,8 @@
 					},
 					"uid": 318,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1293,7 +1304,8 @@
 					},
 					"uid": 319,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1328,7 +1340,8 @@
 					},
 					"uid": 320,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1363,7 +1376,8 @@
 					},
 					"uid": 321,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1398,7 +1412,8 @@
 					},
 					"uid": 322,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1433,7 +1448,8 @@
 					},
 					"uid": 323,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1468,7 +1484,8 @@
 					},
 					"uid": 324,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1503,7 +1520,8 @@
 					},
 					"uid": 325,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1538,7 +1556,8 @@
 					},
 					"uid": 326,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1573,7 +1592,8 @@
 					},
 					"uid": 327,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1608,7 +1628,8 @@
 					},
 					"uid": 328,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1643,7 +1664,8 @@
 					},
 					"uid": 329,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1678,7 +1700,8 @@
 					},
 					"uid": 330,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1713,7 +1736,8 @@
 					},
 					"uid": 331,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1748,7 +1772,8 @@
 					},
 					"uid": 332,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1783,7 +1808,8 @@
 					},
 					"uid": 333,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {
@@ -1818,7 +1844,8 @@
 					},
 					"uid": 334,
 					"instanceVariables": {
-						"damageRate": 3
+						"damageRate": 3,
+						"handle": 0
 					},
 					"behaviors": {
 						"Timer": {

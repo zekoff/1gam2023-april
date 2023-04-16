@@ -1606,6 +1606,36 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "GrappleHook",
+							"sid": 310554658975827,
+							"parameters": {
+								"object": "CollisionTerrain"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-vector-y",
+							"objectClass": "PilotBody",
+							"sid": 725015684806837,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-y": "-300"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "GrappleHook",
+							"sid": 265693011796323
+						}
+					],
+					"sid": 997656371691229
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "every-tick",
 							"objectClass": "System",
 							"sid": 843103953484924

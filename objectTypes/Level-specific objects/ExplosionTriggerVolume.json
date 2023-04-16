@@ -1,0 +1,52 @@
+{
+	"name": "ExplosionTriggerVolume",
+	"plugin-id": "Sprite",
+	"sid": 807419473881119,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "handle",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 479274781549027
+		},
+		{
+			"name": "triggered",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 964734915756942
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4504683,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 801574912784946,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

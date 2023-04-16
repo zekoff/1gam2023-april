@@ -191,7 +191,8 @@
 			},
 			{
 				"items": [
-					"Elevator"
+					"Elevator",
+					"ExplosionTriggerVolume"
 				],
 				"subfolders": [],
 				"name": "Level-specific objects"
@@ -247,7 +248,8 @@
 					"Level 2",
 					"Level 3",
 					"Level 4",
-					"Level 5"
+					"Level 5",
+					"Level 6"
 				],
 				"subfolders": [],
 				"name": "Levels"
@@ -267,7 +269,8 @@
 					"Level 1 Events",
 					"Level 3 Events",
 					"Level 4 Events",
-					"Level 5 Events"
+					"Level 5 Events",
+					"Level 6 Events"
 				],
 				"subfolders": [],
 				"name": "Level-specific"

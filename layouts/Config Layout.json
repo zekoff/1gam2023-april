@@ -655,7 +655,8 @@
 							},
 							"uid": 82,
 							"instanceVariables": {
-								"damageRate": 3
+								"damageRate": 3,
+								"handle": 0
 							},
 							"behaviors": {
 								"Timer": {
@@ -690,7 +691,8 @@
 							},
 							"uid": 83,
 							"instanceVariables": {
-								"damageRate": 3
+								"damageRate": 3,
+								"handle": 0
 							},
 							"behaviors": {
 								"Timer": {
@@ -725,7 +727,8 @@
 							},
 							"uid": 84,
 							"instanceVariables": {
-								"damageRate": 3
+								"damageRate": 3,
+								"handle": 0
 							},
 							"behaviors": {
 								"Timer": {

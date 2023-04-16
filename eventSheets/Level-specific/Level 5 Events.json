@@ -61,9 +61,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 777420688116364,
+					"sid": 207508901775706,
 					"parameters": {
-						"layout": "Level 1"
+						"layout": "Level 6"
 					}
 				}
 			],

@@ -10,6 +10,13 @@
 			"desc": "Damage per second in flame.",
 			"show": true,
 			"sid": 512335555140882
+		},
+		{
+			"name": "handle",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 201558728041910
 		}
 	],
 	"behaviorTypes": [
