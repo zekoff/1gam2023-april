@@ -1,5 +1,5 @@
 {
-	"name": "Level 3 Events",
+	"name": "Level 4 Events",
 	"events": [
 		{
 			"eventType": "include",
@@ -11,7 +11,7 @@
 				{
 					"id": "on-signal",
 					"objectClass": "System",
-					"sid": 742253607577266,
+					"sid": 688462699243384,
 					"parameters": {
 						"tag": "\"level_exit\""
 					}
@@ -21,7 +21,7 @@
 				{
 					"id": "tween-value",
 					"objectClass": "PlayerController",
-					"sid": 489971735277440,
+					"sid": 184437332482766,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"overlay\"",
@@ -38,7 +38,7 @@
 				{
 					"id": "set-group-active",
 					"objectClass": "System",
-					"sid": 995947856027056,
+					"sid": 474672674663292,
 					"parameters": {
 						"group-name": "\"Controls\"",
 						"state": "deactivated"
@@ -47,12 +47,12 @@
 				{
 					"id": "wait-for-previous-actions",
 					"objectClass": "System",
-					"sid": 707957420147990
+					"sid": 611503687005103
 				},
 				{
 					"id": "set-group-active",
 					"objectClass": "System",
-					"sid": 521727277059770,
+					"sid": 757444456971001,
 					"parameters": {
 						"group-name": "\"Controls\"",
 						"state": "activated"
@@ -61,47 +61,14 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 459412752821390,
+					"sid": 973567244716590,
 					"parameters": {
-						"layout": "Level 4"
+						"layout": "Level 1"
 					}
 				}
 			],
-			"sid": 372648380780302
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 412196619264433
-				}
-			],
-			"actions": [
-				{
-					"id": "set-speed",
-					"objectClass": "Elevator",
-					"sid": 232135011671686,
-					"behaviorType": "MoveTo",
-					"parameters": {
-						"speed": "200"
-					}
-				},
-				{
-					"id": "move-to-position",
-					"objectClass": "Elevator",
-					"sid": 704377267170033,
-					"behaviorType": "MoveTo",
-					"parameters": {
-						"x": "Elevator.X",
-						"y": "695",
-						"mode": "direct"
-					}
-				}
-			],
-			"sid": 970568248026251
+			"sid": 422963318845826
 		}
 	],
-	"sid": 274438762234070
+	"sid": 352072106576554
 }
