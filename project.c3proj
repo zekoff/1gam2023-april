@@ -244,7 +244,8 @@
 			{
 				"items": [
 					"Level 1",
-					"Level 2"
+					"Level 2",
+					"Level 3"
 				],
 				"subfolders": [],
 				"name": "Levels"
@@ -261,7 +262,8 @@
 			{
 				"items": [
 					"Level 2 Events",
-					"Level 1 Events"
+					"Level 1 Events",
+					"Level 3 Events"
 				],
 				"subfolders": [],
 				"name": "Level-specific"

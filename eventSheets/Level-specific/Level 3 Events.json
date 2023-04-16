@@ -1,0 +1,107 @@
+{
+	"name": "Level 3 Events",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Main Gameplay"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 742253607577266,
+					"parameters": {
+						"tag": "\"level_exit\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-value",
+					"objectClass": "PlayerController",
+					"sid": 489971735277440,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"overlay\"",
+						"start-value": "0",
+						"end-value": "100",
+						"time": "2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 995947856027056,
+					"parameters": {
+						"group-name": "\"Controls\"",
+						"state": "deactivated"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 707957420147990
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 521727277059770,
+					"parameters": {
+						"group-name": "\"Controls\"",
+						"state": "activated"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 574907511356723,
+					"parameters": {
+						"layout": "Level 1"
+					}
+				}
+			],
+			"sid": 372648380780302
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 412196619264433
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "Elevator",
+					"sid": 232135011671686,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"speed": "200"
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "Elevator",
+					"sid": 704377267170033,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "Elevator.X",
+						"y": "695",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 970568248026251
+		}
+	],
+	"sid": 274438762234070
+}

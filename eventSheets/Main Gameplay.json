@@ -1576,6 +1576,12 @@
 							"parameters": {
 								"object": "OryxScifiTilemap"
 							}
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "OryxScifiTilemap",
+							"sid": 459643751237794,
+							"behaviorType": "Solid"
 						}
 					],
 					"actions": [
@@ -2598,6 +2604,12 @@
 							"parameters": {
 								"object": "OryxScifiTilemap"
 							}
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "OryxScifiTilemap",
+							"sid": 116690819080366,
+							"behaviorType": "Solid"
 						}
 					],
 					"actions": [

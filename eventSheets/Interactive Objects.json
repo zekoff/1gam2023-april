@@ -250,6 +250,19 @@
 					"sid": 161519114770199
 				}
 			]
+		},
+		{
+			"functionName": "LevelExit",
+			"functionCopyPicked": false,
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 426052611809710
 		}
 	],
 	"sid": 398150217251672
