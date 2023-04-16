@@ -28,6 +28,32 @@
 					"customAction": "ExitMech",
 					"objectClass": "MechBody",
 					"sid": 674053625355176
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 840872356524609,
+					"parameters": {
+						"layer": "\"Overlay\"",
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "tween-value",
+					"objectClass": "PlayerController",
+					"sid": 610501567685617,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"overlay\"",
+						"start-value": "100",
+						"end-value": "0",
+						"time": "0.5",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
 				}
 			],
 			"sid": 277103336315007
@@ -285,30 +311,45 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 213397943088053,
+					"children": [
 						{
-							"id": "flash",
-							"objectClass": "MechSprite",
-							"sid": 412747156344520,
-							"disabled": true,
-							"behaviorType": "Flash",
-							"parameters": {
-								"on-time": "0.1",
-								"off-time": "0.1",
-								"duration": "COLLISION_IFRAME_SECONDS"
-							}
-						},
-						{
-							"id": "subtract-from-instvar",
-							"objectClass": "MechBody",
-							"sid": 540050257676658,
-							"parameters": {
-								"instance-variable": "healthCurrent",
-								"value": "EnemyCollisionSources.damageCaused"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "MechBody",
+									"sid": 919790489032877,
+									"parameters": {
+										"instance-variable": "healthCurrent",
+										"comparison": 4,
+										"value": "0"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "MechBody",
+									"sid": 613044131737427,
+									"parameters": {
+										"object": "EnemyCollisionSources"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "MechBody",
+									"sid": 723128639238021,
+									"parameters": {
+										"instance-variable": "healthCurrent",
+										"value": "EnemyCollisionSources.damageCaused"
+									}
+								}
+							],
+							"sid": 846932699814948
 						}
-					],
-					"sid": 213397943088053
+					]
 				},
 				{
 					"eventType": "block",
@@ -341,6 +382,14 @@
 									"sid": 864962803540144,
 									"behaviorType": "Flash",
 									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "PilotBody",
+									"sid": 524486139555588,
+									"parameters": {
+										"object": "EnemyCollisionSources"
+									}
 								}
 							],
 							"actions": [
@@ -455,9 +504,9 @@
 			],
 			"actions": [
 				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 919372443355606
+					"customAction": "FatalDamageTaken",
+					"objectClass": "PilotBody",
+					"sid": 867520448157511
 				}
 			],
 			"sid": 289757538366344
@@ -482,6 +531,140 @@
 				}
 			],
 			"sid": 946344436061319
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "FireHazard",
+					"sid": 550049027312341,
+					"parameters": {
+						"object": "PilotBody"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-color",
+					"objectClass": "PilotSprite",
+					"sid": 803113813530530,
+					"parameters": {
+						"color": "rgbEx(100, 30, 30)"
+					}
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "PilotBody",
+					"sid": 704122386554980,
+					"parameters": {
+						"instance-variable": "healthCurrent",
+						"value": "FireHazard.damageRate * dt"
+					}
+				}
+			],
+			"sid": 901261114929201
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 537157972919382
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-color",
+					"objectClass": "PilotSprite",
+					"sid": 146631041504325,
+					"parameters": {
+						"color": "rgbEx(100, 100, 100)"
+					}
+				}
+			],
+			"sid": 335158612164697
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "FireHazard",
+					"sid": 366663265283680,
+					"parameters": {
+						"object": "MechBody"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-color",
+					"objectClass": "MechSprite",
+					"sid": 859992206724788,
+					"parameters": {
+						"color": "rgbEx(100, 30, 30)"
+					}
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "MechBody",
+					"sid": 632206892495167,
+					"parameters": {
+						"instance-variable": "healthCurrent",
+						"value": "FireHazard.damageRate * dt"
+					}
+				}
+			],
+			"sid": 125666127203660
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 500650351629544
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-color",
+					"objectClass": "MechSprite",
+					"sid": 311594244429478,
+					"parameters": {
+						"color": "rgbEx(100, 100, 100)"
+					}
+				}
+			],
+			"sid": 574163148501351
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-playing",
+					"objectClass": "PlayerController",
+					"sid": 650796763755167,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"overlay\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 923965497715655,
+					"parameters": {
+						"layer": "\"Overlay\"",
+						"opacity": "PlayerController.Tween.Value(\"overlay\")"
+					}
+				}
+			],
+			"sid": 190124933865624
 		},
 		{
 			"eventType": "group",
@@ -1816,6 +1999,75 @@
 						}
 					],
 					"sid": 784492391832614
+				},
+				{
+					"aceType": "action",
+					"aceName": "FatalDamageTaken",
+					"objectClass": "PilotBody",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "custom-ace-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "PilotSprite",
+							"sid": 733892931706453,
+							"parameters": {
+								"animation": "\"Dead\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "tween-value",
+							"objectClass": "PlayerController",
+							"sid": 180065758191278,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"overlay\"",
+								"start-value": "0",
+								"end-value": "100",
+								"time": "3",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 517686219407640,
+							"parameters": {
+								"group-name": "\"Controls\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 327638943150953
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 564775225288524,
+							"parameters": {
+								"group-name": "\"Controls\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 880002776568973
+						}
+					],
+					"sid": 993764510903797
 				}
 			],
 			"sid": 348976118934130
@@ -1823,7 +2075,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "MechEvents",
+			"title": "Mech Events",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -2080,16 +2332,6 @@
 							}
 						},
 						{
-							"id": "set-instvar-value",
-							"objectClass": "Camera",
-							"sid": 160380294722175,
-							"disabled": true,
-							"parameters": {
-								"instance-variable": "zoom",
-								"value": "ZOOM_PILOT"
-							}
-						},
-						{
 							"customAction": "EnablePilot",
 							"objectClass": "PilotBody",
 							"sid": 872664086134637
@@ -2121,16 +2363,6 @@
 							"parameters": {
 								"instance-variable": "activeEntity",
 								"value": "ACTIVE_ENTITY_MECH"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Camera",
-							"sid": 196561779334980,
-							"disabled": true,
-							"parameters": {
-								"instance-variable": "zoom",
-								"value": "ZOOM_MECH"
 							}
 						},
 						{
@@ -2337,45 +2569,7 @@
 							}
 						}
 					],
-					"sid": 490635791443511,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Enemies",
-									"sid": 784224492025607,
-									"parameters": {
-										"instance-variable": "healthCurrent",
-										"comparison": 3,
-										"value": "0"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "Enemies",
-									"sid": 111927686476199
-								},
-								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 486969049698331,
-									"parameters": {
-										"object-to-create": "SmallExplosion",
-										"layer": "\"Entities\"",
-										"x": "Enemies.X",
-										"y": "Enemies.Y",
-										"create-hierarchy": false,
-										"template-name": "\"Standard\""
-									}
-								}
-							],
-							"sid": 531767143807941
-						}
-					]
+					"sid": 490635791443511
 				}
 			],
 			"sid": 698599934526377
@@ -2387,6 +2581,62 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Enemies",
+							"sid": 407538947334320,
+							"parameters": {
+								"instance-variable": "healthCurrent",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"customAction": "FatalDamageTaken",
+							"objectClass": "Enemies",
+							"sid": 166878295741072
+						}
+					],
+					"sid": 840837702165834
+				},
+				{
+					"aceType": "action",
+					"aceName": "FatalDamageTaken",
+					"objectClass": "Enemies",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "custom-ace-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Enemies",
+							"sid": 759917391601001
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 794840201415390,
+							"parameters": {
+								"object-to-create": "SmallExplosion",
+								"layer": "\"Entities\"",
+								"x": "Enemies.X",
+								"y": "Enemies.Y",
+								"create-hierarchy": false,
+								"template-name": "\"Standard\""
+							}
+						}
+					],
+					"sid": 495378200592763
+				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -2477,6 +2727,60 @@
 							]
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "FireHazard",
+							"sid": 586172903498852,
+							"parameters": {
+								"object": "Enemies"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-color",
+							"objectClass": "Enemies",
+							"sid": 150915719529548,
+							"parameters": {
+								"color": "rgbEx(100, 30, 30)"
+							}
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Enemies",
+							"sid": 703404176625919,
+							"parameters": {
+								"instance-variable": "healthCurrent",
+								"value": "FireHazard.damageRate * dt"
+							}
+						}
+					],
+					"sid": 897343501209767
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 811014453109481
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-color",
+							"objectClass": "Enemies",
+							"sid": 948206022291754,
+							"parameters": {
+								"color": "rgbEx(100, 100, 100)"
+							}
+						}
+					],
+					"sid": 844086075116491
 				},
 				{
 					"eventType": "block",

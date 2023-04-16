@@ -1,0 +1,103 @@
+{
+	"name": "FireHazard",
+	"plugin-id": "Sprite",
+	"sid": 559281892169571,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "damageRate",
+			"type": "number",
+			"desc": "Damage per second in flame.",
+			"show": true,
+			"sid": 512335555140882
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 298732115254781
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 24,
+						"height": 24,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8013056,
+						"collisionPoly": {
+							"points": [
+								0.3452881707085503,
+								0.08378363715277769,
+								0.5932707892523873,
+								0.19113854302300337,
+								0.7985989040798611,
+								0.26585337320963537,
+								0.9350658840603298,
+								0.4598726060655381,
+								0.9443081325954861,
+								0.9044955783420139,
+								0.5,
+								1,
+								0.05184648301866316,
+								0.9075273301866321,
+								0.10252278645833329,
+								0.3787994384765624
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 24,
+						"height": 24,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8473283,
+						"collisionPoly": {
+							"points": [
+								0.3985688103569879,
+								0.11626824273003478,
+								0.628007083468967,
+								0.10581342909071179,
+								0.8059246487087675,
+								0.2855131361219618,
+								0.94835459391276,
+								0.48995123969184007,
+								0.9394690619574653,
+								0.9038899739583333,
+								0.5,
+								1,
+								0.06563101874457468,
+								0.883793470594618,
+								0.07756084865993926,
+								0.4550928751627604
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 367204189318671,
+				"name": "Animation 2",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -156,7 +156,8 @@
 			"UiText",
 			"Patroller",
 			"Pickup",
-			"SmallExplosion"
+			"SmallExplosion",
+			"FireHazard"
 		],
 		"subfolders": [
 			{
@@ -212,9 +213,16 @@
 	},
 	"layouts": {
 		"items": [
-			"Config Layout"
+			"Config Layout",
+			"Basic Template Layout"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "Levels"
+			}
+		]
 	},
 	"eventSheets": {
 		"items": [

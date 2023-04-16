@@ -96,7 +96,57 @@
 					}
 				],
 				"sid": 951901456263001,
-				"name": "Animation 1",
+				"name": "Alive",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7320018,
+						"collisionPoly": {
+							"points": [
+								0.75,
+								0.5,
+								0.7083333333333333,
+								0.7083333333333334,
+								0.5,
+								0.875,
+								0.20833333333333337,
+								0.7916666666666666,
+								0.08333333333333337,
+								0.5,
+								0.29166666666666663,
+								0.2916666666666667,
+								0.5,
+								0.08333333333333333,
+								0.75,
+								0.25
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Foot",
+								"x": 0.4583333333333333,
+								"y": 1
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 155246156963371,
+				"name": "Dead",
 				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
