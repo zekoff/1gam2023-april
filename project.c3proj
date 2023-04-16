@@ -78,6 +78,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
 			"author": "Scirra",
@@ -156,7 +163,7 @@
 			"GrappleRope",
 			"PlayerBullet",
 			"SmallLockDoor",
-			"Computer",
+			"DoorComputer",
 			"Drone",
 			"EnemyBullet",
 			"DroneTurret",
@@ -166,7 +173,8 @@
 			"SmallExplosion",
 			"FireHazard",
 			"Browser",
-			"LevelExitMarker"
+			"LevelExitMarker",
+			"SpecialComputer"
 		],
 		"subfolders": [
 			{
@@ -180,6 +188,13 @@
 				],
 				"subfolders": [],
 				"name": "Touch UI Objects"
+			},
+			{
+				"items": [
+					"Elevator"
+				],
+				"subfolders": [],
+				"name": "Level-specific objects"
 			}
 		]
 	},
@@ -228,7 +243,8 @@
 		"subfolders": [
 			{
 				"items": [
-					"Level 1"
+					"Level 1",
+					"Level 2"
 				],
 				"subfolders": [],
 				"name": "Levels"
@@ -241,7 +257,15 @@
 			"Constants",
 			"Interactive Objects"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Level 2 Events"
+				],
+				"subfolders": [],
+				"name": "Level-specific"
+			}
+		]
 	},
 	"rootFileFolders": {
 		"script": {

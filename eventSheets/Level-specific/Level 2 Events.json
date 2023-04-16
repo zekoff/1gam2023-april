@@ -1,0 +1,84 @@
+{
+	"name": "Level 2 Events",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Main Gameplay"
+		},
+		{
+			"aceType": "action",
+			"aceName": "ActivateAndMoveUp",
+			"objectClass": "Elevator",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "Elevator",
+					"sid": 191714406881288,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"speed": "50"
+					}
+				},
+				{
+					"id": "set-moving-angle",
+					"objectClass": "Elevator",
+					"sid": 342939732544181,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"angle": "-90"
+					}
+				},
+				{
+					"id": "set-acceleration",
+					"objectClass": "Elevator",
+					"sid": 311145904494335,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"acceleration": "100"
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "Elevator",
+					"sid": 838966444721987,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "Elevator.X",
+						"y": "0",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 701103667474634
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 645377216914195,
+					"parameters": {
+						"tag": "\"special_computer\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"customAction": "ActivateAndMoveUp",
+					"objectClass": "Elevator",
+					"sid": 173545649336345
+				}
+			],
+			"sid": 762384685781509
+		}
+	],
+	"sid": 253270631717860
+}

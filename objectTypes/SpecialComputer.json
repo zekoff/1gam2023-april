@@ -1,7 +1,7 @@
 {
-	"name": "Computer",
+	"name": "SpecialComputer",
 	"plugin-id": "Sprite",
-	"sid": 656663002516089,
+	"sid": 878615397782579,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
@@ -9,7 +9,7 @@
 			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 100683974889975
+			"sid": 810363055581305
 		}
 	],
 	"behaviorTypes": [],
@@ -26,7 +26,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3839759,
+						"imageSpriteId": 4631302,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -51,7 +51,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 480989472244068,
+				"sid": 160165510679446,
 				"name": "Green",
 				"isLooping": false,
 				"isPingPong": false,
@@ -69,7 +69,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4117082,
+						"imageSpriteId": 4239262,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -94,7 +94,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 349975925909131,
+				"sid": 483813394054631,
 				"name": "Blue",
 				"isLooping": false,
 				"isPingPong": false,
@@ -112,7 +112,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5913162,
+						"imageSpriteId": 9540104,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -137,7 +137,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 386746839979481,
+				"sid": 485168615135176,
 				"name": "Red",
 				"isLooping": false,
 				"isPingPong": false,

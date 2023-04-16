@@ -4,7 +4,7 @@
 		{
 			"aceType": "action",
 			"aceName": "ToggleConnectedDoors",
-			"objectClass": "Computer",
+			"objectClass": "DoorComputer",
 			"functionDescription": "",
 			"functionCategory": "",
 			"functionReturnType": "none",
@@ -33,7 +33,7 @@
 							"parameters": {
 								"instance-variable": "lockColor",
 								"comparison": 0,
-								"value": "Computer.lockColor"
+								"value": "DoorComputer.lockColor"
 							}
 						}
 					],
@@ -161,7 +161,7 @@
 					"objectClass": "System",
 					"sid": 171171130006236,
 					"parameters": {
-						"object": "Computer"
+						"object": "DoorComputer"
 					}
 				}
 			],
@@ -173,7 +173,7 @@
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "Computer",
+							"objectClass": "DoorComputer",
 							"sid": 809823552168696,
 							"parameters": {
 								"instance-variable": "lockColor",
@@ -185,7 +185,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Computer",
+							"objectClass": "DoorComputer",
 							"sid": 487919428743385,
 							"parameters": {
 								"animation": "\"Green\"",
@@ -200,7 +200,7 @@
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "Computer",
+							"objectClass": "DoorComputer",
 							"sid": 860016085266188,
 							"parameters": {
 								"instance-variable": "lockColor",
@@ -212,7 +212,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Computer",
+							"objectClass": "DoorComputer",
 							"sid": 568023709850393,
 							"parameters": {
 								"animation": "\"Red\"",
@@ -227,7 +227,7 @@
 					"conditions": [
 						{
 							"id": "compare-instance-variable",
-							"objectClass": "Computer",
+							"objectClass": "DoorComputer",
 							"sid": 824600210278179,
 							"parameters": {
 								"instance-variable": "lockColor",
@@ -239,7 +239,7 @@
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Computer",
+							"objectClass": "DoorComputer",
 							"sid": 932120670608686,
 							"parameters": {
 								"animation": "\"Blue\"",

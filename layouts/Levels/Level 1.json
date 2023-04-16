@@ -274,7 +274,7 @@
 							}
 						},
 						{
-							"type": "Computer",
+							"type": "DoorComputer",
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Green",
@@ -646,7 +646,7 @@
 							}
 						},
 						{
-							"type": "Computer",
+							"type": "DoorComputer",
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Blue",

@@ -1,0 +1,53 @@
+{
+	"name": "Elevator",
+	"plugin-id": "Sprite",
+	"sid": 674636735870334,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 979331939792791
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 315337282715449
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 610117562983638
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 192,
+						"height": 24,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2530816,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 631193153568221,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

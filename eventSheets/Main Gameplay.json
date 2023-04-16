@@ -2006,18 +2006,42 @@
 									"objectClass": "PilotBody",
 									"sid": 556317835906591,
 									"parameters": {
-										"object": "Computer"
+										"object": "DoorComputer"
 									}
 								}
 							],
 							"actions": [
 								{
 									"customAction": "ToggleConnectedDoors",
-									"objectClass": "Computer",
+									"objectClass": "DoorComputer",
 									"sid": 466764959528887
 								}
 							],
 							"sid": 181002753000449
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "PilotBody",
+									"sid": 183147465858642,
+									"parameters": {
+										"object": "SpecialComputer"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 784378233867746,
+									"parameters": {
+										"tag": "\"special_computer\""
+									}
+								}
+							],
+							"sid": 733932611094317
 						}
 					]
 				},
@@ -2125,13 +2149,13 @@
 						{
 							"id": "tween-value",
 							"objectClass": "PlayerController",
-							"sid": 180065758191278,
+							"sid": 908814428939694,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"overlay\"",
 								"start-value": "0",
 								"end-value": "100",
-								"time": "3",
+								"time": "2",
 								"ease": "default",
 								"destroy-on-complete": "no",
 								"loop": "no",
@@ -2925,6 +2949,14 @@
 							"sid": 582968617715696,
 							"parameters": {
 								"object": "SmallLockDoor"
+							}
+						},
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Patroller",
+							"sid": 333652709346737,
+							"parameters": {
+								"object": "Elevator"
 							}
 						}
 					],
