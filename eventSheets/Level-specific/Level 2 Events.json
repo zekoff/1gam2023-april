@@ -142,6 +142,39 @@
 				}
 			],
 			"sid": 454322979787828
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 114943629009436
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 477477456039102,
+					"parameters": {
+						"tag": "\"music\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 957275494161405,
+					"parameters": {
+						"audio-file": "pilot_song",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"music\""
+					}
+				}
+			],
+			"sid": 608595716920821
 		}
 	],
 	"sid": 253270631717860

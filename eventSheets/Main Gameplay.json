@@ -729,11 +729,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 789746658755763,
+					"sid": 953214081022797,
 					"parameters": {
 						"audio-file": "mission_completed",
 						"loop": "not-looping",
-						"volume": "0",
+						"volume": "-5",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -2271,11 +2271,11 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 611245054492450,
+							"sid": 566703258659743,
 							"parameters": {
 								"audio-file": "mission_failed",
 								"loop": "not-looping",
-								"volume": "0",
+								"volume": "-5",
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
 							}

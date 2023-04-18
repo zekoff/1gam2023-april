@@ -172,6 +172,39 @@
 				}
 			],
 			"sid": 288968172480714
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 709453548182094
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 913616397702602,
+					"parameters": {
+						"tag": "\"music\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 711140979326911,
+					"parameters": {
+						"audio-file": "mech_song",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"music\""
+					}
+				}
+			],
+			"sid": 250841128320119
 		}
 	],
 	"sid": 663148948003260

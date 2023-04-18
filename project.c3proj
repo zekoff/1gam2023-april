@@ -424,7 +424,24 @@
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "mech_song.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 795277447603155,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "pilot_song.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 417382308593687,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
