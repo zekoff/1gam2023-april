@@ -3473,6 +3473,106 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "Graphical UI",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 703388179490915,
+									"parameters": {
+										"object": "Pickup"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 312785814156305,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Pickup",
+											"sid": 556597699559886,
+											"parameters": {
+												"animation": "\"Full Heart\""
+											}
+										},
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Pickup",
+											"sid": 490681159791128,
+											"parameters": {
+												"animation": "\"Empty Heart\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 319819626673124,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "evaluate-expression",
+													"objectClass": "System",
+													"sid": 588949401841701,
+													"parameters": {
+														"value": "Pickup.healthPoint <= PilotBody.healthCurrent"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Pickup",
+													"sid": 684419026917100,
+													"parameters": {
+														"animation": "\"Full Heart\"",
+														"from": "beginning"
+													}
+												}
+											],
+											"sid": 585438271535530
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 293764585528038
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "Pickup",
+													"sid": 594442680395386,
+													"parameters": {
+														"animation": "\"Empty Heart\"",
+														"from": "beginning"
+													}
+												}
+											],
+											"sid": 423360512420247
+										}
+									],
+									"isOrBlock": true
+								}
+							]
+						}
+					],
+					"sid": 159369401385658
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Text UI",
 					"description": "",
 					"isActiveOnStart": true,

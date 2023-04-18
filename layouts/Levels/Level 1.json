@@ -2756,7 +2756,9 @@
 								"live-preview": false
 							},
 							"uid": 126,
-							"instanceVariables": {},
+							"instanceVariables": {
+								"healthPoint": 0
+							},
 							"behaviors": {
 								"Sine": {
 									"properties": {
@@ -2809,7 +2811,12 @@
 										"component": [
 											{
 												"key": "instance-variable",
-												"state": []
+												"state": [
+													{
+														"iv": "healthPoint",
+														"state": true
+													}
+												]
 											}
 										]
 									},
@@ -3226,7 +3233,9 @@
 								"live-preview": false
 							},
 							"uid": 128,
-							"instanceVariables": {},
+							"instanceVariables": {
+								"healthPoint": 0
+							},
 							"behaviors": {
 								"Sine": {
 									"properties": {
@@ -3279,7 +3288,12 @@
 										"component": [
 											{
 												"key": "instance-variable",
-												"state": []
+												"state": [
+													{
+														"iv": "healthPoint",
+														"state": true
+													}
+												]
 											}
 										]
 									},
@@ -3449,7 +3463,9 @@
 								"live-preview": false
 							},
 							"uid": 129,
-							"instanceVariables": {},
+							"instanceVariables": {
+								"healthPoint": 0
+							},
 							"behaviors": {
 								"Sine": {
 									"properties": {
@@ -3502,7 +3518,12 @@
 										"component": [
 											{
 												"key": "instance-variable",
-												"state": []
+												"state": [
+													{
+														"iv": "healthPoint",
+														"state": true
+													}
+												]
 											}
 										]
 									},
@@ -3672,7 +3693,9 @@
 								"live-preview": false
 							},
 							"uid": 130,
-							"instanceVariables": {},
+							"instanceVariables": {
+								"healthPoint": 0
+							},
 							"behaviors": {
 								"Sine": {
 									"properties": {
@@ -3725,7 +3748,12 @@
 										"component": [
 											{
 												"key": "instance-variable",
-												"state": []
+												"state": [
+													{
+														"iv": "healthPoint",
+														"state": true
+													}
+												]
 											}
 										]
 									},
@@ -3895,7 +3923,9 @@
 								"live-preview": false
 							},
 							"uid": 131,
-							"instanceVariables": {},
+							"instanceVariables": {
+								"healthPoint": 0
+							},
 							"behaviors": {
 								"Sine": {
 									"properties": {
@@ -3948,7 +3978,12 @@
 										"component": [
 											{
 												"key": "instance-variable",
-												"state": []
+												"state": [
+													{
+														"iv": "healthPoint",
+														"state": true
+													}
+												]
 											}
 										]
 									},
@@ -4118,7 +4153,9 @@
 								"live-preview": false
 							},
 							"uid": 132,
-							"instanceVariables": {},
+							"instanceVariables": {
+								"healthPoint": 0
+							},
 							"behaviors": {
 								"Sine": {
 									"properties": {
@@ -4171,7 +4208,12 @@
 										"component": [
 											{
 												"key": "instance-variable",
-												"state": []
+												"state": [
+													{
+														"iv": "healthPoint",
+														"state": true
+													}
+												]
 											}
 										]
 									},
@@ -4341,7 +4383,9 @@
 								"live-preview": false
 							},
 							"uid": 134,
-							"instanceVariables": {},
+							"instanceVariables": {
+								"healthPoint": 0
+							},
 							"behaviors": {
 								"Sine": {
 									"properties": {
@@ -4394,7 +4438,12 @@
 										"component": [
 											{
 												"key": "instance-variable",
-												"state": []
+												"state": [
+													{
+														"iv": "healthPoint",
+														"state": true
+													}
+												]
 											}
 										]
 									},
@@ -6711,7 +6760,8 @@
 					"instanceVariables": {
 						"activeEntity": "PILOT",
 						"treasureCollected": 0,
-						"touchControlsVisible": false
+						"touchControlsVisible": false,
+						"triggeredLevelEnd": false
 					},
 					"behaviors": {
 						"Tween": {

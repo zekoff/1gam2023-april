@@ -1554,10 +1554,6 @@
 										]
 									},
 									{
-										"key": "Timer",
-										"state": []
-									},
-									{
 										"key": "BoundToLayout",
 										"state": [
 											[
@@ -1565,6 +1561,10 @@
 												true
 											]
 										]
+									},
+									{
+										"key": "Timer",
+										"state": []
 									}
 								]
 							},
@@ -1852,10 +1852,6 @@
 										]
 									},
 									{
-										"key": "Timer",
-										"state": []
-									},
-									{
 										"key": "BoundToLayout",
 										"state": [
 											[
@@ -1863,6 +1859,10 @@
 												true
 											]
 										]
+									},
+									{
+										"key": "Timer",
+										"state": []
 									}
 								]
 							},
@@ -3086,6 +3086,10 @@
 												"state": true
 											},
 											{
+												"iv": "damageCaused",
+												"state": true
+											},
+											{
 												"iv": "canFire",
 												"state": true
 											},
@@ -3099,10 +3103,6 @@
 											},
 											{
 												"iv": "targetingRange",
-												"state": true
-											},
-											{
-												"iv": "damageCaused",
 												"state": true
 											}
 										]
@@ -3474,7 +3474,9 @@
 						"live-preview": false
 					},
 					"uid": 48,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -3527,7 +3529,12 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "healthPoint",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -3675,8 +3682,8 @@
 						"y": -72,
 						"width": 16,
 						"height": 16,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -3697,7 +3704,9 @@
 						"live-preview": false
 					},
 					"uid": 58,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -3741,7 +3750,9 @@
 						"live-preview": false
 					},
 					"uid": 50,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -3785,7 +3796,9 @@
 						"live-preview": false
 					},
 					"uid": 51,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -3829,7 +3842,9 @@
 						"live-preview": false
 					},
 					"uid": 53,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -3873,7 +3888,9 @@
 						"live-preview": false
 					},
 					"uid": 54,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -3917,7 +3934,9 @@
 						"live-preview": false
 					},
 					"uid": 55,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -3961,7 +3980,9 @@
 						"live-preview": false
 					},
 					"uid": 56,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -4005,7 +4026,9 @@
 						"live-preview": false
 					},
 					"uid": 57,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -5902,7 +5925,1388 @@
 					"name": "Graphical",
 					"overriden": 0,
 					"subLayers": [],
-					"instances": [],
+					"instances": [
+						{
+							"type": "Pickup",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Full Heart",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 68,
+							"instanceVariables": {
+								"healthPoint": 0
+							},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "triangle",
+										"period": 3,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 10,
+										"magnitude-random": 0,
+										"enabled": false,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "template",
+								"templateName": "UI Heart",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthPoint",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														false
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														false
+													],
+													[
+														"h",
+														false
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														false
+													],
+													[
+														"sy",
+														false
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 264,
+								"y": -120,
+								"width": 72,
+								"height": 72,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Pickup",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Full Heart",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 69,
+							"instanceVariables": {
+								"healthPoint": 1
+							},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "triangle",
+										"period": 3,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 10,
+										"magnitude-random": 0,
+										"enabled": false,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "UI Heart",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthPoint",
+														"state": false
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														false
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														false
+													],
+													[
+														"h",
+														false
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														false
+													],
+													[
+														"sy",
+														false
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 0,
+								"y": 0,
+								"width": 72,
+								"height": 72,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Pickup",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Full Heart",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 70,
+							"instanceVariables": {
+								"healthPoint": 2
+							},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "triangle",
+										"period": 3,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 10,
+										"magnitude-random": 0,
+										"enabled": false,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "UI Heart",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthPoint",
+														"state": false
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														false
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														false
+													],
+													[
+														"h",
+														false
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														false
+													],
+													[
+														"sy",
+														false
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 72,
+								"y": 0,
+								"width": 72,
+								"height": 72,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Pickup",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Full Heart",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 71,
+							"instanceVariables": {
+								"healthPoint": 3
+							},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "triangle",
+										"period": 3,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 10,
+										"magnitude-random": 0,
+										"enabled": false,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "UI Heart",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthPoint",
+														"state": false
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														false
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														false
+													],
+													[
+														"h",
+														false
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														false
+													],
+													[
+														"sy",
+														false
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 144,
+								"y": 0,
+								"width": 72,
+								"height": 72,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Pickup",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Full Heart",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 72,
+							"instanceVariables": {
+								"healthPoint": 4
+							},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "triangle",
+										"period": 3,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 10,
+										"magnitude-random": 0,
+										"enabled": false,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "UI Heart",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthPoint",
+														"state": false
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														false
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														false
+													],
+													[
+														"h",
+														false
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														false
+													],
+													[
+														"sy",
+														false
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 216,
+								"y": 0,
+								"width": 72,
+								"height": 72,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Pickup",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Full Heart",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 73,
+							"instanceVariables": {
+								"healthPoint": 5
+							},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "triangle",
+										"period": 3,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 10,
+										"magnitude-random": 0,
+										"enabled": false,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "UI Heart",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthPoint",
+														"state": false
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														false
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														false
+													],
+													[
+														"h",
+														false
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														false
+													],
+													[
+														"sy",
+														false
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 288,
+								"y": 0,
+								"width": 72,
+								"height": 72,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						}
+					],
 					"sid": 465595571952048,
 					"effectTypes": [],
 					"isInitiallyVisible": true,

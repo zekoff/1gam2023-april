@@ -1442,7 +1442,9 @@
 						"live-preview": false
 					},
 					"uid": 336,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -1495,7 +1497,12 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "healthPoint",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -1665,7 +1672,9 @@
 						"live-preview": false
 					},
 					"uid": 337,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -1718,7 +1727,12 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "healthPoint",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -1888,7 +1902,9 @@
 						"live-preview": false
 					},
 					"uid": 338,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -1941,7 +1957,12 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "healthPoint",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -2111,7 +2132,9 @@
 						"live-preview": false
 					},
 					"uid": 339,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -2164,7 +2187,12 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "healthPoint",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -2334,7 +2362,9 @@
 						"live-preview": false
 					},
 					"uid": 340,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -2387,7 +2417,12 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "healthPoint",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -2557,7 +2592,9 @@
 						"live-preview": false
 					},
 					"uid": 341,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -2610,7 +2647,12 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "healthPoint",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -2780,7 +2822,9 @@
 						"live-preview": false
 					},
 					"uid": 342,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -2833,7 +2877,12 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "healthPoint",
+												"state": true
+											}
+										]
 									}
 								]
 							},
@@ -3003,7 +3052,9 @@
 						"live-preview": false
 					},
 					"uid": 343,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"healthPoint": 0
+					},
 					"behaviors": {
 						"Sine": {
 							"properties": {
@@ -3056,7 +3107,12 @@
 								"component": [
 									{
 										"key": "instance-variable",
-										"state": []
+										"state": [
+											{
+												"iv": "healthPoint",
+												"state": true
+											}
+										]
 									}
 								]
 							},
