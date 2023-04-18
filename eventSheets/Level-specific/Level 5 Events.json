@@ -169,6 +169,11 @@
 						"duration": "2",
 						"mode": "reducing-magnitude"
 					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "BlockedPipe",
+					"sid": 852769182836707
 				}
 			],
 			"sid": 288968172480714

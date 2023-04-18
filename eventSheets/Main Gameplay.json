@@ -3686,10 +3686,10 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "MechBody",
-									"sid": 597913900991629,
+									"sid": 483733683953658,
 									"parameters": {
 										"instance-variable": "fuel",
-										"value": "MechBody.fuel + 20"
+										"value": "MechBody.fuel + 34"
 									}
 								}
 							],

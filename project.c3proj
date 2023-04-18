@@ -200,7 +200,8 @@
 			{
 				"items": [
 					"Elevator",
-					"ExplosionTriggerVolume"
+					"ExplosionTriggerVolume",
+					"BlockedPipe"
 				],
 				"subfolders": [],
 				"name": "Level-specific objects"

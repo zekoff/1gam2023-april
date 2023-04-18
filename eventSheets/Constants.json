@@ -135,7 +135,7 @@
 			"eventType": "variable",
 			"name": "MECH_FUEL_BURN_RATE",
 			"type": "number",
-			"initialValue": "3",
+			"initialValue": "2",
 			"comment": "Fuel units to burn per second.",
 			"isStatic": false,
 			"isConstant": true,
