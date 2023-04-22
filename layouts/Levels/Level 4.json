@@ -8824,7 +8824,7 @@
 					],
 					"sid": 761489094452164,
 					"effectTypes": [],
-					"isInitiallyVisible": true,
+					"isInitiallyVisible": false,
 					"isInitiallyInteractive": true,
 					"color": [
 						1,

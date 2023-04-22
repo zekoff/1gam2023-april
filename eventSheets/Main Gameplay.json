@@ -3659,6 +3659,37 @@
 									"sid": 736642077938786
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 580062132631586
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "UiText",
+									"sid": 499967897045020,
+									"parameters": {
+										"instance-variable": "handle",
+										"comparison": 0,
+										"value": "\"Data Coins\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "UiText",
+									"sid": 920720692555887,
+									"parameters": {
+										"text": "PlayerController.treasureCollected & \" / 5\""
+									}
+								}
+							],
+							"sid": 456033278911412
 						}
 					],
 					"sid": 159369401385658

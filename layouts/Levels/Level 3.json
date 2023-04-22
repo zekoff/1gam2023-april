@@ -8722,7 +8722,7 @@
 					],
 					"sid": 251737847679093,
 					"effectTypes": [],
-					"isInitiallyVisible": true,
+					"isInitiallyVisible": false,
 					"isInitiallyInteractive": true,
 					"color": [
 						1,
