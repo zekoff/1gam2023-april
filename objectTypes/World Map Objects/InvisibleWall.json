@@ -1,0 +1,43 @@
+{
+	"name": "InvisibleWall",
+	"plugin-id": "Sprite",
+	"sid": 305120821343536,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 914823908161296
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 72,
+						"height": 69,
+						"originX": 1.6388888888888888,
+						"originY": 1.681159420289855,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 969348,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 744391345703194,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,318 @@
+{
+	"name": "World Map Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 861127548849259
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 874826813194645,
+					"parameters": {
+						"scale": "3"
+					}
+				}
+			],
+			"sid": 273507146166838
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "World Map Controls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-button-down",
+							"objectClass": "Gamepad",
+							"sid": 789823692336661,
+							"parameters": {
+								"gamepad": "0",
+								"button": "d-pad-up"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "MapMarker",
+							"sid": 765787052563722,
+							"behaviorType": "TileMovement",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 128656046564862
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-button-down",
+							"objectClass": "Gamepad",
+							"sid": 564385669445815,
+							"parameters": {
+								"gamepad": "0",
+								"button": "d-pad-down"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "MapMarker",
+							"sid": 142546503801320,
+							"behaviorType": "TileMovement",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 341735656707943
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-button-down",
+							"objectClass": "Gamepad",
+							"sid": 335218074361916,
+							"parameters": {
+								"gamepad": "0",
+								"button": "d-pad-left"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "MapMarker",
+							"sid": 325407147019775,
+							"behaviorType": "TileMovement",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 609597333511544
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-button-down",
+							"objectClass": "Gamepad",
+							"sid": 428412943922118,
+							"parameters": {
+								"gamepad": "0",
+								"button": "d-pad-right"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "MapMarker",
+							"sid": 456504273715275,
+							"behaviorType": "TileMovement",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 740913272667739
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 356437225141718,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-a"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "MapMarker",
+							"sid": 587823743167394,
+							"parameters": {
+								"object": "PointOfInterest"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Fade out and go to level"
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 944741838575153,
+							"parameters": {
+								"layout": "PointOfInterest.levelLayout"
+							}
+						}
+					],
+					"sid": 738928236408117
+				}
+			],
+			"sid": 765660126891701
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "MapMarker",
+					"sid": 362638303201944,
+					"parameters": {
+						"object": "PointOfInterest"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "comment",
+					"text": "Update UI text"
+				}
+			],
+			"sid": 831281731432104,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "WorldMapText",
+							"sid": 486814887301585,
+							"parameters": {
+								"instance-variable": "handle",
+								"comparison": 0,
+								"value": "\"Name\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "WorldMapText",
+							"sid": 772961788481364,
+							"parameters": {
+								"text": "PointOfInterest.levelTitle"
+							}
+						}
+					],
+					"sid": 700307918136200
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "WorldMapText",
+							"sid": 137338802782944,
+							"parameters": {
+								"instance-variable": "handle",
+								"comparison": 0,
+								"value": "\"Description\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "WorldMapText",
+							"sid": 694310946740807,
+							"parameters": {
+								"text": "PointOfInterest.levelDescription"
+							}
+						}
+					],
+					"sid": 357158224865077
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 853744479460668
+				}
+			],
+			"actions": [],
+			"sid": 485003591981996,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "WorldMapText",
+							"sid": 249839661952559,
+							"parameters": {
+								"instance-variable": "handle",
+								"comparison": 0,
+								"value": "\"Name\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "WorldMapText",
+							"sid": 587798900352581,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 465116734091921
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "WorldMapText",
+							"sid": 934443224771655,
+							"parameters": {
+								"instance-variable": "handle",
+								"comparison": 0,
+								"value": "\"Description\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "WorldMapText",
+							"sid": 767362076004430,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 878786121439642
+				}
+			]
+		}
+	],
+	"sid": 897567645366352
+}

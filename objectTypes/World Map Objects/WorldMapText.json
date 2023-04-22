@@ -1,0 +1,17 @@
+{
+	"name": "WorldMapText",
+	"plugin-id": "Text",
+	"sid": 761957819087823,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "handle",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 118682520960101
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

@@ -113,6 +113,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "TileMovement",
+			"name": "Tile movement",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Timer",
 			"name": "Timer",
 			"author": "Scirra",
@@ -220,6 +227,17 @@
 				],
 				"subfolders": [],
 				"name": "Graphical UI"
+			},
+			{
+				"items": [
+					"WorldMapTiles",
+					"PointOfInterest",
+					"MapMarker",
+					"InvisibleWall",
+					"WorldMapText"
+				],
+				"subfolders": [],
+				"name": "World Map Objects"
 			}
 		]
 	},
@@ -263,7 +281,8 @@
 	"layouts": {
 		"items": [
 			"Config Layout",
-			"Basic Template Layout"
+			"Basic Template Layout",
+			"World Map"
 		],
 		"subfolders": [
 			{
@@ -284,7 +303,8 @@
 		"items": [
 			"Main Gameplay",
 			"Constants",
-			"Interactive Objects"
+			"Interactive Objects",
+			"World Map Events"
 		],
 		"subfolders": [
 			{
