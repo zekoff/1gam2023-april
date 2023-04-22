@@ -111,11 +111,20 @@
 					}
 				},
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "ProgressionController",
+					"sid": 821076829706167,
+					"parameters": {
+						"instance-variable": "level1Complete",
+						"value": "true"
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 401875540310718,
+					"sid": 118599973484818,
 					"parameters": {
-						"layout": "Level 2"
+						"layout": "World Map"
 					}
 				}
 			],

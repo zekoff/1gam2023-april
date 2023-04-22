@@ -12,15 +12,131 @@
 			],
 			"actions": [
 				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 141285868536484,
+					"parameters": {
+						"tag": "\"music\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 301545632037002,
+					"parameters": {
+						"audio-file": "pilot_song",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"music\""
+					}
+				},
+				{
 					"id": "set-layout-scale",
 					"objectClass": "System",
 					"sid": 874826813194645,
 					"parameters": {
 						"scale": "3"
 					}
+				},
+				{
+					"id": "tween-value",
+					"objectClass": "WorldMapController",
+					"sid": 678572608579940,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"overlay\"",
+						"start-value": "100",
+						"end-value": "0",
+						"time": "0.5",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
 				}
 			],
-			"sid": 273507146166838
+			"sid": 273507146166838,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "ProgressionController",
+							"sid": 947371876778892,
+							"parameters": {
+								"instance-variable": "lastTileX",
+								"comparison": 4,
+								"value": "-1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-grid-position",
+							"objectClass": "MapMarker",
+							"sid": 545530905131993,
+							"behaviorType": "TileMovement",
+							"parameters": {
+								"x": "ProgressionController.lastTileX",
+								"y": "ProgressionController.lastTileY",
+								"instant": "instant"
+							}
+						}
+					],
+					"sid": 486341221279627
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 668614139759300
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 730229875527253,
+					"parameters": {
+						"layer": "\"World Map Overlay\"",
+						"opacity": "WorldMapController.overlayOpacity"
+					}
+				}
+			],
+			"sid": 502731934174803
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-playing",
+					"objectClass": "WorldMapController",
+					"sid": 516975026146318,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"overlay\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "WorldMapController",
+					"sid": 849710176036796,
+					"parameters": {
+						"instance-variable": "overlayOpacity",
+						"value": "WorldMapController.Tween.Value(\"overlay\")"
+					}
+				}
+			],
+			"sid": 244312575912221
 		},
 		{
 			"eventType": "group",
@@ -40,6 +156,25 @@
 								"gamepad": "0",
 								"button": "d-pad-up"
 							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 273551979491221,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-y-axis",
+								"comparison": 2,
+								"value": "0"
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 624106941600740,
+							"parameters": {
+								"key": 38
+							}
 						}
 					],
 					"actions": [
@@ -53,7 +188,8 @@
 							}
 						}
 					],
-					"sid": 128656046564862
+					"sid": 128656046564862,
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",
@@ -65,6 +201,25 @@
 							"parameters": {
 								"gamepad": "0",
 								"button": "d-pad-down"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 721070448968587,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-y-axis",
+								"comparison": 4,
+								"value": "0"
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 890484312607560,
+							"parameters": {
+								"key": 40
 							}
 						}
 					],
@@ -79,7 +234,8 @@
 							}
 						}
 					],
-					"sid": 341735656707943
+					"sid": 341735656707943,
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",
@@ -91,6 +247,25 @@
 							"parameters": {
 								"gamepad": "0",
 								"button": "d-pad-left"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 858980062472443,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-x-axis",
+								"comparison": 2,
+								"value": "0"
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 259038875374904,
+							"parameters": {
+								"key": 37
 							}
 						}
 					],
@@ -105,7 +280,8 @@
 							}
 						}
 					],
-					"sid": 609597333511544
+					"sid": 609597333511544,
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",
@@ -117,6 +293,25 @@
 							"parameters": {
 								"gamepad": "0",
 								"button": "d-pad-right"
+							}
+						},
+						{
+							"id": "compare-axis",
+							"objectClass": "Gamepad",
+							"sid": 357172136815663,
+							"parameters": {
+								"gamepad": "0",
+								"axis": "left-analog-x-axis",
+								"comparison": 4,
+								"value": "0"
+							}
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 170313521638507,
+							"parameters": {
+								"key": 39
 							}
 						}
 					],
@@ -131,7 +326,8 @@
 							}
 						}
 					],
-					"sid": 740913272667739
+					"sid": 740913272667739,
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",
@@ -146,11 +342,20 @@
 							}
 						},
 						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "MapMarker",
-							"sid": 587823743167394,
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 114993772209649,
 							"parameters": {
-								"object": "PointOfInterest"
+								"gamepad": "0",
+								"button": "button-x"
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 572788418521882,
+							"parameters": {
+								"key": 32
 							}
 						}
 					],
@@ -158,17 +363,76 @@
 						{
 							"type": "comment",
 							"text": "Fade out and go to level"
-						},
-						{
-							"id": "go-to-layout-by-name",
-							"objectClass": "System",
-							"sid": 944741838575153,
-							"parameters": {
-								"layout": "PointOfInterest.levelLayout"
-							}
 						}
 					],
-					"sid": 738928236408117
+					"sid": 738928236408117,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "MapMarker",
+									"sid": 875762647691424,
+									"parameters": {
+										"object": "PointOfInterest"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-value",
+									"objectClass": "WorldMapController",
+									"sid": 272455777526363,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"overlay\"",
+										"start-value": "0",
+										"end-value": "100",
+										"time": "0.5",
+										"ease": "default",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "ProgressionController",
+									"sid": 366909882508625,
+									"parameters": {
+										"instance-variable": "lastTileX",
+										"value": "MapMarker.TileMovement.GridX"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "ProgressionController",
+									"sid": 871345805970353,
+									"parameters": {
+										"instance-variable": "lastTileY",
+										"value": "MapMarker.TileMovement.GridY"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 279591925429307
+								},
+								{
+									"id": "go-to-layout-by-name",
+									"objectClass": "System",
+									"sid": 292447331193836,
+									"parameters": {
+										"layout": "PointOfInterest.levelLayout"
+									}
+								}
+							],
+							"sid": 697171109167726
+						}
+					],
+					"isOrBlock": true
 				}
 			],
 			"sid": 765660126891701
@@ -312,6 +576,484 @@
 					"sid": 878786121439642
 				}
 			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Progression Walls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "ProgressionController",
+							"sid": 746298666642913,
+							"parameters": {
+								"instance-variable": "level1Complete"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 847520772186847,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "InvisibleWall",
+									"sid": 437019294474491,
+									"parameters": {
+										"instance-variable": "handle",
+										"comparison": 0,
+										"value": "\"level1Wall\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "InvisibleWall",
+									"sid": 520273718427183,
+									"behaviorType": "Solid",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 530591399085430
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PointOfInterest",
+									"sid": 230917079334669,
+									"parameters": {
+										"instance-variable": "levelTitle",
+										"comparison": 0,
+										"value": "\"Mission 1\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-scale",
+									"objectClass": "PointOfInterest",
+									"sid": 231726879520213,
+									"parameters": {
+										"scale": "0.5"
+									}
+								},
+								{
+									"id": "set-default-color",
+									"objectClass": "PointOfInterest",
+									"sid": 671342059068366,
+									"parameters": {
+										"color": "rgbEx(50, 50, 50)"
+									}
+								}
+							],
+							"sid": 132702268296213
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "ProgressionController",
+							"sid": 619776398817774,
+							"parameters": {
+								"instance-variable": "level2Complete"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 236333632496788,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "InvisibleWall",
+									"sid": 690212979791745,
+									"parameters": {
+										"instance-variable": "handle",
+										"comparison": 0,
+										"value": "\"level2Wall\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "InvisibleWall",
+									"sid": 586202795840910,
+									"behaviorType": "Solid",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 687188395018975
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PointOfInterest",
+									"sid": 847363471485864,
+									"parameters": {
+										"instance-variable": "levelTitle",
+										"comparison": 0,
+										"value": "\"Mission 2\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-scale",
+									"objectClass": "PointOfInterest",
+									"sid": 803990118076735,
+									"parameters": {
+										"scale": "0.5"
+									}
+								},
+								{
+									"id": "set-default-color",
+									"objectClass": "PointOfInterest",
+									"sid": 356127342056666,
+									"parameters": {
+										"color": "rgbEx(50, 50, 50)"
+									}
+								}
+							],
+							"sid": 420448546855535
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "ProgressionController",
+							"sid": 924872354676561,
+							"parameters": {
+								"instance-variable": "level3Complete"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 598252510324090,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "InvisibleWall",
+									"sid": 753220794879892,
+									"parameters": {
+										"instance-variable": "handle",
+										"comparison": 0,
+										"value": "\"level3Wall\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "InvisibleWall",
+									"sid": 264133533730766,
+									"behaviorType": "Solid",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 497959641716473
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PointOfInterest",
+									"sid": 143132176662388,
+									"parameters": {
+										"instance-variable": "levelTitle",
+										"comparison": 0,
+										"value": "\"Mission 3\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-scale",
+									"objectClass": "PointOfInterest",
+									"sid": 577745557312813,
+									"parameters": {
+										"scale": "0.5"
+									}
+								},
+								{
+									"id": "set-default-color",
+									"objectClass": "PointOfInterest",
+									"sid": 961756189237485,
+									"parameters": {
+										"color": "rgbEx(50, 50, 50)"
+									}
+								}
+							],
+							"sid": 333513322058592
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "ProgressionController",
+							"sid": 191692882711125,
+							"parameters": {
+								"instance-variable": "level4Complete"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 186004108855671,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "InvisibleWall",
+									"sid": 203620291604818,
+									"parameters": {
+										"instance-variable": "handle",
+										"comparison": 0,
+										"value": "\"level4Wall\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "InvisibleWall",
+									"sid": 300836616575359,
+									"behaviorType": "Solid",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 407124977681197
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PointOfInterest",
+									"sid": 281525229418452,
+									"parameters": {
+										"instance-variable": "levelTitle",
+										"comparison": 0,
+										"value": "\"Mission 4\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-scale",
+									"objectClass": "PointOfInterest",
+									"sid": 308385247220329,
+									"parameters": {
+										"scale": "0.5"
+									}
+								},
+								{
+									"id": "set-default-color",
+									"objectClass": "PointOfInterest",
+									"sid": 926251590777298,
+									"parameters": {
+										"color": "rgbEx(50, 50, 50)"
+									}
+								}
+							],
+							"sid": 119440575567021
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "ProgressionController",
+							"sid": 519142404034492,
+							"parameters": {
+								"instance-variable": "level5Complete"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 446844002394281,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "InvisibleWall",
+									"sid": 104600501403090,
+									"parameters": {
+										"instance-variable": "handle",
+										"comparison": 0,
+										"value": "\"level5Wall\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "InvisibleWall",
+									"sid": 366968311828186,
+									"behaviorType": "Solid",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 638589965276474
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PointOfInterest",
+									"sid": 485524783802654,
+									"parameters": {
+										"instance-variable": "levelTitle",
+										"comparison": 0,
+										"value": "\"Mission 5\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-scale",
+									"objectClass": "PointOfInterest",
+									"sid": 393900028256210,
+									"parameters": {
+										"scale": "0.5"
+									}
+								},
+								{
+									"id": "set-default-color",
+									"objectClass": "PointOfInterest",
+									"sid": 752053787008717,
+									"parameters": {
+										"color": "rgbEx(50, 50, 50)"
+									}
+								}
+							],
+							"sid": 688918166125048
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "ProgressionController",
+							"sid": 337481432771934,
+							"parameters": {
+								"instance-variable": "level6Complete"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 866546135311457,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "InvisibleWall",
+									"sid": 303058166586721,
+									"parameters": {
+										"instance-variable": "handle",
+										"comparison": 0,
+										"value": "\"level6Wall\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "InvisibleWall",
+									"sid": 151523793398888,
+									"behaviorType": "Solid",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 116224884164811
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PointOfInterest",
+									"sid": 950785103785499,
+									"parameters": {
+										"instance-variable": "levelTitle",
+										"comparison": 0,
+										"value": "\"Mission 6\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-scale",
+									"objectClass": "PointOfInterest",
+									"sid": 825992990741623,
+									"parameters": {
+										"scale": "0.5"
+									}
+								},
+								{
+									"id": "set-default-color",
+									"objectClass": "PointOfInterest",
+									"sid": 823616677009868,
+									"parameters": {
+										"color": "rgbEx(50, 50, 50)"
+									}
+								}
+							],
+							"sid": 498959712003227
+						}
+					]
+				}
+			],
+			"sid": 134223359977863
 		}
 	],
 	"sid": 897567645366352

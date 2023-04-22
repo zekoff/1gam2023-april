@@ -1,0 +1,136 @@
+{
+	"name": "ProgressionController",
+	"plugin-id": "Sprite",
+	"sid": 210778781104079,
+	"isGlobal": true,
+	"instanceVariables": [
+		{
+			"name": "level1Coins",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 314561792573053
+		},
+		{
+			"name": "level2Coins",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 582905358884168
+		},
+		{
+			"name": "level3Coins",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 976207443670146
+		},
+		{
+			"name": "level4Coins",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 757186053060747
+		},
+		{
+			"name": "level5Coins",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 490100465019828
+		},
+		{
+			"name": "level6Coins",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 718302589884185
+		},
+		{
+			"name": "level1Complete",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 835470711242937
+		},
+		{
+			"name": "level2Complete",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 755148602459297
+		},
+		{
+			"name": "level3Complete",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 901763031005694
+		},
+		{
+			"name": "level4Complete",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 948277540782796
+		},
+		{
+			"name": "level5Complete",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 656641866917169
+		},
+		{
+			"name": "level6Complete",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 670303749248968
+		},
+		{
+			"name": "lastTileX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 262242298697554
+		},
+		{
+			"name": "lastTileY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 278969762958914
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 174,
+						"height": 158,
+						"originX": 0.3103448275862069,
+						"originY": 0.4177215189873418,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2384682,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 718240671032879,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

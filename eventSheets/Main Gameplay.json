@@ -166,9 +166,18 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 456168037814979,
+					"parameters": {
+						"key": 70
+					}
+				},
+				{
 					"id": "is-fullscreen",
 					"objectClass": "Browser",
 					"sid": 391896144038406,
+					"disabled": true,
 					"isInverted": true
 				}
 			],
@@ -183,8 +192,7 @@
 					}
 				}
 			],
-			"sid": 614696984365980,
-			"disabled": true
+			"sid": 614696984365980
 		},
 		{
 			"eventType": "block",

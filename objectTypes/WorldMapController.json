@@ -1,22 +1,22 @@
 {
-	"name": "InvisibleWall",
+	"name": "WorldMapController",
 	"plugin-id": "Sprite",
-	"sid": 305120821343536,
+	"sid": 541630365289536,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
-			"name": "handle",
-			"type": "string",
+			"name": "overlayOpacity",
+			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 655733941710110
+			"sid": 956984792591142
 		}
 	],
 	"behaviorTypes": [
 		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 914823908161296
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 767643926753499
 		}
 	],
 	"effectTypes": [],
@@ -25,19 +25,19 @@
 			{
 				"frames": [
 					{
-						"width": 72,
-						"height": 69,
-						"originX": 1.6388888888888888,
-						"originY": 1.681159420289855,
+						"width": 130,
+						"height": 131,
+						"originX": 0.46153846153846156,
+						"originY": 0.44274809160305345,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 969348,
+						"imageSpriteId": 8741395,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 744391345703194,
+				"sid": 301519241782890,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

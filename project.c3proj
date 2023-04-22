@@ -196,7 +196,9 @@
 			"Browser",
 			"LevelExitMarker",
 			"SpecialComputer",
-			"Audio"
+			"Audio",
+			"WorldMapController",
+			"ProgressionController"
 		],
 		"subfolders": [
 			{
@@ -618,5 +620,5 @@
 	},
 	"viewportWidth": 1280,
 	"viewportHeight": 720,
-	"firstLayout": "Level 1"
+	"firstLayout": "World Map"
 }
