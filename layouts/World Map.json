@@ -487,7 +487,7 @@
 					"instanceVariables": {
 						"levelLayout": "Level 1",
 						"levelTitle": "Mission 1",
-						"levelDescription": "Sneak into the enemy's facility where a powerful secret weapon is stored."
+						"levelDescription": "You must stop the enemy invasion. Sneak into the enemy's facility to steal a powerful secret weapon stored there."
 					},
 					"behaviors": {},
 					"world": {
@@ -520,7 +520,7 @@
 					"instanceVariables": {
 						"levelLayout": "Level 2",
 						"levelTitle": "Mission 2",
-						"levelDescription": "Claim the enemy's secret weapon for yourself and get out of the facility."
+						"levelDescription": "Claim the enemy's secret weapon for yourself and get out of the facility. You will be able to use it against them later."
 					},
 					"behaviors": {},
 					"world": {
@@ -553,7 +553,7 @@
 					"instanceVariables": {
 						"levelLayout": "Level 3",
 						"levelTitle": "Mission 3",
-						"levelDescription": "Use to mech to break into the enemy's weapon factory."
+						"levelDescription": "Use your powerful new mech to break into the enemy's weapon factory. If you can destroy the factory, you will ruin their plans."
 					},
 					"behaviors": {},
 					"world": {
@@ -619,7 +619,7 @@
 					"instanceVariables": {
 						"levelLayout": "Level 5",
 						"levelTitle": "Mission 5",
-						"levelDescription": "Activate the enemy weapon factory's self-destruct command. It is sure to be guarded by a powerful foe."
+						"levelDescription": "Activate the enemy weapon factory's self-destruct command. This area is sure to be guarded by a powerful foe."
 					},
 					"behaviors": {},
 					"world": {
@@ -652,12 +652,45 @@
 					"instanceVariables": {
 						"levelLayout": "Level 6",
 						"levelTitle": "Mission 6",
-						"levelDescription": "Escape the factory before it explodes!"
+						"levelDescription": "Your mech can't help you now. Escape the factory before it explodes!"
 					},
 					"behaviors": {},
 					"world": {
 						"x": 1019.6426933605117,
 						"y": 851.6672827208735,
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PointOfInterest",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 470,
+					"instanceVariables": {
+						"levelLayout": "Ending",
+						"levelTitle": "Epilogue",
+						"levelDescription": "You are a hero!"
+					},
+					"behaviors": {},
+					"world": {
+						"x": 1067.0658386426617,
+						"y": 851.4979913704339,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -1447,7 +1480,7 @@
 					},
 					"uid": 462,
 					"instanceVariables": {
-						"overlayOpacity": 0
+						"overlayOpacity": 100
 					},
 					"behaviors": {
 						"Tween": {
@@ -1559,7 +1592,7 @@
 				1,
 				1,
 				1,
-				0
+				1
 			],
 			"backgroundColor": [
 				1,

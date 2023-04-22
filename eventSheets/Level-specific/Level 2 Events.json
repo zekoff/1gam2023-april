@@ -142,6 +142,15 @@
 					}
 				},
 				{
+					"id": "set-instvar-value",
+					"objectClass": "ProgressionController",
+					"sid": 902309811913182,
+					"parameters": {
+						"instance-variable": "level2Coins",
+						"value": "max(ProgressionController.level2Coins, PlayerController.treasureCollected)"
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 409306025361597,
@@ -168,6 +177,14 @@
 					"sid": 477477456039102,
 					"parameters": {
 						"tag": "\"music\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "MechUiBackground",
+					"sid": 616173406533079,
+					"parameters": {
+						"visibility": "invisible"
 					}
 				},
 				{

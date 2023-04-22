@@ -1,0 +1,216 @@
+{
+	"name": "Ending Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 983127826190873
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 603045177957061,
+					"parameters": {
+						"tag": "\"music\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 673718730754849,
+					"parameters": {
+						"audio-file": "pilot_song",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"music\""
+					}
+				}
+			],
+			"sid": 727199154040804,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "totalCoinsFound",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 113598047145115
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "EpilogueText",
+							"sid": 294720642681206,
+							"parameters": {
+								"unique-id": "476"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 429363417009469,
+							"parameters": {
+								"variable": "totalCoinsFound",
+								"value": "ProgressionController.level1Coins"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 375548509207776,
+							"parameters": {
+								"variable": "totalCoinsFound",
+								"value": "ProgressionController.level2Coins"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 804080704378804,
+							"parameters": {
+								"variable": "totalCoinsFound",
+								"value": "ProgressionController.level3Coins"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 853797043804295,
+							"parameters": {
+								"variable": "totalCoinsFound",
+								"value": "ProgressionController.level4Coins"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 792817091779519,
+							"parameters": {
+								"variable": "totalCoinsFound",
+								"value": "ProgressionController.level5Coins"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 447810390993648,
+							"parameters": {
+								"variable": "totalCoinsFound",
+								"value": "ProgressionController.level6Coins"
+							}
+						}
+					],
+					"sid": 133522717637095,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 355511522278948,
+									"parameters": {
+										"variable": "totalCoinsFound",
+										"comparison": 0,
+										"value": "30"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "EpilogueText",
+									"sid": 634621046985720,
+									"parameters": {
+										"text": "EpilogueTextController.genericText & newline & newline & EpilogueTextController.foundAllCoinsText",
+										"duration": "5"
+									}
+								}
+							],
+							"sid": 168249478732654
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 121082287259875
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "EpilogueTextController",
+									"sid": 476944351844801,
+									"parameters": {
+										"instance-variable": "missingCoinsPlaceholder",
+										"value": "\"Level 1: \" & ProgressionController.level1Coins & \" of 5 coins found\" & newline &\n\"Level 2: \" & ProgressionController.level2Coins & \" of 5 coins found\" & newline &\n\"Level 3: \" & ProgressionController.level3Coins & \" of 5 coins found\" & newline &\n\"Level 4: \" & ProgressionController.level4Coins & \" of 5 coins found\" & newline &\n\"Level 5: \" & ProgressionController.level5Coins & \" of 5 coins found\" & newline &\n\"Level 6: \" & ProgressionController.level6Coins & \" of 5 coins found\"\n"
+									}
+								},
+								{
+									"id": "typewriter-text",
+									"objectClass": "EpilogueText",
+									"sid": 844337450307273,
+									"parameters": {
+										"text": "EpilogueTextController.genericText & newline & newline & EpilogueTextController.missingCoinsSummaryText & newline & EpilogueTextController.missingCoinsPlaceholder",
+										"duration": "5"
+									}
+								}
+							],
+							"sid": 417201793078362
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-button-pressed",
+					"objectClass": "Gamepad",
+					"sid": 291743922621496,
+					"parameters": {
+						"gamepad": "0"
+					}
+				},
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 343158895802285
+				},
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 224871007103034
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 825734253956275,
+					"parameters": {
+						"layout": "World Map"
+					}
+				}
+			],
+			"sid": 566044500656379,
+			"isOrBlock": true
+		}
+	],
+	"sid": 105057377303383
+}

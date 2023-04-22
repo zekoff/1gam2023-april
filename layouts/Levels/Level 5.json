@@ -274,291 +274,6 @@
 							}
 						},
 						{
-							"type": "Patroller",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 304,
-							"instanceVariables": {
-								"healthCurrent": 80,
-								"healthMaximum": 80,
-								"damageCaused": 1,
-								"canFire": true,
-								"shotCooldown": 0.2,
-								"movingRight": false,
-								"targetingRange": 600
-							},
-							"behaviors": {
-								"Flash": {
-									"properties": {}
-								},
-								"Platform": {
-									"properties": {
-										"max-speed": 50,
-										"acceleration": 1500,
-										"deceleration": 1500,
-										"jump-strength": 650,
-										"gravity": 1500,
-										"max-fall-speed": 1000,
-										"double-jump": false,
-										"jump-sustain": 0,
-										"default-controls": false,
-										"enabled": false
-									}
-								},
-								"Timer": {
-									"properties": {}
-								},
-								"DestroyOutsideLayout": {
-									"properties": {}
-								}
-							},
-							"template": {
-								"mode": "replica",
-								"templateName": "",
-								"sourceTemplateName": "Boss",
-								"components": [
-									{
-										"id": "plugin",
-										"component": [
-											{
-												"key": "plugin",
-												"state": [
-													[
-														"initially-visible",
-														true
-													],
-													[
-														"initial-animation",
-														true
-													],
-													[
-														"initial-frame",
-														true
-													],
-													[
-														"enable-collisions",
-														true
-													]
-												]
-											}
-										]
-									},
-									{
-										"id": "instance-variable",
-										"component": [
-											{
-												"key": "instance-variable",
-												"state": [
-													{
-														"iv": "healthCurrent",
-														"state": true
-													},
-													{
-														"iv": "healthMaximum",
-														"state": true
-													},
-													{
-														"iv": "damageCaused",
-														"state": true
-													},
-													{
-														"iv": "canFire",
-														"state": true
-													},
-													{
-														"iv": "shotCooldown",
-														"state": true
-													},
-													{
-														"iv": "movingRight",
-														"state": false
-													},
-													{
-														"iv": "targetingRange",
-														"state": true
-													}
-												]
-											}
-										]
-									},
-									{
-										"id": "behavior",
-										"component": [
-											{
-												"key": "Flash",
-												"state": []
-											},
-											{
-												"key": "Platform",
-												"state": [
-													[
-														"max-speed",
-														true
-													],
-													[
-														"acceleration",
-														true
-													],
-													[
-														"deceleration",
-														true
-													],
-													[
-														"jump-strength",
-														true
-													],
-													[
-														"gravity",
-														true
-													],
-													[
-														"max-fall-speed",
-														true
-													],
-													[
-														"double-jump",
-														true
-													],
-													[
-														"jump-sustain",
-														true
-													],
-													[
-														"default-controls",
-														true
-													],
-													[
-														"enabled",
-														false
-													]
-												]
-											},
-											{
-												"key": "Timer",
-												"state": []
-											},
-											{
-												"key": "DestroyOutsideLayout",
-												"state": []
-											}
-										]
-									},
-									{
-										"id": "effect",
-										"component": []
-									},
-									{
-										"id": "world-instance",
-										"component": [
-											{
-												"key": "world-instance",
-												"state": [
-													[
-														"x",
-														false
-													],
-													[
-														"y",
-														false
-													],
-													[
-														"z",
-														true
-													],
-													[
-														"w",
-														true
-													],
-													[
-														"h",
-														true
-													],
-													[
-														"a",
-														true
-													],
-													[
-														"o",
-														true
-													],
-													[
-														"c",
-														true
-													],
-													[
-														"sx",
-														true
-													],
-													[
-														"sy",
-														true
-													],
-													[
-														"bm",
-														true
-													],
-													[
-														"twpx",
-														true
-													],
-													[
-														"twpy",
-														true
-													],
-													[
-														"twpz",
-														true
-													],
-													[
-														"twpw",
-														true
-													],
-													[
-														"twph",
-														true
-													],
-													[
-														"twpa",
-														true
-													],
-													[
-														"dwp",
-														true
-													],
-													[
-														"ssm",
-														true
-													]
-												]
-											}
-										]
-									}
-								],
-								"replicasUIDs": null
-							},
-							"world": {
-								"x": 1272,
-								"y": 672,
-								"width": 96,
-								"height": 96,
-								"originX": 0.5,
-								"originY": 0.5,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
 							"type": "DoorComputer",
 							"properties": {
 								"initially-visible": true,
@@ -3298,6 +3013,291 @@
 						"height": 24,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Patroller",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 304,
+					"instanceVariables": {
+						"healthCurrent": 160,
+						"healthMaximum": 160,
+						"damageCaused": 1,
+						"canFire": true,
+						"shotCooldown": 0.2,
+						"movingRight": false,
+						"targetingRange": 600
+					},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						},
+						"Platform": {
+							"properties": {
+								"max-speed": 50,
+								"acceleration": 1500,
+								"deceleration": 1500,
+								"jump-strength": 650,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": false
+							}
+						},
+						"Timer": {
+							"properties": {}
+						},
+						"DestroyOutsideLayout": {
+							"properties": {}
+						}
+					},
+					"template": {
+						"mode": "replica",
+						"templateName": "",
+						"sourceTemplateName": "Boss",
+						"components": [
+							{
+								"id": "plugin",
+								"component": [
+									{
+										"key": "plugin",
+										"state": [
+											[
+												"initially-visible",
+												true
+											],
+											[
+												"initial-animation",
+												true
+											],
+											[
+												"initial-frame",
+												true
+											],
+											[
+												"enable-collisions",
+												true
+											]
+										]
+									}
+								]
+							},
+							{
+								"id": "instance-variable",
+								"component": [
+									{
+										"key": "instance-variable",
+										"state": [
+											{
+												"iv": "healthCurrent",
+												"state": false
+											},
+											{
+												"iv": "healthMaximum",
+												"state": false
+											},
+											{
+												"iv": "damageCaused",
+												"state": true
+											},
+											{
+												"iv": "canFire",
+												"state": true
+											},
+											{
+												"iv": "shotCooldown",
+												"state": true
+											},
+											{
+												"iv": "movingRight",
+												"state": false
+											},
+											{
+												"iv": "targetingRange",
+												"state": true
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "behavior",
+								"component": [
+									{
+										"key": "Flash",
+										"state": []
+									},
+									{
+										"key": "Platform",
+										"state": [
+											[
+												"max-speed",
+												true
+											],
+											[
+												"acceleration",
+												true
+											],
+											[
+												"deceleration",
+												true
+											],
+											[
+												"jump-strength",
+												true
+											],
+											[
+												"gravity",
+												true
+											],
+											[
+												"max-fall-speed",
+												true
+											],
+											[
+												"double-jump",
+												true
+											],
+											[
+												"jump-sustain",
+												true
+											],
+											[
+												"default-controls",
+												true
+											],
+											[
+												"enabled",
+												false
+											]
+										]
+									},
+									{
+										"key": "Timer",
+										"state": []
+									},
+									{
+										"key": "DestroyOutsideLayout",
+										"state": []
+									}
+								]
+							},
+							{
+								"id": "effect",
+								"component": []
+							},
+							{
+								"id": "world-instance",
+								"component": [
+									{
+										"key": "world-instance",
+										"state": [
+											[
+												"x",
+												false
+											],
+											[
+												"y",
+												false
+											],
+											[
+												"z",
+												true
+											],
+											[
+												"w",
+												true
+											],
+											[
+												"h",
+												true
+											],
+											[
+												"a",
+												true
+											],
+											[
+												"o",
+												true
+											],
+											[
+												"c",
+												true
+											],
+											[
+												"sx",
+												true
+											],
+											[
+												"sy",
+												true
+											],
+											[
+												"bm",
+												true
+											],
+											[
+												"twpx",
+												true
+											],
+											[
+												"twpy",
+												true
+											],
+											[
+												"twpz",
+												true
+											],
+											[
+												"twpw",
+												true
+											],
+											[
+												"twph",
+												true
+											],
+											[
+												"twpa",
+												true
+											],
+											[
+												"dwp",
+												true
+											],
+											[
+												"ssm",
+												true
+											]
+										]
+									}
+								]
+							}
+						],
+						"replicasUIDs": null
+					},
+					"world": {
+						"x": 1272,
+						"y": 672,
+						"width": 96,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

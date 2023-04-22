@@ -2329,9 +2329,12 @@
 							}
 						},
 						{
-							"id": "restart-layout",
+							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 880002776568973
+							"sid": 771264435257475,
+							"parameters": {
+								"layout": "World Map"
+							}
 						}
 					],
 					"sid": 993764510903797
@@ -2681,6 +2684,14 @@
 								"volume": "-30",
 								"stereo-pan": "0",
 								"tag-optional": "\"mech_engine\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MechUiBackground",
+							"sid": 231763869424988,
+							"parameters": {
+								"visibility": "visible"
 							}
 						}
 					],

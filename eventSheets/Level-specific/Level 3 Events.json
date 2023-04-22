@@ -68,6 +68,15 @@
 					}
 				},
 				{
+					"id": "set-instvar-value",
+					"objectClass": "ProgressionController",
+					"sid": 576214396485138,
+					"parameters": {
+						"instance-variable": "level3Coins",
+						"value": "max(ProgressionController.level3Coins, PlayerController.treasureCollected)"
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 839930943329892,

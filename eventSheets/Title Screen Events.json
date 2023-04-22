@@ -1,0 +1,74 @@
+{
+	"name": "Title Screen Events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-button-pressed",
+					"objectClass": "Gamepad",
+					"sid": 158121403398343,
+					"parameters": {
+						"gamepad": "0"
+					}
+				},
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 220081638691200
+				},
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 275489317721021
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 746815530699308,
+					"parameters": {
+						"layout": "World Map"
+					}
+				}
+			],
+			"sid": 222886273280201,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 696413788398365
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 157536929926175,
+					"parameters": {
+						"tag": "\"music\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 228064735304693,
+					"parameters": {
+						"audio-file": "mech_song",
+						"loop": "looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"music\""
+					}
+				}
+			],
+			"sid": 641699475106542
+		}
+	],
+	"sid": 149712266388304
+}
