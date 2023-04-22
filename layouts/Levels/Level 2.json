@@ -1787,6 +1787,37 @@
 							}
 						},
 						{
+							"type": "SpecialComputer",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Red",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 175,
+							"instanceVariables": {
+								"lockColor": 2
+							},
+							"behaviors": {},
+							"world": {
+								"x": 1488,
+								"y": 1080,
+								"width": 24,
+								"height": 24,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
 							"type": "Elevator",
 							"properties": {
 								"initially-visible": true,
@@ -1825,37 +1856,6 @@
 								"x": 1344,
 								"y": 1104,
 								"width": 192,
-								"height": 24,
-								"originX": 0,
-								"originY": 0,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "SpecialComputer",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Red",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 175,
-							"instanceVariables": {
-								"lockColor": 2
-							},
-							"behaviors": {},
-							"world": {
-								"x": 1488,
-								"y": 1080,
-								"width": 24,
 								"height": 24,
 								"originX": 0,
 								"originY": 0,

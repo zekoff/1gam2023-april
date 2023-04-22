@@ -2865,20 +2865,37 @@
 							"id": "destroy",
 							"objectClass": "PlayerBullet",
 							"sid": 186279175240245
-						},
-						{
-							"id": "flash",
-							"objectClass": "Enemies",
-							"sid": 810121077357750,
-							"behaviorType": "Flash",
-							"parameters": {
-								"on-time": "0.05",
-								"off-time": "0.05",
-								"duration": "0.2"
-							}
 						}
 					],
-					"sid": 490635791443511
+					"sid": 490635791443511,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-flashing",
+									"objectClass": "Enemies",
+									"sid": 473050677576028,
+									"behaviorType": "Flash",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "flash",
+									"objectClass": "Enemies",
+									"sid": 887764072784699,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.05",
+										"off-time": "0.05",
+										"duration": "0.2"
+									}
+								}
+							],
+							"sid": 458596103729554
+						}
+					]
 				}
 			],
 			"sid": 698599934526377
@@ -3521,9 +3538,9 @@
 												{
 													"id": "evaluate-expression",
 													"objectClass": "System",
-													"sid": 588949401841701,
+													"sid": 365031142729812,
 													"parameters": {
-														"value": "Pickup.healthPoint <= PilotBody.healthCurrent"
+														"value": "Pickup.healthPoint <= ceil(PilotBody.healthCurrent)"
 													}
 												}
 											],
@@ -3564,6 +3581,82 @@
 										}
 									],
 									"isOrBlock": true
+								}
+							]
+						},
+						{
+							"eventType": "variable",
+							"name": "mechUiBarWidth",
+							"type": "number",
+							"initialValue": "336",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 875899128845599
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 545849657342774
+								}
+							],
+							"actions": [],
+							"sid": 840811282413471,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MechUiBar",
+											"sid": 970153983005972,
+											"parameters": {
+												"instance-variable": "handle",
+												"comparison": 0,
+												"value": "\"Mech Health UI\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-width",
+											"objectClass": "MechUiBar",
+											"sid": 244891625353388,
+											"parameters": {
+												"width": "MechBody.healthCurrent / 100 * mechUiBarWidth"
+											}
+										}
+									],
+									"sid": 326321844382908
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MechUiBar",
+											"sid": 771492160159906,
+											"parameters": {
+												"instance-variable": "handle",
+												"comparison": 0,
+												"value": "\"Mech Fuel UI\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-width",
+											"objectClass": "MechUiBar",
+											"sid": 575179881921092,
+											"parameters": {
+												"width": "MechBody.fuel / 100 * mechUiBarWidth"
+											}
+										}
+									],
+									"sid": 736642077938786
 								}
 							]
 						}
@@ -3793,7 +3886,36 @@
 									}
 								}
 							],
-							"sid": 240999203843888
+							"sid": 240999203843888,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "MechBody",
+											"sid": 150365826187118,
+											"parameters": {
+												"instance-variable": "fuel",
+												"comparison": 4,
+												"value": "100"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "MechBody",
+											"sid": 554053836144301,
+											"parameters": {
+												"instance-variable": "fuel",
+												"value": "100"
+											}
+										}
+									],
+									"sid": 132590250086437
+								}
+							]
 						},
 						{
 							"eventType": "block",

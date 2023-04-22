@@ -29,6 +29,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -205,6 +212,14 @@
 				],
 				"subfolders": [],
 				"name": "Level-specific objects"
+			},
+			{
+				"items": [
+					"MechUiBar",
+					"MechUiBackground"
+				],
+				"subfolders": [],
+				"name": "Graphical UI"
 			}
 		]
 	},

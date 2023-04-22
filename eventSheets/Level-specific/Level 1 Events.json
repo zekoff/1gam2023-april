@@ -150,6 +150,14 @@
 						"stereo-pan": "0",
 						"tag-optional": "\"music\""
 					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "MechUiBackground",
+					"sid": 132141929437579,
+					"parameters": {
+						"visibility": "invisible"
+					}
 				}
 			],
 			"sid": 721695999719361

@@ -5895,7 +5895,7 @@
 					],
 					"sid": 601087781332546,
 					"effectTypes": [],
-					"isInitiallyVisible": true,
+					"isInitiallyVisible": false,
 					"isInitiallyInteractive": true,
 					"color": [
 						1,
@@ -5932,7 +5932,7 @@
 								"initially-visible": true,
 								"initial-animation": "Full Heart",
 								"initial-frame": 0,
-								"enable-collisions": true,
+								"enable-collisions": false,
 								"live-preview": false
 							},
 							"uid": 68,
@@ -5957,7 +5957,7 @@
 							},
 							"template": {
 								"mode": "template",
-								"templateName": "UI Heart",
+								"templateName": "UI Element",
 								"sourceTemplateName": "Standard",
 								"components": [
 									{
@@ -6188,7 +6188,7 @@
 							"template": {
 								"mode": "replica",
 								"templateName": "",
-								"sourceTemplateName": "UI Heart",
+								"sourceTemplateName": "UI Element",
 								"components": [
 									{
 										"id": "plugin",
@@ -6308,7 +6308,7 @@
 													],
 													[
 														"a",
-														true
+														false
 													],
 													[
 														"o",
@@ -6370,8 +6370,8 @@
 								"replicasUIDs": null
 							},
 							"world": {
-								"x": 0,
-								"y": 0,
+								"x": 24,
+								"y": 24,
 								"width": 72,
 								"height": 72,
 								"originX": 0,
@@ -6418,7 +6418,7 @@
 							"template": {
 								"mode": "replica",
 								"templateName": "",
-								"sourceTemplateName": "UI Heart",
+								"sourceTemplateName": "UI Element",
 								"components": [
 									{
 										"id": "plugin",
@@ -6538,7 +6538,7 @@
 													],
 													[
 														"a",
-														true
+														false
 													],
 													[
 														"o",
@@ -6600,8 +6600,8 @@
 								"replicasUIDs": null
 							},
 							"world": {
-								"x": 72,
-								"y": 0,
+								"x": 96,
+								"y": 24,
 								"width": 72,
 								"height": 72,
 								"originX": 0,
@@ -6648,7 +6648,7 @@
 							"template": {
 								"mode": "replica",
 								"templateName": "",
-								"sourceTemplateName": "UI Heart",
+								"sourceTemplateName": "UI Element",
 								"components": [
 									{
 										"id": "plugin",
@@ -6768,7 +6768,7 @@
 													],
 													[
 														"a",
-														true
+														false
 													],
 													[
 														"o",
@@ -6830,8 +6830,8 @@
 								"replicasUIDs": null
 							},
 							"world": {
-								"x": 144,
-								"y": 0,
+								"x": 168,
+								"y": 24,
 								"width": 72,
 								"height": 72,
 								"originX": 0,
@@ -6878,7 +6878,7 @@
 							"template": {
 								"mode": "replica",
 								"templateName": "",
-								"sourceTemplateName": "UI Heart",
+								"sourceTemplateName": "UI Element",
 								"components": [
 									{
 										"id": "plugin",
@@ -6998,7 +6998,7 @@
 													],
 													[
 														"a",
-														true
+														false
 													],
 													[
 														"o",
@@ -7060,8 +7060,8 @@
 								"replicasUIDs": null
 							},
 							"world": {
-								"x": 216,
-								"y": 0,
+								"x": 240,
+								"y": 24,
 								"width": 72,
 								"height": 72,
 								"originX": 0,
@@ -7108,7 +7108,7 @@
 							"template": {
 								"mode": "replica",
 								"templateName": "",
-								"sourceTemplateName": "UI Heart",
+								"sourceTemplateName": "UI Element",
 								"components": [
 									{
 										"id": "plugin",
@@ -7290,12 +7290,1658 @@
 								"replicasUIDs": null
 							},
 							"world": {
-								"x": 288,
-								"y": 0,
+								"x": 312,
+								"y": 24,
 								"width": 72,
 								"height": 72,
 								"originX": 0,
 								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "MechUiBackground",
+							"properties": {
+								"left-margin": 16,
+								"right-margin": 16,
+								"top-margin": 16,
+								"bottom-margin": 16,
+								"edges": "stretch",
+								"fill": "tile",
+								"initially-visible": true,
+								"origin": "top-left",
+								"seams": "overlap"
+							},
+							"uid": 74,
+							"instanceVariables": {},
+							"behaviors": {},
+							"sceneGraphData": {
+								"parent-uid": null,
+								"uid": 74,
+								"children": [
+									{
+										"uid": 75,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": true,
+											"d": true,
+											"sm": "normal"
+										}
+									},
+									{
+										"uid": 77,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": true,
+											"d": true,
+											"sm": "normal"
+										}
+									},
+									{
+										"uid": 78,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": true,
+											"d": true,
+											"sm": "normal"
+										}
+									},
+									{
+										"uid": 76,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": true,
+											"d": true,
+											"sm": "normal"
+										}
+									},
+									{
+										"uid": 80,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": true,
+											"d": true,
+											"sm": "normal"
+										}
+									},
+									{
+										"uid": 81,
+										"flags": {
+											"x": true,
+											"y": true,
+											"z": true,
+											"w": true,
+											"h": true,
+											"a": true,
+											"o": false,
+											"v": true,
+											"d": true,
+											"sm": "normal"
+										}
+									}
+								],
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"world": {
+								"x": 3,
+								"y": 598,
+								"width": 423,
+								"height": 122,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "MechUiBar",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Empty Bar",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 75,
+							"instanceVariables": {
+								"handle": ""
+							},
+							"behaviors": {},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														true
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "handle",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": []
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"sceneGraphData": {
+								"parent-uid": 74,
+								"uid": 75,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": true,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"world": {
+								"x": 75,
+								"y": 633,
+								"width": 480,
+								"height": 72,
+								"originX": 0,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Pickup",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Health Pack",
+								"initial-frame": 0,
+								"enable-collisions": false,
+								"live-preview": false
+							},
+							"uid": 77,
+							"instanceVariables": {
+								"healthPoint": 0
+							},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "triangle",
+										"period": 3,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 10,
+										"magnitude-random": 0,
+										"enabled": false,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "UI Element",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthPoint",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														false
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														false
+													],
+													[
+														"h",
+														false
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														false
+													],
+													[
+														"sy",
+														false
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"sceneGraphData": {
+								"parent-uid": 74,
+								"uid": 77,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": true,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"world": {
+								"x": 44,
+								"y": 634,
+								"width": 48,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Pickup",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Fuel",
+								"initial-frame": 0,
+								"enable-collisions": false,
+								"live-preview": false
+							},
+							"uid": 78,
+							"instanceVariables": {
+								"healthPoint": 0
+							},
+							"behaviors": {
+								"Sine": {
+									"properties": {
+										"movement": "angle",
+										"wave": "triangle",
+										"period": 3,
+										"period-random": 0,
+										"period-offset": 0,
+										"period-offset-random": 0,
+										"magnitude": 10,
+										"magnitude-random": 0,
+										"enabled": false,
+										"live-preview": false
+									}
+								}
+							},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "UI Element",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "healthPoint",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": [
+											{
+												"key": "Sine",
+												"state": [
+													[
+														"movement",
+														true
+													],
+													[
+														"wave",
+														true
+													],
+													[
+														"period",
+														true
+													],
+													[
+														"period-random",
+														true
+													],
+													[
+														"period-offset",
+														true
+													],
+													[
+														"period-offset-random",
+														true
+													],
+													[
+														"magnitude",
+														true
+													],
+													[
+														"magnitude-random",
+														true
+													],
+													[
+														"enabled",
+														false
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														false
+													],
+													[
+														"h",
+														false
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														false
+													],
+													[
+														"sy",
+														false
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"sceneGraphData": {
+								"parent-uid": 74,
+								"uid": 78,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": true,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"world": {
+								"x": 43.90369199641353,
+								"y": 684.1434746910028,
+								"width": 48,
+								"height": 48,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "MechUiBar",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Empty Bar",
+								"initial-frame": 0,
+								"enable-collisions": false,
+								"live-preview": false
+							},
+							"uid": 79,
+							"instanceVariables": {
+								"handle": ""
+							},
+							"behaviors": {},
+							"template": {
+								"mode": "template",
+								"templateName": "Standard",
+								"sourceTemplateName": "",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														true
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "handle",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": []
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"world": {
+								"x": 576,
+								"y": -156,
+								"width": 336,
+								"height": 48,
+								"originX": 0,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "MechUiBar",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Empty Bar",
+								"initial-frame": 0,
+								"enable-collisions": false,
+								"live-preview": false
+							},
+							"uid": 76,
+							"instanceVariables": {
+								"handle": ""
+							},
+							"behaviors": {},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														true
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "handle",
+														"state": true
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": []
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"sceneGraphData": {
+								"parent-uid": 74,
+								"uid": 76,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": true,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"world": {
+								"x": 75,
+								"y": 685,
+								"width": 480,
+								"height": 72,
+								"originX": 0,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "MechUiBar",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Green Bar",
+								"initial-frame": 0,
+								"enable-collisions": false,
+								"live-preview": false
+							},
+							"uid": 80,
+							"instanceVariables": {
+								"handle": "Mech Health UI"
+							},
+							"behaviors": {},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "handle",
+														"state": false
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": []
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"sceneGraphData": {
+								"parent-uid": 74,
+								"uid": 80,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": true,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"world": {
+								"x": 75,
+								"y": 633,
+								"width": 480,
+								"height": 72,
+								"originX": 0,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "MechUiBar",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Blue Bar",
+								"initial-frame": 0,
+								"enable-collisions": false,
+								"live-preview": false
+							},
+							"uid": 81,
+							"instanceVariables": {
+								"handle": "Mech Fuel UI"
+							},
+							"behaviors": {},
+							"template": {
+								"mode": "replica",
+								"templateName": "",
+								"sourceTemplateName": "Standard",
+								"components": [
+									{
+										"id": "plugin",
+										"component": [
+											{
+												"key": "plugin",
+												"state": [
+													[
+														"initially-visible",
+														true
+													],
+													[
+														"initial-animation",
+														false
+													],
+													[
+														"initial-frame",
+														true
+													],
+													[
+														"enable-collisions",
+														true
+													]
+												]
+											}
+										]
+									},
+									{
+										"id": "instance-variable",
+										"component": [
+											{
+												"key": "instance-variable",
+												"state": [
+													{
+														"iv": "handle",
+														"state": false
+													}
+												]
+											}
+										]
+									},
+									{
+										"id": "behavior",
+										"component": []
+									},
+									{
+										"id": "effect",
+										"component": []
+									},
+									{
+										"id": "world-instance",
+										"component": [
+											{
+												"key": "world-instance",
+												"state": [
+													[
+														"x",
+														false
+													],
+													[
+														"y",
+														false
+													],
+													[
+														"z",
+														true
+													],
+													[
+														"w",
+														true
+													],
+													[
+														"h",
+														true
+													],
+													[
+														"a",
+														true
+													],
+													[
+														"o",
+														true
+													],
+													[
+														"c",
+														true
+													],
+													[
+														"sx",
+														true
+													],
+													[
+														"sy",
+														true
+													],
+													[
+														"bm",
+														true
+													],
+													[
+														"twpx",
+														true
+													],
+													[
+														"twpy",
+														true
+													],
+													[
+														"twpz",
+														true
+													],
+													[
+														"twpw",
+														true
+													],
+													[
+														"twph",
+														true
+													],
+													[
+														"twpa",
+														true
+													],
+													[
+														"dwp",
+														true
+													],
+													[
+														"ssm",
+														true
+													]
+												]
+											}
+										]
+									}
+								],
+								"replicasUIDs": null
+							},
+							"sceneGraphData": {
+								"parent-uid": 74,
+								"uid": 81,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": true,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 0,
+									"transformH": 0,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"world": {
+								"x": 75,
+								"y": 685,
+								"width": 480,
+								"height": 72,
+								"originX": 0,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,

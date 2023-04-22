@@ -1,0 +1,20 @@
+{
+	"name": "MechUiBackground",
+	"plugin-id": "NinePatch",
+	"sid": 580873256178555,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 48,
+		"height": 48,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 4037965,
+		"useCollisionPoly": true
+	}
+}
