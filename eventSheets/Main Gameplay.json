@@ -2268,6 +2268,22 @@
 					"conditions": [],
 					"actions": [
 						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 974811351537735,
+							"parameters": {
+								"tag": "\"mech_engine\""
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 393690068353580,
+							"parameters": {
+								"tag": "\"alarm\""
+							}
+						},
+						{
 							"id": "set-animation",
 							"objectClass": "PilotSprite",
 							"sid": 733892931706453,

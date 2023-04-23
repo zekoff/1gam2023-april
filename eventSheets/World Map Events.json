@@ -149,6 +149,106 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "PlayerController",
+							"sid": 918058914118656,
+							"parameters": {
+								"instance-variable": "touchControlsVisible"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 486332673443361,
+							"parameters": {
+								"layer": "\"World Map Touch Controls\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 605108938518772
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 995098920915757
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 376713180712962,
+							"parameters": {
+								"layer": "\"World Map Touch Controls\"",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 298313712204472
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 417184335176296,
+							"parameters": {
+								"gamepad": "-1"
+							}
+						},
+						{
+							"id": "on-any-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 808988764762855
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "PlayerController",
+							"sid": 960312160604899,
+							"parameters": {
+								"instance-variable": "touchControlsVisible",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 685931646785333,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-in-touch",
+							"objectClass": "Touch",
+							"sid": 836789169052530
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "PlayerController",
+							"sid": 420086449577374,
+							"parameters": {
+								"instance-variable": "touchControlsVisible",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 830943054107967
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "is-button-down",
 							"objectClass": "Gamepad",
 							"sid": 789823692336661,
@@ -174,6 +274,14 @@
 							"sid": 624106941600740,
 							"parameters": {
 								"key": 38
+							}
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 483503801060075,
+							"parameters": {
+								"object": "UpButton"
 							}
 						}
 					],
@@ -221,6 +329,14 @@
 							"parameters": {
 								"key": 40
 							}
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 221439055188200,
+							"parameters": {
+								"object": "DownButton"
+							}
 						}
 					],
 					"actions": [
@@ -266,6 +382,14 @@
 							"sid": 259038875374904,
 							"parameters": {
 								"key": 37
+							}
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 897066731992983,
+							"parameters": {
+								"object": "LeftButton"
 							}
 						}
 					],
@@ -313,6 +437,14 @@
 							"parameters": {
 								"key": 39
 							}
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 264996066588545,
+							"parameters": {
+								"object": "RightButton"
+							}
 						}
 					],
 					"actions": [
@@ -356,6 +488,14 @@
 							"sid": 572788418521882,
 							"parameters": {
 								"key": 32
+							}
+						},
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 139315635220392,
+							"parameters": {
+								"object": "JumpButton"
 							}
 						}
 					],

@@ -210,7 +210,9 @@
 					"FireButton",
 					"JumpButton",
 					"InteractButton",
-					"Touch"
+					"Touch",
+					"UpButton",
+					"DownButton"
 				],
 				"subfolders": [],
 				"name": "Touch UI Objects"

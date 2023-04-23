@@ -152,11 +152,11 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 840266338384141,
+					"sid": 949325678856291,
 					"parameters": {
 						"audio-file": "spaceEngine_000",
 						"loop": "looping",
-						"volume": "-10",
+						"volume": "-5",
 						"stereo-pan": "0",
 						"tag-optional": "\"alarm\""
 					}

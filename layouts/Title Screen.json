@@ -72,7 +72,7 @@
 				{
 					"type": "WorldMapText",
 					"properties": {
-						"text": "(press anything to begin)",
+						"text": "(press gamepad button, keyboard key, or tap screen to begin)",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 20.933679199218748,
@@ -282,8 +282,8 @@
 					"world": {
 						"x": 637,
 						"y": 493,
-						"width": 394,
-						"height": 40,
+						"width": 494,
+						"height": 103,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -299,7 +299,7 @@
 				{
 					"type": "WorldMapText",
 					"properties": {
-						"text": "MECH CAPTAIN",
+						"text": "MECH RESCUE",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 72,

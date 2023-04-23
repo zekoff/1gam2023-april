@@ -5,6 +5,38 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 293001027615944,
+					"parameters": {
+						"key": 70
+					}
+				},
+				{
+					"id": "is-fullscreen",
+					"objectClass": "Browser",
+					"sid": 131323722500578,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "request-fullscreen",
+					"objectClass": "Browser",
+					"sid": 307860928355499,
+					"parameters": {
+						"mode": "stretch-letterbox-scale",
+						"navigation-ui": "hide"
+					}
+				}
+			],
+			"sid": 745241379819020,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-any-button-pressed",
 					"objectClass": "Gamepad",
 					"sid": 158121403398343,
@@ -30,6 +62,15 @@
 					"sid": 746815530699308,
 					"parameters": {
 						"layout": "World Map"
+					}
+				},
+				{
+					"id": "request-fullscreen",
+					"objectClass": "Browser",
+					"sid": 893137531086513,
+					"parameters": {
+						"mode": "stretch-letterbox-scale",
+						"navigation-ui": "hide"
 					}
 				}
 			],
@@ -64,6 +105,15 @@
 						"volume": "-5",
 						"stereo-pan": "0",
 						"tag-optional": "\"music\""
+					}
+				},
+				{
+					"id": "request-fullscreen",
+					"objectClass": "Browser",
+					"sid": 922514750502384,
+					"parameters": {
+						"mode": "stretch-letterbox-scale",
+						"navigation-ui": "hide"
 					}
 				}
 			],
