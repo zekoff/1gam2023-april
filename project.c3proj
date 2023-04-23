@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 33600,
-	"name": "1gam2023-april",
+	"name": "Mech Rescue",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -503,59 +503,27 @@
 		"icon": {
 			"items": [
 				{
-					"name": "icon-16.png",
+					"name": "icon.png",
 					"type": "image/png",
-					"sid": 207907562289826,
+					"sid": 368871552840971,
 					"icon-info": {
 						"purpose": "app-icon"
 					}
 				},
 				{
-					"name": "icon-512.png",
+					"name": "loading-icon.png",
 					"type": "image/png",
-					"sid": 250643831618052,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
-					"name": "icon-32.png",
-					"type": "image/png",
-					"sid": 315196315640803,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
-					"name": "icon-64.png",
-					"type": "image/png",
-					"sid": 582143607447246,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
-					"name": "icon-128.png",
-					"type": "image/png",
-					"sid": 367316209093235,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
-					"name": "icon-256.png",
-					"type": "image/png",
-					"sid": 643017228325019,
-					"icon-info": {
-						"purpose": "app-icon"
-					}
-				},
-				{
-					"name": "loading-logo.png",
-					"type": "image/png",
-					"sid": 178378630367764,
+					"sid": 627201520791035,
 					"icon-info": {
 						"purpose": "loading-logo"
+					}
+				},
+				{
+					"name": "maskable-icon.png",
+					"type": "image/png",
+					"sid": 697901085243166,
+					"icon-info": {
+						"purpose": "app-icon-maskable"
 					}
 				}
 			],
@@ -576,12 +544,12 @@
 		]
 	},
 	"properties": {
-		"description": "",
+		"description": "1GAM 2023 April game. Use a mech to destroy an enemy factory.",
 		"version": "1.0.0.0",
 		"author": "Michael Zekoff",
 		"authorEmail": "zekoff@gmail.com",
-		"authorWebsite": "",
-		"appId": "",
+		"authorWebsite": "https://zekoff.com",
+		"appId": "com.zekoff.1gam2023.april",
 		"pixelRounding": true,
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
